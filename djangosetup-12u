@@ -1,0 +1,770 @@
+login as: djuser
+djuser@172.13.10.12's password:
+Added user djuser.
+
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.19.0-25-generic i686)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Dec 20 18:10:15 IST 2015
+
+  System load:  0.01              Processes:           99
+  Usage of /:   4.2% of 30.55GB   Users logged in:     1
+  Memory usage: 18%               IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.13.10.12
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+djuser@uber1:~$ pip install -U pip setuptools
+The program 'pip' is currently not installed. You can install it by typing:
+sudo apt-get install python-pip
+djuser@uber1:~$ sudo apt-get install python-pip
+[sudo] password for djuser:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  binutils build-essential cpp cpp-4.8 dpkg-dev fakeroot g++ g++-4.8 gcc
+  gcc-4.8 libalgorithm-diff-perl libalgorithm-diff-xs-perl
+  libalgorithm-merge-perl libasan0 libatomic1 libc-dev-bin libc6-dev
+  libcloog-isl4 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-4.8-dev
+  libgomp1 libisl10 libitm1 libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev
+  linux-libc-dev make manpages-dev python-chardet-whl python-colorama
+  python-colorama-whl python-distlib python-distlib-whl python-html5lib
+  python-html5lib-whl python-pip-whl python-requests-whl python-setuptools
+  python-setuptools-whl python-six-whl python-urllib3-whl python-wheel
+  python3-pkg-resources
+Suggested packages:
+  binutils-doc cpp-doc gcc-4.8-locales debian-keyring g++-multilib
+  g++-4.8-multilib gcc-4.8-doc libstdc++6-4.8-dbg gcc-multilib autoconf
+  automake1.9 libtool flex bison gdb gcc-doc gcc-4.8-multilib libgcc1-dbg
+  libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg
+  libquadmath0-dbg glibc-doc libstdc++-4.8-doc make-doc python-genshi
+  python-lxml python3-setuptools
+Recommended packages:
+  python-dev-all
+The following NEW packages will be installed:
+  binutils build-essential cpp cpp-4.8 dpkg-dev fakeroot g++ g++-4.8 gcc
+  gcc-4.8 libalgorithm-diff-perl libalgorithm-diff-xs-perl
+  libalgorithm-merge-perl libasan0 libatomic1 libc-dev-bin libc6-dev
+  libcloog-isl4 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-4.8-dev
+  libgomp1 libisl10 libitm1 libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev
+  linux-libc-dev make manpages-dev python-chardet-whl python-colorama
+  python-colorama-whl python-distlib python-distlib-whl python-html5lib
+  python-html5lib-whl python-pip python-pip-whl python-requests-whl
+  python-setuptools python-setuptools-whl python-six-whl python-urllib3-whl
+  python-wheel python3-pkg-resources
+0 upgraded, 48 newly installed, 0 to remove and 3 not upgraded.
+Need to get 36.9 MB of archives.
+After this operation, 108 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libasan0 i386 4.8.4-2ubuntu1~14.04 [64.1 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libatomic1 i386 4.8.4-2ubuntu1~14.04 [8,276 B]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ trusty/main libisl10 i386 0.12.2-1 [430 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ trusty/main libcloog-isl4 i386 0.18.2-1 [57.6 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libgomp1 i386 4.8.4-2ubuntu1~14.04 [25.0 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libitm1 i386 4.8.4-2ubuntu1~14.04 [28.5 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ trusty/main libmpfr4 i386 3.1.2-1 [197 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libquadmath0 i386 4.8.4-2ubuntu1~14.04 [187 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu/ trusty/main libmpc3 i386 1.0.1-1ubuntu1 [38.0 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main binutils i386 2.24-5ubuntu14 [2,118 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libc-dev-bin i386 2.19-0ubuntu6.6 [63.4 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main linux-libc-dev i386 3.13.0-71.114
+  404  Not Found [IP: 91.189.91.24 80]
+Get:12 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libc6-dev i386 2.19-0ubuntu6.6 [1,554 kB]
+Err http://security.ubuntu.com/ubuntu/ trusty-security/main linux-libc-dev i386 3.13.0-71.114
+  404  Not Found [IP: 91.189.91.14 80]
+Get:13 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main cpp-4.8 i386 4.8.4-2ubuntu1~14.04 [4,292 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu/ trusty/main cpp i386 4:4.8.2-1ubuntu6 [27.4 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libgcc-4.8-dev i386 4.8.4-2ubuntu1~14.04 [1,736 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main gcc-4.8 i386 4.8.4-2ubuntu1~14.04 [4,748 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu/ trusty/main gcc i386 4:4.8.2-1ubuntu6 [5,096 B]
+Get:18 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libstdc++-4.8-dev i386 4.8.4-2ubuntu1~14.04 [1,058 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main g++-4.8 i386 4.8.4-2ubuntu1~14.04 [14.8 MB]
+Get:20 http://us.archive.ubuntu.com/ubuntu/ trusty/main g++ i386 4:4.8.2-1ubuntu6 [1,500 B]
+Get:21 http://us.archive.ubuntu.com/ubuntu/ trusty/main make i386 3.81-8.2ubuntu3 [115 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libdpkg-perl all 1.17.5ubuntu5.5 [179 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main dpkg-dev all 1.17.5ubuntu5.5 [726 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu/ trusty/main build-essential i386 11.6ubuntu6 [4,824 B]
+Get:25 http://us.archive.ubuntu.com/ubuntu/ trusty/main libfakeroot i386 1.20-3ubuntu2 [25.4 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu/ trusty/main fakeroot i386 1.20-3ubuntu2 [55.4 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu/ trusty/main libalgorithm-diff-perl all 1.19.02-3 [50.0 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu/ trusty/main libalgorithm-diff-xs-perl i386 0.04-2build4 [13.1 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu/ trusty/main libalgorithm-merge-perl all 0.08-2 [12.7 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu/ trusty/main libfile-fcntllock-perl i386 0.14-2build1 [16.0 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu/ trusty/main manpages-dev all 3.54-1ubuntu1 [1,820 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python3-pkg-resources all 3.3-1ubuntu2 [31.7 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe python-chardet-whl all 2.2.1-2~ubuntu1 [170 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe python-colorama all 0.2.5-0.1ubuntu2 [18.4 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe python-colorama-whl all 0.2.5-0.1ubuntu2 [18.2 kB]
+Get:36 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe python-distlib all 0.1.8-1ubuntu1 [113 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe python-distlib-whl all 0.1.8-1ubuntu1 [140 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-html5lib all 0.999-3~ubuntu1 [83.5 kB]
+Get:39 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-html5lib-whl all 0.999-3~ubuntu1 [109 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-six-whl all 1.5.2-1ubuntu1 [10.5 kB]
+Get:41 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-urllib3-whl all 1.7.1-1ubuntu4 [64.0 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-requests-whl all 2.2.1-1ubuntu0.3 [227 kB]
+Get:43 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-setuptools-whl all 3.3-1ubuntu2 [244 kB]
+Get:44 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe python-pip-whl all 1.5.4-1ubuntu3 [111 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-setuptools all 3.3-1ubuntu2 [230 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe python-pip all 1.5.4-1ubuntu3 [97.2 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main python-wheel all 0.24.0-1~ubuntu1 [44.7 kB]
+Fetched 36.2 MB in 3min 54s (154 kB/s)
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_3.13.0-71.114_i386.deb  404  Not Found [IP: 91.189.91.14 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+djuser@uber1:~$ sudo  apt-get update
+Ign http://us.archive.ubuntu.com trusty InRelease
+Get:1 http://security.ubuntu.com trusty-security InRelease [64.4 kB]
+Get:2 http://us.archive.ubuntu.com trusty-updates InRelease [64.4 kB]
+Hit http://us.archive.ubuntu.com trusty-backports InRelease
+Hit http://us.archive.ubuntu.com trusty Release.gpg
+Get:3 http://security.ubuntu.com trusty-security/main Sources [101 kB]
+Get:4 http://us.archive.ubuntu.com trusty-updates/main Sources [246 kB]
+Get:5 http://security.ubuntu.com trusty-security/restricted Sources [4,035 B]
+Get:6 http://security.ubuntu.com trusty-security/universe Sources [31.9 kB]
+Get:7 http://security.ubuntu.com trusty-security/multiverse Sources [2,353 B]
+Get:8 http://us.archive.ubuntu.com trusty-updates/restricted Sources [5,359 B]
+Get:9 http://us.archive.ubuntu.com trusty-updates/universe Sources [145 kB]
+Get:10 http://security.ubuntu.com trusty-security/main i386 Packages [374 kB]
+Get:11 http://us.archive.ubuntu.com trusty-updates/multiverse Sources [5,167 B]
+Get:12 http://us.archive.ubuntu.com trusty-updates/main i386 Packages [654 kB]
+Get:13 http://security.ubuntu.com trusty-security/restricted i386 Packages [12.7 kB]
+Get:14 http://security.ubuntu.com trusty-security/universe i386 Packages [122 kB]
+Get:15 http://security.ubuntu.com trusty-security/multiverse i386 Packages [4,972 B]
+Get:16 http://us.archive.ubuntu.com trusty-updates/restricted i386 Packages [15.6 kB]
+Get:17 http://security.ubuntu.com trusty-security/main Translation-en [218 kB]
+Get:18 http://us.archive.ubuntu.com trusty-updates/universe i386 Packages [334 kB]
+Get:19 http://security.ubuntu.com trusty-security/multiverse Translation-en [2,437 B]
+Get:20 http://security.ubuntu.com trusty-security/restricted Translation-en [3,206 B]
+Get:21 http://security.ubuntu.com trusty-security/universe Translation-en [71.1 kB]
+Get:22 http://us.archive.ubuntu.com trusty-updates/multiverse i386 Packages [13.2 kB]
+Get:23 http://us.archive.ubuntu.com trusty-updates/main Translation-en [340 kB]
+Get:24 http://us.archive.ubuntu.com trusty-updates/multiverse Translation-en [6,832 B]
+Get:25 http://us.archive.ubuntu.com trusty-updates/restricted Translation-en [3,699 B]
+Get:26 http://us.archive.ubuntu.com trusty-updates/universe Translation-en [174 kB]
+Hit http://us.archive.ubuntu.com trusty-backports/main Sources
+Hit http://us.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://us.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://us.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://us.archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://us.archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://us.archive.ubuntu.com trusty-backports/universe i386 Packages
+Hit http://us.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://us.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://us.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://us.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://us.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://us.archive.ubuntu.com trusty Release
+Hit http://us.archive.ubuntu.com trusty/main Sources
+Hit http://us.archive.ubuntu.com trusty/restricted Sources
+Hit http://us.archive.ubuntu.com trusty/universe Sources
+Hit http://us.archive.ubuntu.com trusty/multiverse Sources
+Hit http://us.archive.ubuntu.com trusty/main i386 Packages
+Hit http://us.archive.ubuntu.com trusty/restricted i386 Packages
+Hit http://us.archive.ubuntu.com trusty/universe i386 Packages
+Hit http://us.archive.ubuntu.com trusty/multiverse i386 Packages
+Hit http://us.archive.ubuntu.com trusty/main Translation-en
+Hit http://us.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://us.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://us.archive.ubuntu.com trusty/universe Translation-en
+Ign http://us.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://us.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://us.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://us.archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 3,019 kB in 27s (110 kB/s)
+Reading package lists... Done
+djuser@uber1:~$ sudo  apt-get upgrade
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+The following packages have been kept back:
+  linux-generic-lts-vivid linux-headers-generic-lts-vivid
+  linux-image-generic-lts-vivid
+The following packages will be upgraded:
+  bind9 bind9-doc bind9-host bind9utils dnsutils grub-common grub-pc
+  grub-pc-bin grub2-common libbind9-90 libcups2 libdns100 libisc95 libisccc90
+  libisccfg90 liblwres90 libxml2
+17 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+Need to get 5,598 kB of archives.
+After this operation, 1,024 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2 i386 2.9.1+dfsg1-3ubuntu4.6 [556 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libcups2 i386 1.7.2-0ubuntu1.7 [175 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main bind9 i386 1:9.9.5.dfsg-3ubuntu0.6 [280 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main bind9-host i386 1:9.9.5.dfsg-3ubuntu0.6 [45.1 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main dnsutils i386 1:9.9.5.dfsg-3ubuntu0.6 [92.9 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libisc95 i386 1:9.9.5.dfsg-3ubuntu0.6 [144 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libisccc90 i386 1:9.9.5.dfsg-3ubuntu0.6 [15.6 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libisccfg90 i386 1:9.9.5.dfsg-3ubuntu0.6 [33.9 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main liblwres90 i386 1:9.9.5.dfsg-3ubuntu0.6 [32.5 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libdns100 i386 1:9.9.5.dfsg-3ubuntu0.6 [627 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main bind9utils i386 1:9.9.5.dfsg-3ubuntu0.6 [141 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libbind9-90 i386 1:9.9.5.dfsg-3ubuntu0.6 [21.9 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main bind9-doc all 1:9.9.5.dfsg-3ubuntu0.6 [182 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main grub-pc i386 2.02~beta2-9ubuntu1.6 [173 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main grub-pc-bin i386 2.02~beta2-9ubuntu1.6 [890 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main grub2-common i386 2.02~beta2-9ubuntu1.6 [514 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main grub-common i386 2.02~beta2-9ubuntu1.6 [1,674 kB]
+Fetched 5,598 kB in 1min 10s (79.2 kB/s)
+Preconfiguring packages ...
+(Reading database ... 60482 files and directories currently installed.)
+Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.6_i386.deb ...
+Unpacking libxml2:i386 (2.9.1+dfsg1-3ubuntu4.6) over (2.9.1+dfsg1-3ubuntu4.5) ...
+Preparing to unpack .../libcups2_1.7.2-0ubuntu1.7_i386.deb ...
+Unpacking libcups2:i386 (1.7.2-0ubuntu1.7) over (1.7.2-0ubuntu1.6) ...
+Preparing to unpack .../bind9_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking bind9 (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../bind9-host_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking bind9-host (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../dnsutils_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking dnsutils (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../libisc95_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking libisc95 (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../libisccc90_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking libisccc90 (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../libisccfg90_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking libisccfg90 (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../liblwres90_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking liblwres90 (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../libdns100_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking libdns100 (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../bind9utils_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking bind9utils (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../libbind9-90_1%3a9.9.5.dfsg-3ubuntu0.6_i386.deb ...
+Unpacking libbind9-90 (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../bind9-doc_1%3a9.9.5.dfsg-3ubuntu0.6_all.deb ...
+Unpacking bind9-doc (1:9.9.5.dfsg-3ubuntu0.6) over (1:9.9.5.dfsg-3ubuntu0.5) ...
+Preparing to unpack .../grub-pc_2.02~beta2-9ubuntu1.6_i386.deb ...
+Unpacking grub-pc (2.02~beta2-9ubuntu1.6) over (2.02~beta2-9ubuntu1.5) ...
+Preparing to unpack .../grub-pc-bin_2.02~beta2-9ubuntu1.6_i386.deb ...
+Unpacking grub-pc-bin (2.02~beta2-9ubuntu1.6) over (2.02~beta2-9ubuntu1.5) ...
+Preparing to unpack .../grub2-common_2.02~beta2-9ubuntu1.6_i386.deb ...
+Unpacking grub2-common (2.02~beta2-9ubuntu1.6) over (2.02~beta2-9ubuntu1.5) ...
+Preparing to unpack .../grub-common_2.02~beta2-9ubuntu1.6_i386.deb ...
+Unpacking grub-common (2.02~beta2-9ubuntu1.6) over (2.02~beta2-9ubuntu1.5) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ureadahead will be reprofiled on next reboot
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Processing triggers for install-info (5.2.0.dfsg.1-2) ...
+Setting up libxml2:i386 (2.9.1+dfsg1-3ubuntu4.6) ...
+Setting up libcups2:i386 (1.7.2-0ubuntu1.7) ...
+Setting up libisc95 (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up libdns100 (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up libisccc90 (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up libisccfg90 (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up libbind9-90 (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up liblwres90 (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up bind9utils (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up bind9 (1:9.9.5.dfsg-3ubuntu0.6) ...
+ * Stopping domain name service... bind9                                        waiting for pid 1008 to die
+                                                                         [ OK ]
+ * Starting domain name service... bind9                                 [ OK ]
+Setting up bind9-host (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up dnsutils (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up bind9-doc (1:9.9.5.dfsg-3ubuntu0.6) ...
+Setting up grub-common (2.02~beta2-9ubuntu1.6) ...
+Setting up grub2-common (2.02~beta2-9ubuntu1.6) ...
+Setting up grub-pc-bin (2.02~beta2-9ubuntu1.6) ...
+Setting up grub-pc (2.02~beta2-9ubuntu1.6) ...
+Installing for i386-pc platform.
+Installation finished. No error reported.
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-3.19.0-25-generic
+Found initrd image: /boot/initrd.img-3.19.0-25-generic
+Found memtest86+ image: /memtest86+.elf
+Found memtest86+ image: /memtest86+.bin
+done
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+djuser@uber1:~$ sudo apt-get install python-pip
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  binutils build-essential cpp cpp-4.8 dpkg-dev fakeroot g++ g++-4.8 gcc
+  gcc-4.8 libalgorithm-diff-perl libalgorithm-diff-xs-perl
+  libalgorithm-merge-perl libasan0 libatomic1 libc-dev-bin libc6-dev
+  libcloog-isl4 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-4.8-dev
+  libgomp1 libisl10 libitm1 libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev
+  linux-libc-dev make manpages-dev python-chardet-whl python-colorama
+  python-colorama-whl python-distlib python-distlib-whl python-html5lib
+  python-html5lib-whl python-pip-whl python-requests-whl python-setuptools
+  python-setuptools-whl python-six-whl python-urllib3-whl python-wheel
+  python3-pkg-resources
+Suggested packages:
+  binutils-doc cpp-doc gcc-4.8-locales debian-keyring g++-multilib
+  g++-4.8-multilib gcc-4.8-doc libstdc++6-4.8-dbg gcc-multilib autoconf
+  automake1.9 libtool flex bison gdb gcc-doc gcc-4.8-multilib libgcc1-dbg
+  libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg
+  libquadmath0-dbg glibc-doc libstdc++-4.8-doc make-doc python-genshi
+  python-lxml python3-setuptools
+Recommended packages:
+  python-dev-all
+The following NEW packages will be installed:
+  binutils build-essential cpp cpp-4.8 dpkg-dev fakeroot g++ g++-4.8 gcc
+  gcc-4.8 libalgorithm-diff-perl libalgorithm-diff-xs-perl
+  libalgorithm-merge-perl libasan0 libatomic1 libc-dev-bin libc6-dev
+  libcloog-isl4 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-4.8-dev
+  libgomp1 libisl10 libitm1 libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev
+  linux-libc-dev make manpages-dev python-chardet-whl python-colorama
+  python-colorama-whl python-distlib python-distlib-whl python-html5lib
+  python-html5lib-whl python-pip python-pip-whl python-requests-whl
+  python-setuptools python-setuptools-whl python-six-whl python-urllib3-whl
+  python-wheel python3-pkg-resources
+0 upgraded, 48 newly installed, 0 to remove and 3 not upgraded.
+Need to get 771 kB/36.9 MB of archives.
+After this operation, 108 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main linux-libc-dev i386 3.13.0-74.118 [771 kB]
+Fetched 771 kB in 6s (121 kB/s)
+Extracting templates from packages: 100%
+Selecting previously unselected package libasan0:i386.
+(Reading database ... 60482 files and directories currently installed.)
+Preparing to unpack .../libasan0_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking libasan0:i386 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package libatomic1:i386.
+Preparing to unpack .../libatomic1_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking libatomic1:i386 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package libisl10:i386.
+Preparing to unpack .../libisl10_0.12.2-1_i386.deb ...
+Unpacking libisl10:i386 (0.12.2-1) ...
+Selecting previously unselected package libcloog-isl4:i386.
+Preparing to unpack .../libcloog-isl4_0.18.2-1_i386.deb ...
+Unpacking libcloog-isl4:i386 (0.18.2-1) ...
+Selecting previously unselected package libgomp1:i386.
+Preparing to unpack .../libgomp1_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking libgomp1:i386 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package libitm1:i386.
+Preparing to unpack .../libitm1_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking libitm1:i386 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package libmpfr4:i386.
+Preparing to unpack .../libmpfr4_3.1.2-1_i386.deb ...
+Unpacking libmpfr4:i386 (3.1.2-1) ...
+Selecting previously unselected package libquadmath0:i386.
+Preparing to unpack .../libquadmath0_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking libquadmath0:i386 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package libmpc3:i386.
+Preparing to unpack .../libmpc3_1.0.1-1ubuntu1_i386.deb ...
+Unpacking libmpc3:i386 (1.0.1-1ubuntu1) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../binutils_2.24-5ubuntu14_i386.deb ...
+Unpacking binutils (2.24-5ubuntu14) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../libc-dev-bin_2.19-0ubuntu6.6_i386.deb ...
+Unpacking libc-dev-bin (2.19-0ubuntu6.6) ...
+Selecting previously unselected package linux-libc-dev:i386.
+Preparing to unpack .../linux-libc-dev_3.13.0-74.118_i386.deb ...
+Unpacking linux-libc-dev:i386 (3.13.0-74.118) ...
+Selecting previously unselected package libc6-dev:i386.
+Preparing to unpack .../libc6-dev_2.19-0ubuntu6.6_i386.deb ...
+Unpacking libc6-dev:i386 (2.19-0ubuntu6.6) ...
+Selecting previously unselected package cpp-4.8.
+Preparing to unpack .../cpp-4.8_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking cpp-4.8 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../cpp_4%3a4.8.2-1ubuntu6_i386.deb ...
+Unpacking cpp (4:4.8.2-1ubuntu6) ...
+Selecting previously unselected package libgcc-4.8-dev:i386.
+Preparing to unpack .../libgcc-4.8-dev_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking libgcc-4.8-dev:i386 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package gcc-4.8.
+Preparing to unpack .../gcc-4.8_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking gcc-4.8 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../gcc_4%3a4.8.2-1ubuntu6_i386.deb ...
+Unpacking gcc (4:4.8.2-1ubuntu6) ...
+Selecting previously unselected package libstdc++-4.8-dev:i386.
+Preparing to unpack .../libstdc++-4.8-dev_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking libstdc++-4.8-dev:i386 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package g++-4.8.
+Preparing to unpack .../g++-4.8_4.8.4-2ubuntu1~14.04_i386.deb ...
+Unpacking g++-4.8 (4.8.4-2ubuntu1~14.04) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../g++_4%3a4.8.2-1ubuntu6_i386.deb ...
+Unpacking g++ (4:4.8.2-1ubuntu6) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_3.81-8.2ubuntu3_i386.deb ...
+Unpacking make (3.81-8.2ubuntu3) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.17.5ubuntu5.5_all.deb ...
+Unpacking libdpkg-perl (1.17.5ubuntu5.5) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.17.5ubuntu5.5_all.deb ...
+Unpacking dpkg-dev (1.17.5ubuntu5.5) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../build-essential_11.6ubuntu6_i386.deb ...
+Unpacking build-essential (11.6ubuntu6) ...
+Selecting previously unselected package libfakeroot:i386.
+Preparing to unpack .../libfakeroot_1.20-3ubuntu2_i386.deb ...
+Unpacking libfakeroot:i386 (1.20-3ubuntu2) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../fakeroot_1.20-3ubuntu2_i386.deb ...
+Unpacking fakeroot (1.20-3ubuntu2) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../libalgorithm-diff-perl_1.19.02-3_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.02-3) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../libalgorithm-diff-xs-perl_0.04-2build4_i386.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-2build4) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../libalgorithm-merge-perl_0.08-2_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-2) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../libfile-fcntllock-perl_0.14-2build1_i386.deb ...
+Unpacking libfile-fcntllock-perl (0.14-2build1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../manpages-dev_3.54-1ubuntu1_all.deb ...
+Unpacking manpages-dev (3.54-1ubuntu1) ...
+Selecting previously unselected package python3-pkg-resources.
+Preparing to unpack .../python3-pkg-resources_3.3-1ubuntu2_all.deb ...
+Unpacking python3-pkg-resources (3.3-1ubuntu2) ...
+Selecting previously unselected package python-chardet-whl.
+Preparing to unpack .../python-chardet-whl_2.2.1-2~ubuntu1_all.deb ...
+Unpacking python-chardet-whl (2.2.1-2~ubuntu1) ...
+Selecting previously unselected package python-colorama.
+Preparing to unpack .../python-colorama_0.2.5-0.1ubuntu2_all.deb ...
+Unpacking python-colorama (0.2.5-0.1ubuntu2) ...
+Selecting previously unselected package python-colorama-whl.
+Preparing to unpack .../python-colorama-whl_0.2.5-0.1ubuntu2_all.deb ...
+Unpacking python-colorama-whl (0.2.5-0.1ubuntu2) ...
+Selecting previously unselected package python-distlib.
+Preparing to unpack .../python-distlib_0.1.8-1ubuntu1_all.deb ...
+Unpacking python-distlib (0.1.8-1ubuntu1) ...
+Selecting previously unselected package python-distlib-whl.
+Preparing to unpack .../python-distlib-whl_0.1.8-1ubuntu1_all.deb ...
+Unpacking python-distlib-whl (0.1.8-1ubuntu1) ...
+Selecting previously unselected package python-html5lib.
+Preparing to unpack .../python-html5lib_0.999-3~ubuntu1_all.deb ...
+Unpacking python-html5lib (0.999-3~ubuntu1) ...
+Selecting previously unselected package python-html5lib-whl.
+Preparing to unpack .../python-html5lib-whl_0.999-3~ubuntu1_all.deb ...
+Unpacking python-html5lib-whl (0.999-3~ubuntu1) ...
+Selecting previously unselected package python-six-whl.
+Preparing to unpack .../python-six-whl_1.5.2-1ubuntu1_all.deb ...
+Unpacking python-six-whl (1.5.2-1ubuntu1) ...
+Selecting previously unselected package python-urllib3-whl.
+Preparing to unpack .../python-urllib3-whl_1.7.1-1ubuntu4_all.deb ...
+Unpacking python-urllib3-whl (1.7.1-1ubuntu4) ...
+Selecting previously unselected package python-requests-whl.
+Preparing to unpack .../python-requests-whl_2.2.1-1ubuntu0.3_all.deb ...
+Unpacking python-requests-whl (2.2.1-1ubuntu0.3) ...
+Selecting previously unselected package python-setuptools-whl.
+Preparing to unpack .../python-setuptools-whl_3.3-1ubuntu2_all.deb ...
+Unpacking python-setuptools-whl (3.3-1ubuntu2) ...
+Selecting previously unselected package python-pip-whl.
+Preparing to unpack .../python-pip-whl_1.5.4-1ubuntu3_all.deb ...
+Unpacking python-pip-whl (1.5.4-1ubuntu3) ...
+Selecting previously unselected package python-setuptools.
+Preparing to unpack .../python-setuptools_3.3-1ubuntu2_all.deb ...
+Unpacking python-setuptools (3.3-1ubuntu2) ...
+Selecting previously unselected package python-pip.
+Preparing to unpack .../python-pip_1.5.4-1ubuntu3_all.deb ...
+Unpacking python-pip (1.5.4-1ubuntu3) ...
+Selecting previously unselected package python-wheel.
+Preparing to unpack .../python-wheel_0.24.0-1~ubuntu1_all.deb ...
+Unpacking python-wheel (0.24.0-1~ubuntu1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libasan0:i386 (4.8.4-2ubuntu1~14.04) ...
+Setting up libatomic1:i386 (4.8.4-2ubuntu1~14.04) ...
+Setting up libisl10:i386 (0.12.2-1) ...
+Setting up libcloog-isl4:i386 (0.18.2-1) ...
+Setting up libgomp1:i386 (4.8.4-2ubuntu1~14.04) ...
+Setting up libitm1:i386 (4.8.4-2ubuntu1~14.04) ...
+Setting up libmpfr4:i386 (3.1.2-1) ...
+Setting up libquadmath0:i386 (4.8.4-2ubuntu1~14.04) ...
+Setting up libmpc3:i386 (1.0.1-1ubuntu1) ...
+Setting up binutils (2.24-5ubuntu14) ...
+Setting up libc-dev-bin (2.19-0ubuntu6.6) ...
+Setting up linux-libc-dev:i386 (3.13.0-74.118) ...
+Setting up libc6-dev:i386 (2.19-0ubuntu6.6) ...
+Setting up cpp-4.8 (4.8.4-2ubuntu1~14.04) ...
+Setting up cpp (4:4.8.2-1ubuntu6) ...
+Setting up libgcc-4.8-dev:i386 (4.8.4-2ubuntu1~14.04) ...
+Setting up gcc-4.8 (4.8.4-2ubuntu1~14.04) ...
+Setting up gcc (4:4.8.2-1ubuntu6) ...
+Setting up libstdc++-4.8-dev:i386 (4.8.4-2ubuntu1~14.04) ...
+Setting up g++-4.8 (4.8.4-2ubuntu1~14.04) ...
+Setting up g++ (4:4.8.2-1ubuntu6) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up make (3.81-8.2ubuntu3) ...
+Setting up libdpkg-perl (1.17.5ubuntu5.5) ...
+Setting up dpkg-dev (1.17.5ubuntu5.5) ...
+Setting up build-essential (11.6ubuntu6) ...
+Setting up libfakeroot:i386 (1.20-3ubuntu2) ...
+Setting up fakeroot (1.20-3ubuntu2) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up libalgorithm-diff-perl (1.19.02-3) ...
+Setting up libalgorithm-diff-xs-perl (0.04-2build4) ...
+Setting up libalgorithm-merge-perl (0.08-2) ...
+Setting up libfile-fcntllock-perl (0.14-2build1) ...
+Setting up manpages-dev (3.54-1ubuntu1) ...
+Setting up python3-pkg-resources (3.3-1ubuntu2) ...
+Setting up python-chardet-whl (2.2.1-2~ubuntu1) ...
+Setting up python-colorama (0.2.5-0.1ubuntu2) ...
+Setting up python-colorama-whl (0.2.5-0.1ubuntu2) ...
+Setting up python-distlib (0.1.8-1ubuntu1) ...
+Setting up python-distlib-whl (0.1.8-1ubuntu1) ...
+Setting up python-html5lib (0.999-3~ubuntu1) ...
+Setting up python-html5lib-whl (0.999-3~ubuntu1) ...
+Setting up python-six-whl (1.5.2-1ubuntu1) ...
+Setting up python-urllib3-whl (1.7.1-1ubuntu4) ...
+Setting up python-requests-whl (2.2.1-1ubuntu0.3) ...
+Setting up python-setuptools-whl (3.3-1ubuntu2) ...
+Setting up python-pip-whl (1.5.4-1ubuntu3) ...
+Setting up python-setuptools (3.3-1ubuntu2) ...
+Setting up python-pip (1.5.4-1ubuntu3) ...
+Setting up python-wheel (0.24.0-1~ubuntu1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+djuser@uber1:~$ pip
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  zip                         DEPRECATED. Zip individual packages.
+  unzip                       DEPRECATED. Unzip individual packages.
+  bundle                      DEPRECATED. Create pybundles.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output.
+  --log-file <path>           Path to a verbose non-appending log, that only
+                              logs failures. This log is active by default at
+                              /home/djuser/.pip/pip.log.
+  --log <path>                Path to a verbose appending log. This log is
+                              inactive by default.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup.
+  --cert <path>               Path to alternate CA bundle.
+djuser@uber1:~$ sudo mkdir djpro
+djuser@uber1:~$ chmod 777 djpro/
+chmod: changing permissions of ‘djpro/’: Operation not permitted
+djuser@uber1:~$ chmod 777 djpro
+chmod: changing permissions of ‘djpro’: Operation not permitted
+djuser@uber1:~$ sudo chmod 777 djpro
+djuser@uber1:~$ cd djpro/
+djuser@uber1:~/djpro$ pip install virtualenv
+Downloading/unpacking virtualenv
+  Downloading virtualenv-13.1.2-py2.py3-none-any.whl (1.7MB): 1.7MB downloaded
+Installing collected packages: virtualenv
+Cleaning up...
+Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/usr/lib/python2.7/dist-packages/pip/commands/install.py", line 283, in run
+    requirement_set.install(install_options, global_options, root=options.root_path)
+  File "/usr/lib/python2.7/dist-packages/pip/req.py", line 1436, in install
+    requirement.install(install_options, global_options, *args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/pip/req.py", line 672, in install
+    self.move_wheel_files(self.source_dir, root=root)
+  File "/usr/lib/python2.7/dist-packages/pip/req.py", line 902, in move_wheel_files
+    pycompile=self.pycompile,
+  File "/usr/lib/python2.7/dist-packages/pip/wheel.py", line 206, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/usr/lib/python2.7/dist-packages/pip/wheel.py", line 193, in clobber
+    os.makedirs(destsubdir)
+  File "/usr/lib/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 13] Permission denied: '/usr/local/lib/python2.7/dist-packages/virtualenv_support'
+
+Storing debug log for failure in /home/djuser/.pip/pip.log
+djuser@uber1:~/djpro$ sudo pip install virtualenv
+Downloading/unpacking virtualenv
+  Downloading virtualenv-13.1.2-py2.py3-none-any.whl (1.7MB): 1.7MB downloaded
+Installing collected packages: virtualenv
+Successfully installed virtualenv
+Cleaning up...
+djuser@uber1:~/djpro$ cd ..
+djuser@uber1:~$ cd djpro
+djuser@uber1:~/djpro$ sudo mkdir venvdir
+djuser@uber1:~/djpro$ virtualenv venvdir
+Traceback (most recent call last):
+  File "/usr/local/bin/virtualenv", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/virtualenv.py", line 832, in main
+    symlink=options.symlink)
+  File "/usr/local/lib/python2.7/dist-packages/virtualenv.py", line 994, in create_environment
+    site_packages=site_packages, clear=clear, symlink=symlink))
+  File "/usr/local/lib/python2.7/dist-packages/virtualenv.py", line 1170, in install_python
+    mkdir(lib_dir)
+  File "/usr/local/lib/python2.7/dist-packages/virtualenv.py", line 448, in mkdir
+    os.makedirs(path)
+  File "/usr/lib/python2.7/os.py", line 150, in makedirs
+    makedirs(head, mode)
+  File "/usr/lib/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 13] Permission denied: 'venvdir/lib'
+djuser@uber1:~/djpro$ sudo chmod 777 venvdir
+djuser@uber1:~/djpro$ virtualenv venvdir
+New python executable in venvdir/bin/python
+Installing setuptools, pip, wheel...done.
+djuser@uber1:~/djpro$ source venvdir/bin/activate
+(venvdir)djuser@uber1:~/djpro$ python -V
+Python 2.7.6
+(venvdir)djuser@uber1:~/djpro$ python import django
+python: can't open file 'import': [Errno 2] No such file or directory
+(venvdir)djuser@uber1:~/djpro$ python
+Python 2.7.6 (default, Jun 22 2015, 18:00:18)
+[GCC 4.8.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>>
+(venvdir)djuser@uber1:~/djpro$ ^C
+(venvdir)djuser@uber1:~/djpro$ ^C
+(venvdir)djuser@uber1:~/djpro$ ^C^C
+(venvdir)djuser@uber1:~/djpro$ cd venvdir/bin/
+(venvdir)djuser@uber1:~/djpro/venvdir/bin$ ls
+activate       activate_this.py  pip     python     wheel
+activate.csh   easy_install      pip2    python2
+activate.fish  easy_install-2.7  pip2.7  python2.7
+(venvdir)djuser@uber1:~/djpro/venvdir/bin$ cd -P
+(venvdir)djuser@uber1:~$  pip install Django
+Collecting Django
+/home/djuser/djpro/venvdir/local/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+  Downloading Django-1.9-py2.py3-none-any.whl (6.6MB)
+    100% |████████████████████████████████| 6.6MB 40kB/s
+Installing collected packages: Django
+Successfully installed Django-1.9
+/home/djuser/djpro/venvdir/local/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+(venvdir)djuser@uber1:~$ python -c "import django; print(django.__path__)"
+['/home/djuser/djpro/venvdir/local/lib/python2.7/site-packages/django']
+(venvdir)djuser@uber1:~$ django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+(venvdir)djuser@uber1:~$ django-admin --version
+1.9
+(venvdir)djuser@uber1:~$ django-admin startproject testdjp1
+(venvdir)djuser@uber1:~$ ls
+djpro  testdjp1
+(venvdir)djuser@uber1:~$ cd testdjp1/
+(venvdir)djuser@uber1:~/testdjp1$ ls
+manage.py  testdjp1
+(venvdir)djuser@uber1:~/testdjp1$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, contenttypes, auth, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying sessions.0001_initial... OK
+(venvdir)djuser@uber1:~/testdjp1$ python manage.py syncdb
+Unknown command: 'syncdb'
+Type 'manage.py help' for usage.
+(venvdir)djuser@uber1:~/testdjp1$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, contenttypes, auth, sessions
+Running migrations:
+  No migrations to apply.
+(venvdir)djuser@uber1:~/testdjp1$ python manage.py admin
+Unknown command: 'admin'
+Type 'manage.py help' for usage.
+(venvdir)djuser@uber1:~/testdjp1$ python manage.py createsuperuser
+Username (leave blank to use 'djuser'): ashok
+Email address: ashok@ashok.co
+Password:
+Password (again):
+The password is too similar to the email address.
+This password is too short. It must contain at least 8 characters.
+Password:
+Password (again):
+Superuser created successfully.
+(venvdir)djuser@uber1:~/testdjp1$ python manage.py runserver 0.0.0.0:8000
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 20, 2015 - 13:10:50
+Django version 1.9, using settings 'testdjp1.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+[20/Dec/2015 13:11:17] "GET / HTTP/1.1" 200 1767
+Not Found: /favicon.ico
+[20/Dec/2015 13:11:17] "GET /favicon.ico HTTP/1.1" 404 1941
+Not Found: /admin
+[20/Dec/2015 13:11:25] "GET /admin HTTP/1.1" 301 0
+[20/Dec/2015 13:11:25] "GET /admin/ HTTP/1.1" 302 0
+[20/Dec/2015 13:11:25] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1679
+[20/Dec/2015 13:11:25] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[20/Dec/2015 13:11:25] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[20/Dec/2015 13:11:25] "GET /static/admin/css/base.css HTTP/1.1" 200 15897
+[20/Dec/2015 13:11:25] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[20/Dec/2015 13:11:25] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[20/Dec/2015 13:11:43] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[20/Dec/2015 13:11:43] "GET /admin/ HTTP/1.1" 200 2779
+[20/Dec/2015 13:11:43] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+[20/Dec/2015 13:11:43] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[20/Dec/2015 13:11:43] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[20/Dec/2015 13:11:43] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+Not Found: /
+[20/Dec/2015 13:11:50] "GET / HTTP/1.1" 200 1767
+[20/Dec/2015 13:11:53] "GET /admin/ HTTP/1.1" 200 2779
+^X^C(venvdir)djuser@uber1:~/testdjp1$
