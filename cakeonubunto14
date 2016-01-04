@@ -1,0 +1,1873 @@
+    changing mode of build/scripts-2.7/rstpep2html.py from 644 to 755
+    changing mode of build/scripts-2.7/rst2odt.py from 644 to 755
+    changing mode of build/scripts-2.7/rst2odt_prepstyles.py from 644 to 755
+
+    warning: no files found matching 'MANIFEST'
+    warning: no files found matching '*' under directory 'extras'
+    warning: no previously-included files matching '.cvsignore' found under dire                                                     ctory '*'
+    warning: no previously-included files matching '*.pyc' found under directory                                                      '*'
+    warning: no previously-included files matching '*~' found under directory '*                                                     '
+    warning: no previously-included files matching '.DS_Store' found under direc                                                     tory '*'
+    changing mode of /usr/local/bin/rst2xml.py to 755
+    changing mode of /usr/local/bin/rst2s5.py to 755
+    changing mode of /usr/local/bin/rst2latex.py to 755
+    changing mode of /usr/local/bin/rst2html.py to 755
+    changing mode of /usr/local/bin/rst2odt.py to 755
+    changing mode of /usr/local/bin/rstpep2html.py to 755
+    changing mode of /usr/local/bin/rst2xetex.py to 755
+    changing mode of /usr/local/bin/rst2pseudoxml.py to 755
+    changing mode of /usr/local/bin/rst2odt_prepstyles.py to 755
+    changing mode of /usr/local/bin/rst2man.py to 755
+  Running setup.py install for MarkupSafe
+
+    building 'markupsafe._speedups' extension
+    i686-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wa                                                     ll -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c markupsafe/_speedups.c                                                      -o build/temp.linux-i686-2.7/markupsafe/_speedups.o
+    i686-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bs                                                     ymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wal                                                     l -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffe                                                     r-size=4 -Wformat -Werror=format-security build/temp.linux-i686-2.7/markupsafe/_                                                     speedups.o -o build/lib.linux-i686-2.7/markupsafe/_speedups.so
+Successfully installed sphinx Jinja2 Pygments docutils MarkupSafe
+Cleaning up...
+cakedev@uber1:~/ckdev/docs$ sudo pip install sphinxcontrib-phpdomain
+Downloading/unpacking sphinxcontrib-phpdomain
+  Downloading sphinxcontrib-phpdomain-0.1.4.tar.gz
+  Running setup.py (path:/tmp/pip_build_root/sphinxcontrib-phpdomain/setup.py) e                                                     gg_info for package sphinxcontrib-phpdomain
+
+Requirement already satisfied (use --upgrade to upgrade): Sphinx>=1.0 in /usr/lo                                                     cal/lib/python2.7/dist-packages (from sphinxcontrib-phpdomain)
+Installing collected packages: sphinxcontrib-phpdomain
+  Running setup.py install for sphinxcontrib-phpdomain
+
+    Skipping installation of /usr/local/lib/python2.7/dist-packages/sphinxcontri                                                     b/__init__.py (namespace package)
+    Installing /usr/local/lib/python2.7/dist-packages/sphinxcontrib_phpdomain-0.                                                     1.4-nspkg.pth
+Successfully installed sphinxcontrib-phpdomain
+Cleaning up...
+cakedev@uber1:~/ckdev/docs$ make html-en
+make: Circular en/Makefile <- en/Makefile dependency dropped.
+cd en && make html LANG=en
+make[1]: Entering directory `/home/cakedev/ckdev/docs/en'
+sphinx-build -b html -d ../build/doctrees/en   . ../build/html/en
+Making output directory...
+Running Sphinx v1.2.3
+loading translations [en]... done
+loading pickled environment... not yet created
+building [html]: targets for 141 source files that are out of date
+updating environment: 141 added, 0 changed, 0 removed
+reading sources... [ 83%] models/data-validation/validating-data-from-the-contro                                                     reading sources... [ 95%] tutorials-and-examples/simple-acl-controlled-applicati                                                     reading sources... [ 96%] tutorials-and-examples/simple-acl-controlled-applicati                                                     reading sources... [100%] views/themes
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [ 83%] models/data-validation/validating-data-from-the-control                                                     writing output... [ 95%] tutorials-and-examples/simple-acl-controlled-applicatio                                                     writing output... [ 96%] tutorials-and-examples/simple-acl-controlled-applicatio                                                     writing output... [100%] views/themes
+writing additional files... genindex search
+copying images... [100%] _static/img/basic_mvc.png
+copying static files... done
+copying extra files... done
+dumping search index... done
+dumping object inventory... done
+build succeeded.
+
+Build finished. The HTML pages are in ../build/html/en.
+make[1]: Leaving directory `/home/cakedev/ckdev/docs/en'
+cakedev@uber1:~/ckdev/docs$ ^C
+cakedev@uber1:~/ckdev/docs$ ll
+total 80
+drwxrwxrwx 13 cakedev cakedev 4096 Jan  4 07:49 ./
+drwxrwxrwx  3 root    root    4096 Jan  4 07:40 ../
+drwxrwxr-x  4 cakedev cakedev 4096 Jan  4 07:49 build/
+drwxrwxrwx  2 cakedev cakedev 4096 Jan  4 07:49 config/
+-rwxrwxrwx  1 cakedev cakedev  463 Jan  4 07:47 Dockerfile*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 en/
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 es/
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 fr/
+drwxrwxrwx  8 cakedev cakedev 4096 Jan  4 07:47 .git/
+-rwxrwxrwx  1 cakedev cakedev  299 Jan  4 07:47 .gitignore*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 ja/
+-rwxrwxrwx  1 cakedev cakedev 2453 Jan  4 07:47 Makefile*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 pt/
+-rwxrwxrwx  1 cakedev cakedev 6182 Jan  4 07:47 README.mdown*
+-rwxrwxrwx  1 cakedev cakedev   38 Jan  4 07:47 requirements.txt*
+drwxrwxrwx  2 cakedev cakedev 4096 Jan  4 07:47 scripts/
+drwxrwxrwx  4 cakedev cakedev 4096 Jan  4 07:47 themes/
+-rwxrwxrwx  1 cakedev cakedev  166 Jan  4 07:47 .travis.yml*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 zh/
+cakedev@uber1:~/ckdev/docs$ ll
+total 80
+drwxrwxrwx 13 cakedev cakedev 4096 Jan  4 07:49 ./
+drwxrwxrwx  3 root    root    4096 Jan  4 07:40 ../
+drwxrwxr-x  4 cakedev cakedev 4096 Jan  4 07:49 build/
+drwxrwxrwx  2 cakedev cakedev 4096 Jan  4 07:49 config/
+-rwxrwxrwx  1 cakedev cakedev  463 Jan  4 07:47 Dockerfile*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 en/
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 es/
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 fr/
+drwxrwxrwx  8 cakedev cakedev 4096 Jan  4 07:47 .git/
+-rwxrwxrwx  1 cakedev cakedev  299 Jan  4 07:47 .gitignore*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 ja/
+-rwxrwxrwx  1 cakedev cakedev 2453 Jan  4 07:47 Makefile*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 pt/
+-rwxrwxrwx  1 cakedev cakedev 6182 Jan  4 07:47 README.mdown*
+-rwxrwxrwx  1 cakedev cakedev   38 Jan  4 07:47 requirements.txt*
+drwxrwxrwx  2 cakedev cakedev 4096 Jan  4 07:47 scripts/
+drwxrwxrwx  4 cakedev cakedev 4096 Jan  4 07:47 themes/
+-rwxrwxrwx  1 cakedev cakedev  166 Jan  4 07:47 .travis.yml*
+drwxrwxrwx 17 cakedev cakedev 4096 Jan  4 07:47 zh/
+cakedev@uber1:~/ckdev/docs$ cd build/
+cakedev@uber1:~/ckdev/docs/build$ ls
+doctrees  html
+cakedev@uber1:~/ckdev/docs/build$ cd html/
+cakedev@uber1:~/ckdev/docs/build/html$ ll
+total 12
+drwxrwxr-x  3 cakedev cakedev 4096 Jan  4 07:49 ./
+drwxrwxr-x  4 cakedev cakedev 4096 Jan  4 07:49 ../
+drwxrwxr-x 19 cakedev cakedev 4096 Jan  4 07:49 en/
+cakedev@uber1:~/ckdev/docs/build/html$ cd en/
+cakedev@uber1:~/ckdev/docs/build/html/en$ ll
+total 1128
+drwxrwxr-x 19 cakedev cakedev   4096 Jan  4 07:49 ./
+drwxrwxr-x  3 cakedev cakedev   4096 Jan  4 07:49 ../
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 appendices/
+-rw-rw-r--  1 cakedev cakedev  17137 Jan  4 07:49 appendices.html
+-rw-rw-r--  1 cakedev cakedev    230 Jan  4 07:49 .buildinfo
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 cakephp-overview/
+-rw-rw-r--  1 cakedev cakedev  12066 Jan  4 07:49 cakephp-overview.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 console-and-shells/
+-rw-rw-r--  1 cakedev cakedev 110977 Jan  4 07:49 console-and-shells.html
+-rw-rw-r--  1 cakedev cakedev  57158 Jan  4 07:49 contents.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 contributing/
+-rw-rw-r--  1 cakedev cakedev  12216 Jan  4 07:49 contributing.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 controllers/
+-rw-rw-r--  1 cakedev cakedev  91887 Jan  4 07:49 controllers.html
+drwxrwxr-x  5 cakedev cakedev   4096 Jan  4 07:49 core-libraries/
+-rw-rw-r--  1 cakedev cakedev  20273 Jan  4 07:49 core-libraries.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 core-utility-libraries/
+-rw-rw-r--  1 cakedev cakedev  17333 Jan  4 07:49 deployment.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 development/
+-rw-rw-r--  1 cakedev cakedev  12595 Jan  4 07:49 development.html
+-rw-rw-r--  1 cakedev cakedev  54195 Jan  4 07:49 epub-contents.html
+-rw-rw-r--  1 cakedev cakedev 135717 Jan  4 07:49 genindex.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 getting-started/
+-rw-rw-r--  1 cakedev cakedev  99471 Jan  4 07:49 getting-started.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 _images/
+-rw-rw-r--  1 cakedev cakedev  14292 Jan  4 07:49 index.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 installation/
+-rw-rw-r--  1 cakedev cakedev  27771 Jan  4 07:49 installation.html
+drwxrwxr-x  3 cakedev cakedev   4096 Jan  4 07:49 models/
+-rw-rw-r--  1 cakedev cakedev  21977 Jan  4 07:49 models.html
+-rw-rw-r--  1 cakedev cakedev  10411 Jan  4 07:49 objects.inv
+-rw-rw-r--  1 cakedev cakedev  24178 Jan  4 07:49 pdf-contents.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 plugins/
+-rw-rw-r--  1 cakedev cakedev  11840 Jan  4 07:49 plugins.html
+-rw-rw-r--  1 cakedev cakedev  10010 Jan  4 07:49 search.html
+-rw-rw-r--  1 cakedev cakedev 173431 Jan  4 07:49 searchindex.js
+drwxrwxr-x 16 cakedev cakedev   4096 Jan  4 07:49 _sources/
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 _static/
+drwxrwxr-x  5 cakedev cakedev   4096 Jan  4 07:49 tutorials-and-examples/
+-rw-rw-r--  1 cakedev cakedev  12678 Jan  4 07:49 tutorials-and-examples.html
+drwxrwxr-x  2 cakedev cakedev   4096 Jan  4 07:49 views/
+-rw-rw-r--  1 cakedev cakedev  80247 Jan  4 07:49 views.html
+cakedev@uber1:~/ckdev/docs/build/html/en$ cd ..
+cakedev@uber1:~/ckdev/docs/build/html$ cd ..
+cakedev@uber1:~/ckdev/docs/build$ ll
+total 16
+drwxrwxr-x  4 cakedev cakedev 4096 Jan  4 07:49 ./
+drwxrwxrwx 13 cakedev cakedev 4096 Jan  4 07:49 ../
+drwxrwxr-x  3 cakedev cakedev 4096 Jan  4 07:49 doctrees/
+drwxrwxr-x  3 cakedev cakedev 4096 Jan  4 07:49 html/
+cakedev@uber1:~/ckdev/docs/build$ python -M SimpleHttpServer
+Unknown option: -M
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+cakedev@uber1:~/ckdev/docs/build$ python -m SimpleHttpServer
+/usr/bin/python: No module named SimpleHttpServer
+cakedev@uber1:~/ckdev/docs/build$ $ python -m SimpleHTTPServer
+$: command not found
+cakedev@uber1:~/ckdev/docs/build$ python -m SimpleHTTPServer
+Serving HTTP on 0.0.0.0 port 8000 ...
+^X^CTraceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 230, in <module>
+    test()
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 226, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 599, in test
+    httpd.serve_forever()
+  File "/usr/lib/python2.7/SocketServer.py", line 236, in serve_forever
+    poll_interval)
+  File "/usr/lib/python2.7/SocketServer.py", line 155, in _eintr_retry
+    return func(*args)
+KeyboardInterrupt
+cakedev@uber1:~/ckdev/docs/build$ pifconfig
+The program 'pifconfig' is currently not installed. You can install it by typing                                                     :
+sudo apt-get install python-ethtool
+cakedev@uber1:~/ckdev/docs/build$ ifconfig
+eth0      Link encap:Ethernet  HWaddr 08:00:27:8f:8b:85
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe8f:8b85/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:96084 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:22038 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:113454270 (113.4 MB)  TX bytes:1346356 (1.3 MB)
+
+eth1      Link encap:Ethernet  HWaddr 08:00:27:8f:ea:ae
+          inet addr:172.13.10.15  Bcast:172.13.10.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe8f:eaae/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:4582 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:5449 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:338930 (338.9 KB)  TX bytes:925317 (925.3 KB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:36 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:36 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:2080 (2.0 KB)  TX bytes:2080 (2.0 KB)
+
+cakedev@uber1:~/ckdev/docs/build$ python -m SimpleHTTPServer
+Serving HTTP on 0.0.0.0 port 8000 ...
+172.13.10.2 - - [04/Jan/2016 07:56:17] "GET / HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:17] code 404, message File not found
+172.13.10.2 - - [04/Jan/2016 07:56:17] "GET /favicon.ico HTTP/1.1" 404 -
+172.13.10.2 - - [04/Jan/2016 07:56:19] "GET /html/ HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/ HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/default.css HTTP/1.                                                     1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/pygments.css HTTP/1                                                     .1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/jquery.js HTTP/1.1"                                                      200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/underscore.js HTTP/                                                     1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/doctools.js HTTP/1.                                                     1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/app.js HTTP/1.1" 20                                                     0 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/search.js HTTP/1.1"                                                      200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/typeahead.js HTTP/1                                                     .1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/foundation.css HTTP                                                     /1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/csf-navbar.css HTTP                                                     /1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/cake.css HTTP/1.1"                                                      200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/modernizr.foundatio                                                     n.js HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/foundation.js HTTP/                                                     1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/cake-logo.png HTTP/                                                     1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/main-link.png HTTP/                                                     1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/header-bg.png HTTP/                                                     1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/header-halftone.png                                                      HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/Museo_Slab_500-webf                                                     ont.woff HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/interact.png HTTP/1                                                     .1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:20] "GET /html/en/_static/pale-halftone-botto                                                     m.png HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:21] "GET /html/en/_static/favicon.ico HTTP/1.                                                     1" 200 -
+172.13.10.2 - - [04/Jan/2016 07:56:27] "GET /html/en/installation.html HTTP/1.1"                                                      200 -
+172.13.10.2 - - [04/Jan/2016 07:56:27] "GET /html/en/_static/icons.png HTTP/1.1"                                                      200 -
+^X^CTraceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 230, in <module>
+    test()
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 226, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 599, in test
+    httpd.serve_forever()
+  File "/usr/lib/python2.7/SocketServer.py", line 236, in serve_forever
+    poll_interval)
+  File "/usr/lib/python2.7/SocketServer.py", line 155, in _eintr_retry
+    return func(*args)
+KeyboardInterrupt
+cakedev@uber1:~/ckdev/docs/build$ cd ..
+cakedev@uber1:~/ckdev/docs$ cd -P
+cakedev@uber1:~$ sudo mkdir compassws
+cakedev@uber1:~$ sudo chmod 777 compassws/
+cakedev@uber1:~$ cd compassws/
+cakedev@uber1:~/compassws$ ll
+total 8
+drwxrwxrwx 2 root    root    4096 Jan  4 08:00 ./
+drwxr-xr-x 8 cakedev cakedev 4096 Jan  4 08:00 ../
+cakedev@uber1:~/compassws$ sudo curl -sS https://getcomposer.org/installer | php                                                     
+#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /home/cakedev/compassws/composer.phar
+Use it: php composer.phar
+cakedev@uber1:~/compassws$ php -r "readfile('https://getcomposer.org/installer')                                                     ;" | php
+#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /home/cakedev/compassws/composer.phar
+Use it: php composer.phar
+cakedev@uber1:~/compassws$ ls
+composer.phar
+cakedev@uber1:~/compassws$ php composer.phar self-update
+You are already using composer version 72cd6afdfce16f36a9fd786bc1b2f32b851e764f.
+cakedev@uber1:~/compassws$ cd ..
+cakedev@uber1:~$ ll
+total 1260
+drwxr-xr-x 8 cakedev cakedev    4096 Jan  4 08:00 ./
+drwxr-xr-x 4 root    root       4096 Jan  3 10:25 ../
+-rw------- 1 cakedev cakedev    1262 Jan  3 11:18 .bash_history
+-rw-r--r-- 1 cakedev cakedev     220 Jan  3 10:25 .bash_logout
+-rw-r--r-- 1 cakedev cakedev    3637 Jan  3 10:25 .bashrc
+drwx------ 2 cakedev cakedev    4096 Jan  3 10:28 .cache/
+drwxrwxrwx 3 root    root       4096 Jan  4 07:40 ckdev/
+drwxrwxrwx 2 root    root       4096 Jan  4 08:01 compassws/
+drwxrwxr-x 3 cakedev cakedev    4096 Jan  3 11:04 .composer/
+-rwxr-xr-x 1 cakedev cakedev 1238154 Jan  3 11:04 composer.phar*
+-rw-r--r-- 1 cakedev cakedev     675 Jan  3 10:25 .profile
+drwxrwxrwx 2 root    root       4096 Jan  3 10:55 webprojects/
+drwxrwxrwx 3 root    root       4096 Jan  3 10:59 WebSites/
+cakedev@uber1:~$ cd ckdev/
+cakedev@uber1:~/ckdev$ ll
+total 12
+drwxrwxrwx  3 root    root    4096 Jan  4 07:40 ./
+drwxr-xr-x  8 cakedev cakedev 4096 Jan  4 08:00 ../
+drwxrwxrwx 13 cakedev cakedev 4096 Jan  4 07:49 docs/
+cakedev@uber1:~/ckdev$ sudo mkdir cakephpgit3
+cakedev@uber1:~/ckdev$ cd -P
+cakedev@uber1:~$ cd webprojects/
+cakedev@uber1:~/webprojects$ ll
+total 8
+drwxrwxrwx 2 root    root    4096 Jan  3 10:55 ./
+drwxr-xr-x 8 cakedev cakedev 4096 Jan  4 08:00 ../
+cakedev@uber1:~/webprojects$ git clone https://github.com/cakephp/cakephp.git
+Cloning into 'cakephp'...
+remote: Counting objects: 307482, done.
+remote: Compressing objects: 100% (178/178), done.
+^X^Civing objects:  23% (72604/307482), 24.53 MiB | 119.00 KiB/s
+cakedev@uber1:~/webprojects$ ls
+cakedev@uber1:~/webprojects$ sudo composer require cakephp/cakephp:"~3.1"
+sudo: composer: command not found
+cakedev@uber1:~/webprojects$ composer require cakephp/cakephp:"~3.1"
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects$ php composer.phar create-project --prefer-dist cake                                                     php/app [app_name]
+Could not open input file: composer.phar
+cakedev@uber1:~/webprojects$ php composer.phar create-project --prefer-dist cake                                                     php/app appalex
+Could not open input file: composer.phar
+cakedev@uber1:~/webprojects$ php composer.phar create-project --prefer-dist cake                                                     php/app bookmarker
+Could not open input file: composer.phar
+cakedev@uber1:~/webprojects$ sudo php composer.phar create-project --prefer-dist                                                      cakephp/app bookmarker
+Could not open input file: composer.phar
+cakedev@uber1:~/webprojects$ composer require cakephp/cakephp:"~3.1"
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects$ composer require cakephp/cakephp
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects$ mkdir srccake
+cakedev@uber1:~/webprojects$ chmmod 777 srccake/
+No command 'chmmod' found, did you mean:
+ Command 'chmod' from package 'coreutils' (main)
+chmmod: command not found
+cakedev@uber1:~/webprojects$ sudo chmmod 777 srccake/
+sudo: chmmod: command not found
+cakedev@uber1:~/webprojects$ sudo chmod 777 srccake/
+cakedev@uber1:~/webprojects$ cd srccake/
+cakedev@uber1:~/webprojects/srccake$ git clone https://github.com/cakephp/cakeph                                                     p.git
+Cloning into 'cakephp'...
+^X^C
+cakedev@uber1:~/webprojects/srccake$ git clone https://github.com/cakephp/cakeph                                                     p.git
+Cloning into 'cakephp'...
+remote: Counting objects: 307482, done.
+remote: Compressing objects: 100% (178/178), done.
+remote: Total 307482 (delta 103), reused 0 (delta 0), pack-reused 307304
+Receiving objects: 100% (307482/307482), 64.47 MiB | 130.00 KiB/s, done.
+Resolving deltas: 100% (225485/225485), done.
+Checking connectivity... done.
+cakedev@uber1:~/webprojects/srccake$ ll
+total 12
+drwxrwxrwx 3 cakedev cakedev 4096 Jan  4 08:22 ./
+drwxrwxrwx 3 root    root    4096 Jan  4 08:18 ../
+drwxrwxr-x 7 cakedev cakedev 4096 Jan  4 08:44 cakephp/
+cakedev@uber1:~/webprojects/srccake$ sudo apt-get update
+[sudo] password for cakedev:
+Get:1 http://security.ubuntu.com trusty-security InRelease [64.4 kB]
+Ign http://us.archive.ubuntu.com trusty InRelease
+Get:2 http://security.ubuntu.com trusty-security/main Sources [101 kB]
+Get:3 http://us.archive.ubuntu.com trusty-updates InRelease [64.4 kB]
+Get:4 http://security.ubuntu.com trusty-security/restricted Sources [4,035 B]
+Get:5 http://security.ubuntu.com trusty-security/universe Sources [31.9 kB]
+Get:6 http://security.ubuntu.com trusty-security/multiverse Sources [2,357 B]
+Get:7 http://security.ubuntu.com trusty-security/main i386 Packages [374 kB]
+Get:8 http://us.archive.ubuntu.com trusty-backports InRelease [64.5 kB]
+Get:9 http://us.archive.ubuntu.com trusty Release.gpg [933 B]
+Get:10 http://us.archive.ubuntu.com trusty-updates/main Sources [246 kB]
+Get:11 http://us.archive.ubuntu.com trusty-updates/restricted Sources [5,359 B]
+Get:12 http://security.ubuntu.com trusty-security/restricted i386 Packages [12.7                                                      kB]
+Get:13 http://security.ubuntu.com trusty-security/universe i386 Packages [122 kB                                                     ]
+Get:14 http://us.archive.ubuntu.com trusty-updates/universe Sources [145 kB]
+Get:15 http://security.ubuntu.com trusty-security/multiverse i386 Packages [4,95                                                     5 B]
+Get:16 http://security.ubuntu.com trusty-security/main Translation-en [218 kB]
+Get:17 http://us.archive.ubuntu.com trusty-updates/multiverse Sources [5,161 B]
+Get:18 http://us.archive.ubuntu.com trusty-updates/main i386 Packages [654 kB]
+Get:19 http://security.ubuntu.com trusty-security/multiverse Translation-en [2,4                                                     37 B]
+Get:20 http://security.ubuntu.com trusty-security/restricted Translation-en [3,2                                                     06 B]
+Get:21 http://security.ubuntu.com trusty-security/universe Translation-en [71.1                                                      kB]
+Get:22 http://us.archive.ubuntu.com trusty-updates/restricted i386 Packages [15.                                                     6 kB]
+Get:23 http://us.archive.ubuntu.com trusty-updates/universe i386 Packages [334 k                                                     B]
+Get:24 http://us.archive.ubuntu.com trusty-updates/multiverse i386 Packages [13.                                                     1 kB]
+Get:25 http://us.archive.ubuntu.com trusty-updates/main Translation-en [340 kB]
+Get:26 http://us.archive.ubuntu.com trusty-updates/multiverse Translation-en [6,                                                     832 B]
+Get:27 http://us.archive.ubuntu.com trusty-updates/restricted Translation-en [3,                                                     699 B]
+Get:28 http://us.archive.ubuntu.com trusty-updates/universe Translation-en [174                                                      kB]
+Get:29 http://us.archive.ubuntu.com trusty-backports/main Sources [8,221 B]
+Get:30 http://us.archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+Get:31 http://us.archive.ubuntu.com trusty-backports/universe Sources [33.2 kB]
+Get:32 http://us.archive.ubuntu.com trusty-backports/multiverse Sources [1,898 B                                                     ]
+Get:33 http://us.archive.ubuntu.com trusty-backports/main i386 Packages [9,411 B                                                     ]
+Get:34 http://us.archive.ubuntu.com trusty-backports/restricted i386 Packages [2                                                     8 B]
+Get:35 http://us.archive.ubuntu.com trusty-backports/universe i386 Packages [39.                                                     6 kB]
+Get:36 http://us.archive.ubuntu.com trusty-backports/multiverse i386 Packages [1                                                     ,552 B]
+Get:37 http://us.archive.ubuntu.com trusty-backports/main Translation-en [5,549                                                      B]
+Get:38 http://us.archive.ubuntu.com trusty-backports/multiverse Translation-en [                                                     1,215 B]
+Get:39 http://us.archive.ubuntu.com trusty-backports/restricted Translation-en [                                                     14 B]
+Get:40 http://us.archive.ubuntu.com trusty-backports/universe Translation-en [34                                                     .5 kB]
+Get:41 http://us.archive.ubuntu.com trusty Release [58.5 kB]
+Get:42 http://us.archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:43 http://us.archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:44 http://us.archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:45 http://us.archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:46 http://us.archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Get:47 http://us.archive.ubuntu.com trusty/main i386 Packages [1,348 kB]
+Get:48 http://us.archive.ubuntu.com trusty/restricted i386 Packages [13.4 kB]
+Get:49 http://us.archive.ubuntu.com trusty/universe i386 Packages [5,866 kB]
+Get:50 http://us.archive.ubuntu.com trusty/multiverse i386 Packages [134 kB]
+Get:51 http://us.archive.ubuntu.com trusty/main Translation-en [762 kB]
+Get:52 http://us.archive.ubuntu.com trusty/multiverse Translation-en [102 kB]
+Get:53 http://us.archive.ubuntu.com trusty/restricted Translation-en [3,457 B]
+Get:54 http://us.archive.ubuntu.com trusty/universe Translation-en [4,089 kB]
+Ign http://us.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://us.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://us.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://us.archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 22.9 MB in 8min 41s (43.8 kB/s)
+Reading package lists... Done
+cakedev@uber1:~/webprojects/srccake$ sudo apt-get upgrade
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+The following packages have been kept back:
+  linux-generic-lts-vivid linux-headers-generic-lts-vivid
+  linux-image-generic-lts-vivid
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+cakedev@uber1:~/webprojects/srccake$ ls
+cakephp
+cakedev@uber1:~/webprojects/srccake$ sudo chmod -R 777 cakephp/
+cakedev@uber1:~/webprojects/srccake$ ls
+cakephp
+cakedev@uber1:~/webprojects/srccake$ composer require cakephp/cakephp:"~3.1"
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects/srccake$ composer require cakephp/cakephp:"~3.1"
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects/srccake$ cd cakephp/
+cakedev@uber1:~/webprojects/srccake/cakephp$ ls
+appveyor.yml   contrib          Makefile          src
+composer.json  CONTRIBUTING.md  phpunit.xml.dist  tests
+config         LICENSE.txt      README.md         VERSION.txt
+cakedev@uber1:~/webprojects/srccake/cakephp$ $ composer require cakephp/cakephp:                                                     "~3.1"
+$: command not found
+cakedev@uber1:~/webprojects/srccake/cakephp$ $ composer require cakephp/cakephp:                                                     "~3.1"
+$: command not found
+cakedev@uber1:~/webprojects/srccake/cakephp$ cd -P
+cakedev@uber1:~$ sudo apt-get install phpmyadmin
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+phpmyadmin is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+cakedev@uber1:~$ sudo php5enmod mcrypt
+cakedev@uber1:~$ sudo service apache2 restart
+ * Restarting web server apache2                                                                                                     AH00558: apache2: Could not reliably determine the server's fully qualified doma                                                     in name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress th                                                     is message
+                                                                         [ OK ]
+cakedev@uber1:~$ cd webprojects/
+cakedev@uber1:~/webprojects$ ls
+srccake
+cakedev@uber1:~/webprojects$ cd srccake/
+cakedev@uber1:~/webprojects/srccake$ ls
+cakephp
+cakedev@uber1:~/webprojects/srccake$ php composer.phar create-project --prefer-d                                                     ist cakephp/app bookmarker
+Could not open input file: composer.phar
+cakedev@uber1:~/webprojects/srccake$ git clone https://github.com/cakephp/app.gi                                                     t
+Cloning into 'app'...
+remote: Counting objects: 9933, done.
+remote: Compressing objects: 100% (15/15), done.
+Receiving objects: 100% (9933/9933), 2.00 MiB | 78.00 KiB/s, done.
+remote: Total 9933 (delta 4), reused 0 (delta 0), pack-reused 9917
+Resolving deltas: 100% (4294/4294), done.
+Checking connectivity... done.
+cakedev@uber1:~/webprojects/srccake$ ls
+app  cakephp
+cakedev@uber1:~/webprojects/srccake$ composer create-project --prefer-dist cakep                                                     hp/app ashokapp
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects/srccake$ composer create-project --prefer-dist cakep                                                     hp/app ashokapp
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects/srccake$ composer
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects/srccake$ curl -sS https://getcomposer.org/installer                                                      | php
+
+#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /home/cakedev/webprojects/srccake/composer.p                                                     har
+Use it: php composer.phar
+cakedev@uber1:~/webprojects/srccake$ mv composer.phar /usr/local/bin/composer
+mv: cannot move ‘composer.phar’ to ‘/usr/local/bin/composer’: Permission denied
+cakedev@uber1:~/webprojects/srccake$ mv composer.phar /cakedev/local/bin/compose                                                     r
+mv: cannot move ‘composer.phar’ to ‘/cakedev/local/bin/composer’: No such file o                                                     r directory
+cakedev@uber1:~/webprojects/srccake$ curl -sS https://getcomposer.org/installer                                                      | sudo php -- --install-dir=/usr/local/bin
+#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /usr/local/bin/composer.phar
+Use it: php /usr/local/bin/composer.phar
+cakedev@uber1:~/webprojects/srccake$ composer
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects/srccake$ mv composer.phar /cakedev/local/bin/compose                                                     r
+mv: cannot move ‘composer.phar’ to ‘/cakedev/local/bin/composer’: No such file o                                                     r directory
+cakedev@uber1:~/webprojects/srccake$ clear
+cakedev@uber1:~/webprojects/srccake$ composer self-update
+No command 'composer' found, did you mean:
+ Command 'compose' from package 'mime-support' (main)
+composer: command not found
+cakedev@uber1:~/webprojects/srccake$ sudo apt-get install composer
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package composer
+cakedev@uber1:~/webprojects/srccake$ sudo apt-get install comp
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package comp
+cakedev@uber1:~/webprojects/srccake$ sudo apt-get install curl php5-cli git
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+curl is already the newest version.
+git is already the newest version.
+php5-cli is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+cakedev@uber1:~/webprojects/srccake$ curl -sS https://getcomposer.org/installer                                                      | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /usr/local/bin/composer
+Use it: php /usr/local/bin/composer
+cakedev@uber1:~/webprojects/srccake$
+cakedev@uber1:~/webprojects/srccake$ composer
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 1.0-dev (72cd6afdfce16f36a9fd786bc1b2f32b851e764f) 2015-12-28 1                                                     7:35:19
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display this help message
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi                     Force ANSI output
+      --no-ansi                  Disable ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as workin                                                     g directory.
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for norma                                                     l output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about           Short information about Composer
+  archive         Create an archive of this composer package
+  browse          Opens the package's repository URL or homepage in your browser                                                     .
+  clear-cache     Clears composer's internal package cache.
+  clearcache      Clears composer's internal package cache.
+  config          Set config options
+  create-project  Create new project from a package into given directory.
+  depends         Shows which packages depend on the given package
+  diagnose        Diagnoses the system to identify common errors.
+  dump-autoload   Dumps the autoloader
+  dumpautoload    Dumps the autoloader
+  global          Allows running commands in the global composer dir ($COMPOSER_                                                     HOME).
+  help            Displays help for a command
+  home            Opens the package's repository URL or homepage in your browser                                                     .
+  info            Show information about packages
+  init            Creates a basic composer.json file in current directory.
+  install         Installs the project dependencies from the composer.lock file                                                      if present, or falls back on the composer.json.
+  licenses        Show information about licenses of dependencies
+  list            Lists commands
+  remove          Removes a package from the require or require-dev
+  require         Adds required packages to your composer.json and installs them
+  run-script      Run the scripts defined in composer.json.
+  search          Search for packages
+  self-update     Updates composer.phar to the latest version.
+  selfupdate      Updates composer.phar to the latest version.
+  show            Show information about packages
+  status          Show a list of locally modified packages
+  suggests        Show package suggestions
+  update          Updates your dependencies to the latest version according to c                                                     omposer.json, and updates the composer.lock file.
+  validate        Validates a composer.json and composer.lock
+cakedev@uber1:~/webprojects/srccake$ ls
+app  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ cd -P
+cakedev@uber1:~$ composer
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 1.0-dev (72cd6afdfce16f36a9fd786bc1b2f32b851e764f) 2015-12-28 1                                                     7:35:19
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display this help message
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi                     Force ANSI output
+      --no-ansi                  Disable ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as workin                                                     g directory.
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for norma                                                     l output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about           Short information about Composer
+  archive         Create an archive of this composer package
+  browse          Opens the package's repository URL or homepage in your browser                                                     .
+  clear-cache     Clears composer's internal package cache.
+  clearcache      Clears composer's internal package cache.
+  config          Set config options
+  create-project  Create new project from a package into given directory.
+  depends         Shows which packages depend on the given package
+  diagnose        Diagnoses the system to identify common errors.
+  dump-autoload   Dumps the autoloader
+  dumpautoload    Dumps the autoloader
+  global          Allows running commands in the global composer dir ($COMPOSER_                                                     HOME).
+  help            Displays help for a command
+  home            Opens the package's repository URL or homepage in your browser                                                     .
+  info            Show information about packages
+  init            Creates a basic composer.json file in current directory.
+  install         Installs the project dependencies from the composer.lock file                                                      if present, or falls back on the composer.json.
+  licenses        Show information about licenses of dependencies
+  list            Lists commands
+  remove          Removes a package from the require or require-dev
+  require         Adds required packages to your composer.json and installs them
+  run-script      Run the scripts defined in composer.json.
+  search          Search for packages
+  self-update     Updates composer.phar to the latest version.
+  selfupdate      Updates composer.phar to the latest version.
+  show            Show information about packages
+  status          Show a list of locally modified packages
+  suggests        Show package suggestions
+  update          Updates your dependencies to the latest version according to c                                                     omposer.json, and updates the composer.lock file.
+  validate        Validates a composer.json and composer.lock
+cakedev@uber1:~$ cls
+No command 'cls' found, but there are 18 similar ones
+cls: command not found
+cakedev@uber1:~$ clear
+cakedev@uber1:~$ ll
+total 1260
+drwxr-xr-x 8 cakedev cakedev    4096 Jan  4 08:00 ./
+drwxr-xr-x 4 root    root       4096 Jan  3 10:25 ../
+-rw------- 1 cakedev cakedev    1262 Jan  3 11:18 .bash_history
+-rw-r--r-- 1 cakedev cakedev     220 Jan  3 10:25 .bash_logout
+-rw-r--r-- 1 cakedev cakedev    3637 Jan  3 10:25 .bashrc
+drwx------ 2 cakedev cakedev    4096 Jan  3 10:28 .cache/
+drwxrwxrwx 4 root    root       4096 Jan  4 08:04 ckdev/
+drwxrwxrwx 2 root    root       4096 Jan  4 08:01 compassws/
+drwxrwxr-x 3 cakedev cakedev    4096 Jan  3 11:04 .composer/
+-rwxr-xr-x 1 cakedev cakedev 1238154 Jan  3 11:04 composer.phar*
+-rw-r--r-- 1 cakedev cakedev     675 Jan  3 10:25 .profile
+drwxrwxrwx 3 root    root       4096 Jan  4 08:18 webprojects/
+drwxrwxrwx 3 root    root       4096 Jan  3 10:59 WebSites/
+cakedev@uber1:~$ cd WebSites/
+cakedev@uber1:~/WebSites$ ls
+Catalog
+cakedev@uber1:~/WebSites$ cd ..
+cakedev@uber1:~$ cd webprojects/
+cakedev@uber1:~/webprojects$ ls
+srccake
+cakedev@uber1:~/webprojects$ cd srccake/
+cakedev@uber1:~/webprojects/srccake$ ls
+app  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ php composer.phar create-project --prefer-d                                                     ist cakephp/app
+^X^C
+cakedev@uber1:~/webprojects/srccake$ php composer.phar create-project --prefer-d                                                     ist cakephp/app bannjayapp
+file_put_contents(/home/cakedev/.composer/cache/repo/https---packagist.org/p-pro                                                     vider-2015-04.json): failed to open stream: Permission denied
+http://packagist.org could not be fully loaded, package information was loaded f                                                     rom the local cache and may be out of date
+Installing cakephp/app (3.1.2)
+  - Installing cakephp/app (3.1.2)
+    Downloading: 100%
+
+Created project in bannjayapp
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+file_put_contents(/home/cakedev/.composer/cache/repo/https---packagist.org/p-pro                                                     vider-2015-04.json): failed to open stream: Permission denied
+http://packagist.org could not be fully loaded, package information was loaded f                                                     rom the local cache and may be out of date
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - cakephp/cakephp 3.1.6 requires ext-intl * -> the requested PHP extension i                                                     ntl is missing from your system.
+    - cakephp/cakephp 3.1.5 requires ext-intl * -> the requested PHP extension i                                                     ntl is missing from your system.
+    - cakephp/cakephp 3.1.4 requires ext-intl * -> the requested PHP extension i                                                     ntl is missing from your system.
+    - cakephp/cakephp 3.1.3 requires ext-intl * -> the requested PHP extension i                                                     ntl is missing from your system.
+    - cakephp/cakephp 3.1.2 requires ext-intl * -> the requested PHP extension i                                                     ntl is missing from your system.
+    - cakephp/cakephp 3.1.1 requires ext-intl * -> the requested PHP extension i                                                     ntl is missing from your system.
+    - cakephp/cakephp 3.1.0 requires ext-intl * -> the requested PHP extension i                                                     ntl is missing from your system.
+    - Installation request for cakephp/cakephp ~3.1 -> satisfiable by cakephp/ca                                                     kephp[3.1.0, 3.1.1, 3.1.2, 3.1.3, 3.1.4, 3.1.5, 3.1.6].
+
+cakedev@uber1:~/webprojects/srccake$ sudo php composer.phar create-project --prefer-dist cakephp/app bannjayapp
+Installing cakephp/app (3.1.2)
+
+
+
+  [InvalidArgumentException]
+  Project directory bannjayapp/ is not empty.
+
+
+
+create-project [-s|--stability STABILITY] [--prefer-source] [--prefer-dist] [--repository-url REPOSITORY-URL] [--dev] [--no-dev] [--n [--no-scripts] [--no-progress] [--keep-vcs] [--no-install] [--ignore-platform-reqs] [--] [<package>] [<directory>] [<version>]
+
+
+cakedev@uber1:~/webprojects/srccake$ sudo php composer.phar create-project --prefer-dist cakephp/app appleapp1
+Installing cakephp/app (3.1.2)
+  - Installing cakephp/app (3.1.2)
+    Loading from cache
+
+Created project in appleapp1
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - cakephp/cakephp 3.1.6 requires ext-intl * -> the requested PHP extension intl is missing from your system.
+    - cakephp/cakephp 3.1.5 requires ext-intl * -> the requested PHP extension intl is missing from your system.
+    - cakephp/cakephp 3.1.4 requires ext-intl * -> the requested PHP extension intl is missing from your system.
+    - cakephp/cakephp 3.1.3 requires ext-intl * -> the requested PHP extension intl is missing from your system.
+    - cakephp/cakephp 3.1.2 requires ext-intl * -> the requested PHP extension intl is missing from your system.
+    - cakephp/cakephp 3.1.1 requires ext-intl * -> the requested PHP extension intl is missing from your system.
+    - cakephp/cakephp 3.1.0 requires ext-intl * -> the requested PHP extension intl is missing from your system.
+    - Installation request for cakephp/cakephp ~3.1 -> satisfiable by cakephp/cakephp[3.1.0, 3.1.1, 3.1.2, 3.1.3, 3.1.4, 3.1.5, 3.1.6
+
+cakedev@uber1:~/webprojects/srccake$ ^C
+cakedev@uber1:~/webprojects/srccake$ ^C
+cakedev@uber1:~/webprojects/srccake$ sudo apt-get install php5-intl
+[sudo] password for cakedev:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  libicu52
+The following NEW packages will be installed:
+  libicu52 php5-intl
+0 upgraded, 2 newly installed, 0 to remove and 3 not upgraded.
+Need to get 6,881 kB of archives.
+After this operation, 28.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libicu52 i386 52.1-3ubuntu0.4 [6,775 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/universe php5-intl i386 5.5.9+dfsg-1ubuntu4.14 [106 kB]
+Fetched 6,881 kB in 56s (122 kB/s)
+Selecting previously unselected package libicu52:i386.
+(Reading database ... 70817 files and directories currently installed.)
+Preparing to unpack .../libicu52_52.1-3ubuntu0.4_i386.deb ...
+Unpacking libicu52:i386 (52.1-3ubuntu0.4) ...
+Selecting previously unselected package php5-intl.
+Preparing to unpack .../php5-intl_5.5.9+dfsg-1ubuntu4.14_i386.deb ...
+Unpacking php5-intl (5.5.9+dfsg-1ubuntu4.14) ...
+Processing triggers for libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.14) ...
+Setting up libicu52:i386 (52.1-3ubuntu0.4) ...
+Setting up php5-intl (5.5.9+dfsg-1ubuntu4.14) ...
+
+Creating config file /etc/php5/mods-available/intl.ini with new version
+php5_invoke: Enable module intl for apache2 SAPI
+php5_invoke: Enable module intl for cli SAPI
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Processing triggers for libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.14) ...
+cakedev@uber1:~/webprojects/srccake$ sudo service apache2 restart
+ * Restarting web server apache2                                                                                                     AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directge
+
+cakedev@uber1:~/webprojects/srccake$ ls
+app  appleapp1  bannjayapp  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ cd bannjayapp/
+cakedev@uber1:~/webprojects/srccake/bannjayapp$ ls
+bin  composer.json  config  index.php  logs  phpunit.xml.dist  plugins  README.md  src  tests  tmp  vendor  webroot
+cakedev@uber1:~/webprojects/srccake/bannjayapp$ cd ..
+cakedev@uber1:~/webprojects/srccake$ ls
+app  appleapp1  bannjayapp  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ rm -R bannjayapp/
+cakedev@uber1:~/webprojects/srccake$ ls
+app  appleapp1  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ rm -R appleapp1/
+rm: descend into write-protected directory ‘appleapp1/’?
+cakedev@uber1:~/webprojects/srccake$ ls
+app  appleapp1  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ sudo rm -R appleapp1
+cakedev@uber1:~/webprojects/srccake$ ls
+app  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ sudo php composer.phar create-project --prefer-dist cakephp/app bannjayapp
+Installing cakephp/app (3.1.2)
+  - Installing cakephp/app (3.1.2)
+    Loading from cache
+
+Created project in bannjayapp
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+  - Installing aura/installer-default (1.0.0)
+    Downloading: 100%
+
+  - Installing cakephp/plugin-installer (0.0.12)
+    Downloading: 100%
+
+  - Installing psr/log (1.0.0)
+    Downloading: 100%
+
+  - Installing nesbot/carbon (1.13.0)
+    Downloading: 100%
+
+  - Installing mobiledetect/mobiledetectlib (2.8.19)
+    Downloading: 100%
+
+  - Installing aura/intl (1.1.1)
+    Downloading: 100%
+
+  - Installing ircmaxell/password-compat (v1.0.4)
+    Downloading: 100%
+
+  - Installing cakephp/cakephp (3.1.6)
+    Downloading: 100%
+
+  - Installing symfony/yaml (v3.0.1)
+    Downloading: 100%
+
+  - Installing symfony/filesystem (v3.0.1)
+    Downloading: 100%
+
+  - Installing symfony/config (v3.0.1)
+    Downloading: 100%
+
+  - Installing symfony/polyfill-mbstring (v1.0.1)
+    Downloading: 100%
+
+  - Installing symfony/console (v3.0.1)
+    Downloading: 100%
+
+  - Installing robmorgan/phinx (v0.5.1)
+    Downloading: 100%
+
+  - Installing cakephp/migrations (1.5.2)
+    Downloading: 100%
+
+  - Installing jakub-onderka/php-console-color (0.1)
+    Downloading: 100%
+
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2)
+    Downloading: 100%
+
+  - Installing dnoegel/php-xdg-base-dir (0.1)
+    Downloading: 100%
+
+  - Installing nikic/php-parser (v2.0.0)
+    Downloading: 100%
+
+  - Installing symfony/var-dumper (v3.0.1)
+    Downloading: 100%
+
+  - Installing psy/psysh (v0.6.1)
+    Downloading: 100%
+
+  - Installing jdorn/sql-formatter (v1.2.17)
+    Downloading: 100%
+
+  - Installing cakephp/debug_kit (3.2.4)
+    Downloading: 100%
+
+  - Installing cakephp/bake (1.1.3)
+    Downloading: 100%
+
+symfony/console suggests installing symfony/event-dispatcher ()
+symfony/console suggests installing symfony/process ()
+symfony/var-dumper suggests installing ext-symfony_debug ()
+psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+cakephp/debug_kit suggests installing ext-sqlite (DebugKit needs to store panel data in a database. SQLite is simple and easy to use.
+Writing lock file
+Generating autoload files
+> Cake\Composer\Installer\PluginInstaller::postAutoloadDump
+> App\Console\Installer::postInstall
+Created `config/app.php` file
+Set Folder Permissions ? (Default to Y) [Y,n]? Y
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/tmp/cache
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/tmp/cache/models
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/tmp/cache/persistent
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/tmp/cache/views
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/tmp/sessions
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/tmp/tests
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/tmp
+Permissions set on /home/cakedev/webprojects/srccake/bannjayapp/logs
+Updated Security.salt value in config/app.php
+cakedev@uber1:~/webprojects/srccake$ sudo chmod -R 777 bannjayapp
+cakedev@uber1:~/webprojects/srccake$ sudo chmod -R 777 bannjayapp/
+cakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ cd bannjayapp/
+cakedev@uber1:~/webprojects/srccake/bannjayapp$ ls
+bin  composer.json  composer.lock  config  index.php  logs  phpunit.xml.dist  plugins  README.md  src  tests  tmp  vendor  webroot
+cakedev@uber1:~/webprojects/srccake/bannjayapp$ cd config/
+cakedev@uber1:~/webprojects/srccake/bannjayapp/config$ ls
+app.default.php  app.php  bootstrap_cli.php  bootstrap.php  paths.php  routes.php  schema
+cakedev@uber1:~/webprojects/srccake/bannjayapp/config$ nano app.php
+cakedev@uber1:~/webprojects/srccake/bannjayapp/config$ ll
+total 64
+drwxrwxrwx  3 root root  4096 Jan  4 10:03 ./
+drwxrwxrwx 11 root root  4096 Jan  4 10:03 ../
+-rwxrwxrwx  1 root root 12444 Jan  4 10:01 app.default.php*
+-rwxrwxrwx  1 root root 12500 Jan  4 10:03 app.php*
+-rwxrwxrwx  1 root root  1073 Jan  4 10:01 bootstrap_cli.php*
+-rwxrwxrwx  1 root root  6276 Jan  4 10:01 bootstrap.php*
+-rwxrwxrwx  1 root root  2146 Jan  4 10:01 paths.php*
+-rwxrwxrwx  1 root root  2741 Jan  4 10:01 routes.php*
+drwxrwxrwx  2 root root  4096 Jan  4 10:01 schema/
+cakedev@uber1:~/webprojects/srccake/bannjayapp/config$ cd ..
+cakedev@uber1:~/webprojects/srccake/bannjayapp$ bin/cake server
+
+Welcome to CakePHP v3.1.6 Console
+---------------------------------------------------------------
+App : src
+Path: /home/cakedev/webprojects/srccake/bannjayapp/src/
+DocumentRoot: /home/cakedev/webprojects/srccake/bannjayapp/webroot
+---------------------------------------------------------------
+built-in server is running in http://localhost:8765/
+You can exit with `CTRL-C`
+^C
+cakedev@uber1:~/webprojects/srccake/bannjayapp$ bin/cake server
+
+Welcome to CakePHP v3.1.6 Console
+---------------------------------------------------------------
+App : src
+Path: /home/cakedev/webprojects/srccake/bannjayapp/src/
+DocumentRoot: /home/cakedev/webprojects/srccake/bannjayapp/webroot
+---------------------------------------------------------------
+built-in server is running in http://localhost:8765/
+You can exit with `CTRL-C`
+
+^C
+cakedev@uber1:~/webprojects/srccake/bannjayapp$ cd ..
+cakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ cd ..
+cakedev@uber1:~/webprojects$ ls
+srccake
+cakedev@uber1:~/webprojects$ php composer.phar create-project --prefer-dist cakephp/app bookmarker
+Could not open input file: composer.phar
+cakedev@uber1:~/webprojects$ sudo php composer.phar create-project --prefer-dist cakephp/app bookmarker
+Could not open input file: composer.phar
+cakedev@uber1:~/webprojects$ ls
+srccake
+cakedev@uber1:~/webprojects$ cd srccake/
+cakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ composer create-project --prefer-dist cakephp/app bookmarker
+Installing cakephp/app (3.1.2)
+  - Installing cakephp/app (3.1.2)
+    Loading from cache
+
+Created project in bookmarker
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+  - Installing aura/installer-default (1.0.0)
+    Failed to download aura/installer-default from dist: Could not delete /home/cakedev/.composer/cache/files/aura/installer-default/028c8.zip:
+    Now trying to download from source
+  - Installing aura/installer-default (1.0.0)
+    Cloning 52f8de3670cc1ef45a916f40f732937436d028c8
+
+  - Installing cakephp/plugin-installer (0.0.12)
+    Failed to download cakephp/plugin-installer from dist: Could not delete /home/cakedev/.composer/cache/files/cakephp/plugin-instald818b0ce1.zip:
+    Now trying to download from source
+  - Installing cakephp/plugin-installer (0.0.12)
+    Cloning 8a71f10fcc455b8b9756529433d5f0fd818b0ce1
+
+  - Installing psr/log (1.0.0)
+    Failed to download psr/log from dist: Could not delete /home/cakedev/.composer/cache/files/psr/log/fe0936ee26643249e916849d48e3a5
+    Now trying to download from source
+  - Installing psr/log (1.0.0)
+    Cloning fe0936ee26643249e916849d48e3a51d5f5e278b
+
+  - Installing nesbot/carbon (1.13.0)
+    Failed to download nesbot/carbon from dist: Could not delete /home/cakedev/.composer/cache/files/nesbot/carbon/5cb6e71055f7b0b579
+    Now trying to download from source
+  - Installing nesbot/carbon (1.13.0)
+    Cloning 5cb6e71055f7b0b57956b73d324cc4de31278f42
+^X^Ccakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  bookmarker  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ sudo rm -R bookmarker/
+cakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ ping google.com
+PING google.com (216.58.197.78) 56(84) bytes of data.
+64 bytes from maa03s21-in-f14.1e100.net (216.58.197.78): icmp_seq=1 ttl=56 time=40.7 ms
+^X64 bytes from maa03s21-in-f14.1e100.net (216.58.197.78): icmp_seq=2 ttl=56 time=11.7 ms
+^C
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 11.764/26.251/40.738/14.487 ms
+cakedev@uber1:~/webprojects/srccake$ clear
+cakedev@uber1:~/webprojects/srccake$ sudo composer create-project --prefer-dist cakephp/app bookmarker
+Installing cakephp/app (3.1.2)
+  - Installing cakephp/app (3.1.2)
+    Loading from cache
+
+Created project in bookmarker
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+  - Installing aura/installer-default (1.0.0)
+    Loading from cache
+
+  - Installing cakephp/plugin-installer (0.0.12)
+    Loading from cache
+
+  - Installing psr/log (1.0.0)
+    Loading from cache
+
+  - Installing nesbot/carbon (1.13.0)
+    Loading from cache
+
+  - Installing mobiledetect/mobiledetectlib (2.8.19)
+    Loading from cache
+
+  - Installing aura/intl (1.1.1)
+    Loading from cache
+
+  - Installing ircmaxell/password-compat (v1.0.4)
+    Loading from cache
+
+  - Installing cakephp/cakephp (3.1.6)
+    Loading from cache
+
+  - Installing symfony/yaml (v3.0.1)
+    Loading from cache
+
+  - Installing symfony/filesystem (v3.0.1)
+    Loading from cache
+
+  - Installing symfony/config (v3.0.1)
+    Loading from cache
+
+  - Installing symfony/polyfill-mbstring (v1.0.1)
+    Loading from cache
+
+  - Installing symfony/console (v3.0.1)
+    Loading from cache
+
+  - Installing robmorgan/phinx (v0.5.1)
+    Loading from cache
+
+  - Installing cakephp/migrations (1.5.2)
+    Loading from cache
+
+  - Installing jakub-onderka/php-console-color (0.1)
+    Loading from cache
+
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2)
+    Loading from cache
+
+  - Installing dnoegel/php-xdg-base-dir (0.1)
+    Loading from cache
+
+  - Installing nikic/php-parser (v2.0.0)
+    Loading from cache
+
+  - Installing symfony/var-dumper (v3.0.1)
+    Loading from cache
+
+  - Installing psy/psysh (v0.6.1)
+    Loading from cache
+
+  - Installing jdorn/sql-formatter (v1.2.17)
+    Loading from cache
+
+  - Installing cakephp/debug_kit (3.2.4)
+    Loading from cache
+
+  - Installing cakephp/bake (1.1.3)
+    Loading from cache
+
+symfony/console suggests installing symfony/event-dispatcher ()
+symfony/console suggests installing symfony/process ()
+symfony/var-dumper suggests installing ext-symfony_debug ()
+psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+cakephp/debug_kit suggests installing ext-sqlite (DebugKit needs to store panel data in a database. SQLite is simple and easy to use.)
+Writing lock file
+Generating autoload files
+> Cake\Composer\Installer\PluginInstaller::postAutoloadDump
+> App\Console\Installer::postInstall
+Created `config/app.php` file
+Set Folder Permissions ? (Default to Y) [Y,n]? Y
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/tmp/cache
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/tmp/cache/models
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/tmp/cache/persistent
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/tmp/cache/views
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/tmp/sessions
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/tmp/tests
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/tmp
+Permissions set on /home/cakedev/webprojects/srccake/bookmarker/logs
+Updated Security.salt value in config/app.php
+cakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  bookmarker  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ cd bookmarker/
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ls
+bin  composer.json  composer.lock  config  index.php  logs  phpunit.xml.dist  plugins  README.md  src  tests  tmp  vendor  webroot
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ll
+total 124
+drwxr-xr-x 11 root    root     4096 Jan  4 10:13 ./
+drwxrwxrwx  6 cakedev cakedev  4096 Jan  4 10:13 ../
+drwxr-xr-x  2 root    root     4096 Jan  4 10:13 bin/
+-rw-r--r--  1 root    root     1206 Jan  4 10:13 composer.json
+-rw-r--r--  1 root    root    44734 Jan  4 10:13 composer.lock
+drwxr-xr-x  3 root    root     4096 Jan  4 10:13 config/
+-rw-r--r--  1 root    root      329 Jan  4 10:13 .editorconfig
+-rw-r--r--  1 root    root      772 Jan  4 10:13 .gitattributes
+-rw-r--r--  1 root    root       41 Jan  4 10:13 .gitignore
+-rw-r--r--  1 root    root      140 Jan  4 10:13 .htaccess
+-rw-r--r--  1 root    root      648 Jan  4 10:13 index.php
+drwxr-xrwx  2 root    root     4096 Jan  4 10:13 logs/
+-rw-r--r--  1 root    root     1139 Jan  4 10:13 phpunit.xml.dist
+drwxr-xr-x  2 root    root     4096 Jan  4 10:13 plugins/
+-rw-r--r--  1 root    root      964 Jan  4 10:13 README.md
+drwxr-xr-x  8 root    root     4096 Jan  4 10:13 src/
+drwxr-xr-x  4 root    root     4096 Jan  4 10:13 tests/
+drwxr-xrwx  5 root    root     4096 Jan  4 10:13 tmp/
+-rw-r--r--  1 root    root      321 Jan  4 10:13 .travis.yml
+drwxr-xr-x 17 root    root     4096 Jan  4 10:13 vendor/
+drwxr-xr-x  5 root    root     4096 Jan  4 10:13 webroot/
+cakedev@uber1:~/webprojects/srccake/bookmarker$ bin/cake server
+-bash: bin/cake: Permission denied
+cakedev@uber1:~/webprojects/srccake/bookmarker$ sudo bin/cake server
+sudo: bin/cake: command not found
+cakedev@uber1:~/webprojects/srccake/bookmarker$ cd ..
+cakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  bookmarker  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ sudo chmod -R 777 bookmarker/
+cakedev@uber1:~/webprojects/srccake$ ls
+app  bannjayapp  bookmarker  cakephp  composer.phar
+cakedev@uber1:~/webprojects/srccake$ cd bookmarker/
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ls
+bin  composer.json  composer.lock  config  index.php  logs  phpunit.xml.dist  plugins  README.md  src  tests  tmp  vendor  webroot
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ll
+total 124
+drwxrwxrwx 11 root    root     4096 Jan  4 10:13 ./
+drwxrwxrwx  6 cakedev cakedev  4096 Jan  4 10:13 ../
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 bin/
+-rwxrwxrwx  1 root    root     1206 Jan  4 10:13 composer.json*
+-rwxrwxrwx  1 root    root    44734 Jan  4 10:13 composer.lock*
+drwxrwxrwx  3 root    root     4096 Jan  4 10:13 config/
+-rwxrwxrwx  1 root    root      329 Jan  4 10:13 .editorconfig*
+-rwxrwxrwx  1 root    root      772 Jan  4 10:13 .gitattributes*
+-rwxrwxrwx  1 root    root       41 Jan  4 10:13 .gitignore*
+-rwxrwxrwx  1 root    root      140 Jan  4 10:13 .htaccess*
+-rwxrwxrwx  1 root    root      648 Jan  4 10:13 index.php*
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 logs/
+-rwxrwxrwx  1 root    root     1139 Jan  4 10:13 phpunit.xml.dist*
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 plugins/
+-rwxrwxrwx  1 root    root      964 Jan  4 10:13 README.md*
+drwxrwxrwx  8 root    root     4096 Jan  4 10:13 src/
+drwxrwxrwx  4 root    root     4096 Jan  4 10:13 tests/
+drwxrwxrwx  5 root    root     4096 Jan  4 10:13 tmp/
+-rwxrwxrwx  1 root    root      321 Jan  4 10:13 .travis.yml*
+drwxrwxrwx 17 root    root     4096 Jan  4 10:13 vendor/
+drwxrwxrwx  5 root    root     4096 Jan  4 10:13 webroot/
+cakedev@uber1:~/webprojects/srccake/bookmarker$ bin/cake server
+
+Welcome to CakePHP v3.1.6 Console
+---------------------------------------------------------------
+App : src
+Path: /home/cakedev/webprojects/srccake/bookmarker/src/
+DocumentRoot: /home/cakedev/webprojects/srccake/bookmarker/webroot
+---------------------------------------------------------------
+built-in server is running in http://localhost:8765/
+You can exit with `CTRL-C`
+^X^C
+cakedev@uber1:~/webprojects/srccake/bookmarker$ mysql
+ERROR 1045 (28000): Access denied for user 'cakedev'@'localhost' (using password: NO)
+cakedev@uber1:~/webprojects/srccake/bookmarker$ mysql -u root -p 27465
+Enter password:
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+cakedev@uber1:~/webprojects/srccake/bookmarker$ mysql -u root
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+cakedev@uber1:~/webprojects/srccake/bookmarker$ mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 103
+Server version: 5.5.46-0ubuntu0.14.04.2 (Ubuntu)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE TABLE users (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     email VARCHAR(255) NOT NULL,
+    ->     password VARCHAR(255) NOT NULL,
+    ->     created DATETIME,
+    ->     modified DATETIME
+    -> );
+ERROR 1046 (3D000): No database selected
+mysql> help
+
+For information about MySQL products and services, visit:
+   http://www.mysql.com/
+For developer information, including the MySQL Reference Manual, visit:
+   http://dev.mysql.com/
+To buy MySQL Enterprise support, training, or other products, visit:
+   https://shop.mysql.com/
+
+List of all MySQL commands:
+Note that all text commands must be first on line and end with ';'
+?         (\?) Synonym for `help'.
+clear     (\c) Clear the current input statement.
+connect   (\r) Reconnect to the server. Optional arguments are db and host.
+delimiter (\d) Set statement delimiter.
+edit      (\e) Edit command with $EDITOR.
+ego       (\G) Send command to mysql server, display result vertically.
+exit      (\q) Exit mysql. Same as quit.
+go        (\g) Send command to mysql server.
+help      (\h) Display this help.
+nopager   (\n) Disable pager, print to stdout.
+notee     (\t) Don't write into outfile.
+pager     (\P) Set PAGER [to_pager]. Print the query results via PAGER.
+print     (\p) Print current command.
+prompt    (\R) Change your mysql prompt.
+quit      (\q) Quit mysql.
+rehash    (\#) Rebuild completion hash.
+source    (\.) Execute an SQL script file. Takes a file name as an argument.
+status    (\s) Get status information from the server.
+system    (\!) Execute a system shell command.
+tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.
+use       (\u) Use another database. Takes database name as argument.
+charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
+warnings  (\W) Show warnings after every statement.
+nowarning (\w) Don't show warnings after every statement.
+
+For server side help, type 'help contents'
+
+mysql> USE cake_bookmarks
+Database changed
+mysql> desc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> CREATE TABLE users (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     email VARCHAR(255) NOT NULL,
+    ->     password VARCHAR(255) NOT NULL,
+    ->     created DATETIME,
+    ->     modified DATETIME
+    -> );
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> CREATE TABLE bookmarks (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     user_id INT NOT NULL,
+    ->     title VARCHAR(50),
+    ->     description TEXT,
+    ->     url TEXT,
+    ->     created DATETIME,
+    ->     modified DATETIME,
+    ->     FOREIGN KEY user_key (user_id) REFERENCES users(id)
+    -> );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> CREATE TABLE tags (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     title VARCHAR(255),
+    ->     created DATETIME,
+    ->     modified DATETIME,
+    ->     UNIQUE KEY (title)
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE bookmarks_tags (
+    ->     bookmark_id INT NOT NULL,
+    ->     tag_id INT NOT NULL,
+    ->     PRIMARY KEY (bookmark_id, tag_id),
+    ->     FOREIGN KEY tag_key(tag_id) REFERENCES tags(id),
+    ->     FOREIGN KEY bookmark_key(bookmark_id) REFERENCES bookmarks(id)
+    -> );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> close
+    -> close;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'close
+close' at line 1
+mysql> exit
+Bye
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ls
+bin  composer.json  composer.lock  config  index.php  logs  phpunit.xml.dist  plugins  README.md  src  tests  tmp  vendor  webroot
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ll
+total 124
+drwxrwxrwx 11 root    root     4096 Jan  4 10:13 ./
+drwxrwxrwx  6 cakedev cakedev  4096 Jan  4 10:13 ../
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 bin/
+-rwxrwxrwx  1 root    root     1206 Jan  4 10:13 composer.json*
+-rwxrwxrwx  1 root    root    44734 Jan  4 10:13 composer.lock*
+drwxrwxrwx  3 root    root     4096 Jan  4 10:13 config/
+-rwxrwxrwx  1 root    root      329 Jan  4 10:13 .editorconfig*
+-rwxrwxrwx  1 root    root      772 Jan  4 10:13 .gitattributes*
+-rwxrwxrwx  1 root    root       41 Jan  4 10:13 .gitignore*
+-rwxrwxrwx  1 root    root      140 Jan  4 10:13 .htaccess*
+-rwxrwxrwx  1 root    root      648 Jan  4 10:13 index.php*
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 logs/
+-rwxrwxrwx  1 root    root     1139 Jan  4 10:13 phpunit.xml.dist*
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 plugins/
+-rwxrwxrwx  1 root    root      964 Jan  4 10:13 README.md*
+drwxrwxrwx  8 root    root     4096 Jan  4 10:13 src/
+drwxrwxrwx  4 root    root     4096 Jan  4 10:13 tests/
+drwxrwxrwx  5 root    root     4096 Jan  4 10:13 tmp/
+-rwxrwxrwx  1 root    root      321 Jan  4 10:13 .travis.yml*
+drwxrwxrwx 17 root    root     4096 Jan  4 10:13 vendor/
+drwxrwxrwx  5 root    root     4096 Jan  4 10:13 webroot/
+cakedev@uber1:~/webprojects/srccake/bookmarker$ cd config/
+cakedev@uber1:~/webprojects/srccake/bookmarker/config$ ll
+total 64
+drwxrwxrwx  3 root root  4096 Jan  4 10:13 ./
+drwxrwxrwx 11 root root  4096 Jan  4 10:13 ../
+-rwxrwxrwx  1 root root 12444 Jan  4 10:13 app.default.php*
+-rwxrwxrwx  1 root root 12500 Jan  4 10:13 app.php*
+-rwxrwxrwx  1 root root  1073 Jan  4 10:13 bootstrap_cli.php*
+-rwxrwxrwx  1 root root  6276 Jan  4 10:13 bootstrap.php*
+-rwxrwxrwx  1 root root  2146 Jan  4 10:13 paths.php*
+-rwxrwxrwx  1 root root  2741 Jan  4 10:13 routes.php*
+drwxrwxrwx  2 root root  4096 Jan  4 10:13 schema/
+cakedev@uber1:~/webprojects/srccake/bookmarker/config$ cat app.default.php
+<?php
+return [
+    /**
+     * Debug Level:
+     *
+     * Production Mode:
+     * false: No error messages, errors, or warnings shown.
+     *
+     * Development Mode:
+     * true: Errors and warnings shown.
+     */
+    'debug' => true,
+
+    /**
+     * Configure basic information about the application.
+     *
+     * - namespace - The namespace to find app classes under.
+     * - encoding - The encoding used for HTML + database connections.
+     * - base - The base directory the app resides in. If false this
+     *   will be auto detected.
+     * - dir - Name of app directory.
+     * - webroot - The webroot directory.
+     * - wwwRoot - The file path to webroot.
+     * - baseUrl - To configure CakePHP to *not* use mod_rewrite and to
+     *   use CakePHP pretty URLs, remove these .htaccess
+     *   files:
+     *      /.htaccess
+     *      /webroot/.htaccess
+     *   And uncomment the baseUrl key below.
+     * - fullBaseUrl - A base URL to use for absolute links.
+     * - imageBaseUrl - Web path to the public images directory under webroot.
+     * - cssBaseUrl - Web path to the public css directory under webroot.
+     * - jsBaseUrl - Web path to the public js directory under webroot.
+     * - paths - Configure paths for non class based resources. Supports the
+     *   `plugins`, `templates`, `locales` subkeys, which allow the definition of
+     *   paths for plugins, view templates and locale files respectively.
+     */
+    'App' => [
+        'namespace' => 'App',
+        'encoding' => 'UTF-8',
+        'base' => false,
+        'dir' => 'src',
+        'webroot' => 'webroot',
+        'wwwRoot' => WWW_ROOT,
+        // 'baseUrl' => env('SCRIPT_NAME'),
+        'fullBaseUrl' => false,
+        'imageBaseUrl' => 'img/',
+        'cssBaseUrl' => 'css/',
+        'jsBaseUrl' => 'js/',
+        'paths' => [
+            'plugins' => [ROOT . DS . 'plugins' . DS],
+            'templates' => [APP . 'Template' . DS],
+            'locales' => [APP . 'Locale' . DS],
+        ],
+    ],
+
+    /**
+     * Security and encryption configuration
+     *
+     * - salt - A random string used in security hashing methods.
+     *   The salt value is also used as the encryption key.
+     *   You should treat it as extremely sensitive data.
+     */
+    'Security' => [
+        'salt' => '__SALT__',
+    ],
+
+    /**
+     * Apply timestamps with the last modified time to static assets (js, css, images).
+     * Will append a querystring parameter containing the time the file was modified.
+     * This is useful for busting browser caches.
+     *
+     * Set to true to apply timestamps when debug is true. Set to 'force' to always
+     * enable timestamping regardless of debug value.
+     */
+    'Asset' => [
+        // 'timestamp' => true,
+    ],
+
+    /**
+     * Configure the cache adapters.
+     */
+    'Cache' => [
+        'default' => [
+            'className' => 'File',
+            'path' => CACHE,
+        ],
+
+        /**
+         * Configure the cache used for general framework caching.
+         * Translation cache files are stored with this configuration.
+         */
+        '_cake_core_' => [
+            'className' => 'File',
+            'prefix' => 'myapp_cake_core_',
+            'path' => CACHE . 'persistent/',
+            'serialize' => true,
+            'duration' => '+2 minutes',
+        ],
+
+        /**
+         * Configure the cache for model and datasource caches. This cache
+         * configuration is used to store schema descriptions, and table listings
+         * in connections.
+         */
+        '_cake_model_' => [
+            'className' => 'File',
+            'prefix' => 'myapp_cake_model_',
+            'path' => CACHE . 'models/',
+            'serialize' => true,
+            'duration' => '+2 minutes',
+        ],
+    ],
+
+    /**
+     * Configure the Error and Exception handlers used by your application.
+     *
+     * By default errors are displayed using Debugger, when debug is true and logged
+     * by Cake\Log\Log when debug is false.
+     *
+     * In CLI environments exceptions will be printed to stderr with a backtrace.
+     * In web environments an HTML page will be displayed for the exception.
+     * With debug true, framework errors like Missing Controller will be displayed.
+     * When debug is false, framework errors will be coerced into generic HTTP errors.
+     *
+     * Options:
+     *
+     * - `errorLevel` - int - The level of errors you are interested in capturing.
+     * - `trace` - boolean - Whether or not backtraces should be included in
+     *   logged errors/exceptions.
+     * - `log` - boolean - Whether or not you want exceptions logged.
+     * - `exceptionRenderer` - string - The class responsible for rendering
+     *   uncaught exceptions.  If you choose a custom class you should place
+     *   the file for that class in src/Error. This class needs to implement a
+     *   render method.
+     * - `skipLog` - array - List of exceptions to skip for logging. Exceptions that
+     *   extend one of the listed exceptions will also be skipped for logging.
+     *   E.g.:
+     *   `'skipLog' => ['Cake\Network\Exception\NotFoundException', 'Cake\Network\Exception\UnauthorizedException']`
+     */
+    'Error' => [
+        'errorLevel' => E_ALL & ~E_DEPRECATED,
+        'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
+        'skipLog' => [],
+        'log' => true,
+        'trace' => true,
+    ],
+
+    /**
+     * Email configuration.
+     *
+     * By defining transports separately from delivery profiles you can easily
+     * re-use transport configuration across multiple profiles.
+     *
+     * You can specify multiple configurations for production, development and
+     * testing.
+     *
+     * Each transport needs a `className`. Valid options are as follows:
+     *
+     *  Mail   - Send using PHP mail function
+     *  Smtp   - Send using SMTP
+     *  Debug  - Do not send the email, just return the result
+     *
+     * You can add custom transports (or override existing transports) by adding the
+     * appropriate file to src/Mailer/Transport.  Transports should be named
+     * 'YourTransport.php', where 'Your' is the name of the transport.
+     */
+    'EmailTransport' => [
+        'default' => [
+            'className' => 'Mail',
+            // The following keys are used in SMTP transports
+            'host' => 'localhost',
+            'port' => 25,
+            'timeout' => 30,
+            'username' => 'user',
+            'password' => 'secret',
+            'client' => null,
+            'tls' => null,
+        ],
+    ],
+
+    /**
+     * Email delivery profiles
+     *
+     * Delivery profiles allow you to predefine various properties about email
+     * messages from your application and give the settings a name. This saves
+     * duplication across your application and makes maintenance and development
+     * easier. Each profile accepts a number of keys. See `Cake\Network\Email\Email`
+     * for more information.
+     */
+    'Email' => [
+        'default' => [
+            'transport' => 'default',
+            'from' => 'you@localhost',
+            //'charset' => 'utf-8',
+            //'headerCharset' => 'utf-8',
+        ],
+    ],
+
+    /**
+     * Connection information used by the ORM to connect
+     * to your application's datastores.
+     * Drivers include Mysql Postgres Sqlite Sqlserver
+     * See vendor\cakephp\cakephp\src\Database\Driver for complete list
+     */
+    'Datasources' => [
+        'default' => [
+            'className' => 'Cake\Database\Connection',
+            'driver' => 'Cake\Database\Driver\Mysql',
+            'persistent' => false,
+            'host' => 'localhost',
+            /**
+             * CakePHP will use the default DB port based on the driver selected
+             * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
+             * the following line and set the port accordingly
+             */
+            //'port' => 'nonstandard_port_number',
+            'username' => 'my_app',
+            'password' => 'secret',
+            'database' => 'my_app',
+            'encoding' => 'utf8',
+            'timezone' => 'UTC',
+            'cacheMetadata' => true,
+            'log' => false,
+
+            /**
+             * Set identifier quoting to true if you are using reserved words or
+             * special characters in your table or column names. Enabling this
+             * setting will result in queries built using the Query Builder having
+             * identifiers quoted when creating SQL. It should be noted that this
+             * decreases performance because each query needs to be traversed and
+             * manipulated before being executed.
+             */
+            'quoteIdentifiers' => false,
+
+            /**
+             * During development, if using MySQL < 5.6, uncommenting the
+             * following line could boost the speed at which schema metadata is
+             * fetched from the database. It can also be set directly with the
+             * mysql configuration directive 'innodb_stats_on_metadata = 0'
+             * which is the recommended value in production environments
+             */
+            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+        ],
+
+        /**
+         * The test connection is used during the test suite.
+         */
+        'test' => [
+            'className' => 'Cake\Database\Connection',
+            'driver' => 'Cake\Database\Driver\Mysql',
+            'persistent' => false,
+            'host' => 'localhost',
+            //'port' => 'nonstandard_port_number',
+            'username' => 'my_app',
+            'password' => 'secret',
+            'database' => 'test_myapp',
+            'encoding' => 'utf8',
+            'timezone' => 'UTC',
+            'cacheMetadata' => true,
+            'quoteIdentifiers' => false,
+            'log' => false,
+            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+        ],
+    ],
+
+    /**
+     * Configures logging options
+     */
+    'Log' => [
+        'debug' => [
+            'className' => 'Cake\Log\Engine\FileLog',
+            'path' => LOGS,
+            'file' => 'debug',
+            'levels' => ['notice', 'info', 'debug'],
+        ],
+        'error' => [
+            'className' => 'Cake\Log\Engine\FileLog',
+            'path' => LOGS,
+            'file' => 'error',
+            'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+        ],
+    ],
+
+    /**
+     * Session configuration.
+     *
+     * Contains an array of settings to use for session configuration. The
+     * `defaults` key is used to define a default preset to use for sessions, any
+     * settings declared here will override the settings of the default config.
+     *
+     * ## Options
+     *
+     * - `cookie` - The name of the cookie to use. Defaults to 'CAKEPHP'.
+     * - `cookiePath` - The url path for which session cookie is set. Maps to the
+     *   `session.cookie_path` php.ini config. Defaults to base path of app.
+     * - `timeout` - The time in minutes the session should be valid for.
+     *    Pass 0 to disable checking timeout.
+     *    Please note that php.ini's session.gc_maxlifetime must be equal to or greater
+     *    than the largest Session['timeout'] in all served websites for it to have the
+     *    desired effect.
+     * - `defaults` - The default configuration set to use as a basis for your session.
+     *    There are four built-in options: php, cake, cache, database.
+     * - `handler` - Can be used to enable a custom session handler. Expects an
+     *    array with at least the `engine` key, being the name of the Session engine
+     *    class to use for managing the session. CakePHP bundles the `CacheSession`
+     *    and `DatabaseSession` engines.
+     * - `ini` - An associative array of additional ini values to set.
+     *
+     * The built-in `defaults` options are:
+     *
+     * - 'php' - Uses settings defined in your php.ini.
+     * - 'cake' - Saves session files in CakePHP's /tmp directory.
+     * - 'database' - Uses CakePHP's database sessions.
+     * - 'cache' - Use the Cache class to save sessions.
+     *
+     * To define a custom session handler, save it at src/Network/Session/<name>.php.
+     * Make sure the class implements PHP's `SessionHandlerInterface` and set
+     * Session.handler to <name>
+     *
+     * To use database sessions, load the SQL file located at config/Schema/sessions.sql
+     */
+    'Session' => [
+        'defaults' => 'php',
+    ],
+];
+cakedev@uber1:~/webprojects/srccake/bookmarker/config$ ll
+total 64
+drwxrwxrwx  3 root root  4096 Jan  4 10:13 ./
+drwxrwxrwx 11 root root  4096 Jan  4 10:13 ../
+-rwxrwxrwx  1 root root 12444 Jan  4 10:13 app.default.php*
+-rwxrwxrwx  1 root root 12500 Jan  4 10:13 app.php*
+-rwxrwxrwx  1 root root  1073 Jan  4 10:13 bootstrap_cli.php*
+-rwxrwxrwx  1 root root  6276 Jan  4 10:13 bootstrap.php*
+-rwxrwxrwx  1 root root  2146 Jan  4 10:13 paths.php*
+-rwxrwxrwx  1 root root  2741 Jan  4 10:13 routes.php*
+drwxrwxrwx  2 root root  4096 Jan  4 10:13 schema/
+cakedev@uber1:~/webprojects/srccake/bookmarker/config$ nano app.php
+cakedev@uber1:~/webprojects/srccake/bookmarker/config$ nano app.php
+cakedev@uber1:~/webprojects/srccake/bookmarker/config$ cd ..
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ls
+bin  composer.json  composer.lock  config  index.php  logs  phpunit.xml.dist  plugins  README.md  src  tests  tmp  vendor  webroot
+cakedev@uber1:~/webprojects/srccake/bookmarker$ ll
+total 124
+drwxrwxrwx 11 root    root     4096 Jan  4 10:13 ./
+drwxrwxrwx  6 cakedev cakedev  4096 Jan  4 10:13 ../
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 bin/
+-rwxrwxrwx  1 root    root     1206 Jan  4 10:13 composer.json*
+-rwxrwxrwx  1 root    root    44734 Jan  4 10:13 composer.lock*
+drwxrwxrwx  3 root    root     4096 Jan  4 10:13 config/
+-rwxrwxrwx  1 root    root      329 Jan  4 10:13 .editorconfig*
+-rwxrwxrwx  1 root    root      772 Jan  4 10:13 .gitattributes*
+-rwxrwxrwx  1 root    root       41 Jan  4 10:13 .gitignore*
+-rwxrwxrwx  1 root    root      140 Jan  4 10:13 .htaccess*
+-rwxrwxrwx  1 root    root      648 Jan  4 10:13 index.php*
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 logs/
+-rwxrwxrwx  1 root    root     1139 Jan  4 10:13 phpunit.xml.dist*
+drwxrwxrwx  2 root    root     4096 Jan  4 10:13 plugins/
+-rwxrwxrwx  1 root    root      964 Jan  4 10:13 README.md*
+drwxrwxrwx  8 root    root     4096 Jan  4 10:13 src/
+drwxrwxrwx  4 root    root     4096 Jan  4 10:13 tests/
+drwxrwxrwx  5 root    root     4096 Jan  4 10:13 tmp/
+-rwxrwxrwx  1 root    root      321 Jan  4 10:13 .travis.yml*
+drwxrwxrwx 17 root    root     4096 Jan  4 10:13 vendor/
+drwxrwxrwx  5 root    root     4096 Jan  4 10:13 webroot/
+cakedev@uber1:~/webprojects/srccake/bookmarker$ bin/cake bake
+
+Welcome to CakePHP v3.1.6 Console
+---------------------------------------------------------------
+App : src
+Path: /home/cakedev/webprojects/srccake/bookmarker/src/
+PHP : 5.5.9-1ubuntu4.14
+---------------------------------------------------------------
+The following commands can be used to generate skeleton code for your application.
+
+Available bake commands:
+
+- all
+- behavior
+- cell
+- component
+- controller
+- fixture
+- form
+- helper
+- mailer
+- migration
+- migration_snapshot
+- model
+- plugin
+- shell
+- shell_helper
+- template
+- test
+
+By using `cake bake [name]` you can invoke a specific bake task.
+cakedev@uber1:~/webprojects/srccake/bookmarker$ bake all users
+No command 'bake' found, did you mean:
+ Command 'jake' from package 'node-jake' (universe)
+ Command 'fake' from package 'fake' (universe)
+ Command 'cake' from package 'cakephp-scripts' (universe)
+ Command 'make' from package 'make' (main)
+ Command 'rake' from package 'rake' (main)
+ Command 'bmake' from package 'bmake' (universe)
+bake: command not found
+cakedev@uber1:~/webprojects/srccake/bookmarker$ bin/cake bake all users
+
+Welcome to CakePHP v3.1.6 Console
+---------------------------------------------------------------
+App : src
+Path: /home/cakedev/webprojects/srccake/bookmarker/src/
+PHP : 5.5.9-1ubuntu4.14
+---------------------------------------------------------------
+Bake All
+---------------------------------------------------------------
+One moment while associations are detected.
+Exception: SQLSTATE[28000] [1045] Access denied for user 'ashok'@'localhost' (using password: YES) in [/home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php, line 48]
+2016-01-04 04:59:22 Error: [PDOException] SQLSTATE[28000] [1045] Access denied for user 'ashok'@'localhost' (using password: YES)
+Stack Trace:
+#0 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'ashok', '27465', Array)
+#1 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(894): Cake\Database\Connection->schemaCollection()
+#8 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(859): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(186): Bake\Shell\Task\ModelTask->listAll()
+#10 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(110): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('Users')
+#12 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/bake/src/Shell/BakeShell.php(250): Bake\Shell\Task\ModelTask->main('Users')
+#13 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('users', 0)
+#14 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/bake/src/Shell/BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#15 [internal function]: Bake\Shell\BakeShell->all('users')
+#16 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Console/Shell.php(436): call_user_func_array(Array, Array)
+#17 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#18 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#19 /home/cakedev/webprojects/srccake/bookmarker/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#20 /home/cakedev/webprojects/srccake/bookmarker/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#21 {main}
+
+
+cakedev@uber1:~/webprojects/srccake/bookmarker$ sudo apt-get install php5-gd php5-mysql
+[sudo] password for cakedev:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+php5-gd is already the newest version.
+php5-gd set to manually installed.
+php5-mysql is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+cakedev@uber1:~/webprojects/srccake/bookmarker$ sudo service apache2 restart
+ * Restarting web server apache2                                                                                                     AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+                                                                                                                              [ OK ]
+cakedev@uber1:~/webprojects/srccake/bookmarker$ sudo apt-get install php5-mysql
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+php5-mysql is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+cakedev@uber1:~/webprojects/srccake/bookmarker$ bin/cake bake
+
+Welcome to CakePHP v3.1.6 Console
+---------------------------------------------------------------
+App : src
+Path: /home/cakedev/webprojects/srccake/bookmarker/src/
+PHP : 5.5.9-1ubuntu4.14
+---------------------------------------------------------------
+The following commands can be used to generate skeleton code for your application.
+
+Available bake commands:
+
+- all
+- behavior
+- cell
+- component
+- controller
+- fixture
+- form
+- helper
+- mailer
+- migration
+- migration_snapshot
+- model
+- plugin
+- shell
+- shell_helper
+- template
+- test
+
+By using `cake bake [name]` you can invoke a specific bake task.
+cakedev@uber1:~/webprojects/srccake/bookmarker$ bin/cake server
+
+Welcome to CakePHP v3.1.6 Console
+---------------------------------------------------------------
+App : src
+Path: /home/cakedev/webprojects/srccake/bookmarker/src/
+DocumentRoot: /home/cakedev/webprojects/srccake/bookmarker/webroot
+---------------------------------------------------------------
+built-in server is running in http://localhost:8765/
+You can exit with `CTRL-C`
+^X^C
+cakedev@uber1:~/webprojects/srccake/bookmarker$
+Broadcast message from cakedev@uber1
+        (/dev/tty1) at 10:38 ...
+
+The system is going down for power off NOW!
