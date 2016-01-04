@@ -1,0 +1,2033 @@
+Reading state information... Done
+The following extra packages will be installed:
+  php5-cgi
+Suggested packages:
+  php-pear
+The following packages will be REMOVED:
+  apache2* apache2-mpm-prefork* libapache2-mod-php5*
+The following NEW packages will be installed:
+  php5-cgi
+0 upgraded, 1 newly installed, 3 to remove and 3 not upgraded.
+Need to get 4,264 kB of archives.
+After this operation, 8,200 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-cgi i386 5.5.9+dfsg-1ubuntu4.14 [4,264 kB]
+Fetched 4,264 kB in 56s (74.9 kB/s)
+(Reading database ... 69042 files and directories currently installed.)
+Removing apache2-mpm-prefork (2.4.7-1ubuntu4.8) ...
+Selecting previously unselected package php5-cgi.
+(Reading database ... 69042 files and directories currently installed.)
+Preparing to unpack .../php5-cgi_5.5.9+dfsg-1ubuntu4.14_i386.deb ...
+Unpacking php5-cgi (5.5.9+dfsg-1ubuntu4.14) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+dpkg: apache2: dependency problems, but removing anyway as you requested:
+ libapache2-mod-php5 depends on apache2 (>= 2.4); however:
+  Package apache2 is to be removed.
+
+(Reading database ... 69053 files and directories currently installed.)
+Removing apache2 (2.4.7-1ubuntu4.8) ...
+ * Stopping web server apache2                                                                                                                                           *
+Purging configuration files for apache2 (2.4.7-1ubuntu4.8) ...
+dpkg: warning: while removing apache2, directory '/var/www/html' not empty so not removed
+dpkg: libapache2-mod-php5: dependency problems, but removing anyway as you requested:
+ phpmyadmin depends on libapache2-mod-php5 | libapache2-mod-php5filter | php5-cgi | php5-fpm | php5; however:
+  Package libapache2-mod-php5 is to be removed.
+  Package libapache2-mod-php5filter is not installed.
+  Package php5-cgi is not configured yet.
+  Package php5-fpm is not installed.
+  Package php5 is not installed.
+
+Removing libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.14) ...
+php5_invoke prerm: Disable module pdo for apache2 SAPI
+php5_invoke prerm: Disable module readline for apache2 SAPI
+php5_invoke prerm: Disable module mcrypt for apache2 SAPI
+php5_invoke prerm: Disable module opcache for apache2 SAPI
+php5_invoke prerm: Disable module pdo_mysql for apache2 SAPI
+php5_invoke prerm: Disable module mysql for apache2 SAPI
+php5_invoke prerm: Disable module json for apache2 SAPI
+php5_invoke prerm: Disable module gd for apache2 SAPI
+php5_invoke prerm: Disable module mysqli for apache2 SAPI
+Purging configuration files for libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.14) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Setting up php5-cgi (5.5.9+dfsg-1ubuntu4.14) ...
+update-alternatives: using /usr/bin/php5-cgi to provide /usr/bin/php-cgi (php-cgi) in auto mode
+update-alternatives: using /usr/lib/cgi-bin/php5 to provide /usr/lib/cgi-bin/php (php-cgi-bin) in auto mode
+
+Creating config file /etc/php5/cgi/php.ini with new version
+php5_invoke: Enable module pdo for cgi SAPI
+php5_invoke: Enable module readline for cgi SAPI
+php5_invoke: Enable module mcrypt for cgi SAPI
+php5_invoke: Enable module opcache for cgi SAPI
+php5_invoke: Enable module pdo_mysql for cgi SAPI
+php5_invoke: Enable module mysql for cgi SAPI
+php5_invoke: Enable module json for cgi SAPI
+php5_invoke: Enable module gd for cgi SAPI
+php5_invoke: Enable module mysqli for cgi SAPI
+fdev@uber1:~$ sudo apt-get install apache2
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils
+The following NEW packages will be installed:
+  apache2
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 0 B/87.6 kB of archives.
+After this operation, 474 kB of additional disk space will be used.
+Selecting previously unselected package apache2.
+(Reading database ... 68850 files and directories currently installed.)
+Preparing to unpack .../apache2_2.4.7-1ubuntu4.8_i386.deb ...
+Unpacking apache2 (2.4.7-1ubuntu4.8) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Setting up apache2 (2.4.7-1ubuntu4.8) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+ * Starting web server apache2                                                                                                                                          AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+ *
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+fdev@uber1:~$ sudo mkdir fask
+fdev@uber1:~$ sudo chmd -R 777 fask/
+sudo: chmd: command not found
+fdev@uber1:~$ sudo chmod -R 777 fask/
+fdev@uber1:~$ cd fask/
+fdev@uber1:~/fask$ ls
+fdev@uber1:~/fask$ virtualenv fp_one
+New python executable in fp_one/bin/python
+Installing setuptools, pip, wheel...done.
+fdev@uber1:~/fask$ ls
+fp_one
+fdev@uber1:~/fask$ source fp_one/bin/activate
+(fp_one)fdev@uber1:~/fask$ ls
+fp_one
+(fp_one)fdev@uber1:~/fask$ pip install Flask
+Collecting Flask
+/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+  Downloading Flask-0.10.1.tar.gz (544kB)
+    100% |████████████████████████████████| 544kB 61kB/s
+Collecting Werkzeug>=0.7 (from Flask)
+  Downloading Werkzeug-0.11.3-py2.py3-none-any.whl (305kB)
+    100% |████████████████████████████████| 307kB 167kB/s
+Collecting Jinja2>=2.4 (from Flask)
+  Downloading Jinja2-2.8-py2.py3-none-any.whl (263kB)
+    100% |████████████████████████████████| 266kB 141kB/s
+Collecting itsdangerous>=0.21 (from Flask)
+  Downloading itsdangerous-0.24.tar.gz (46kB)
+    100% |████████████████████████████████| 49kB 144kB/s
+Collecting MarkupSafe (from Jinja2>=2.4->Flask)
+  Downloading MarkupSafe-0.23.tar.gz
+Building wheels for collected packages: Flask, itsdangerous, MarkupSafe
+  Running setup.py bdist_wheel for Flask
+  Stored in directory: /home/fdev/.cache/pip/wheels/d2/db/61/cb9b80526b8f3ba89248ec0a29d6da1bb6013681c930fca987
+  Running setup.py bdist_wheel for itsdangerous
+  Stored in directory: /home/fdev/.cache/pip/wheels/97/c0/b8/b37c320ff57e15f993ba0ac98013eee778920b4a7b3ebae3cf
+  Running setup.py bdist_wheel for MarkupSafe
+  Stored in directory: /home/fdev/.cache/pip/wheels/94/a7/79/f79a998b64c1281cb99fa9bbd33cfc9b8b5775f438218d17a7
+Successfully built Flask itsdangerous MarkupSafe
+Installing collected packages: Werkzeug, MarkupSafe, Jinja2, itsdangerous, Flask
+Successfully installed Flask-0.10.1 Jinja2-2.8 MarkupSafe-0.23 Werkzeug-0.11.3 itsdangerous-0.24
+/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+(fp_one)fdev@uber1:~/fask$ sudo pip install Flask
+Requirement already satisfied (use --upgrade to upgrade): Flask in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): Werkzeug>=0.7 in /usr/local/lib/python2.7/dist-packages (from Flask)
+Requirement already satisfied (use --upgrade to upgrade): Jinja2>=2.4 in /usr/local/lib/python2.7/dist-packages (from Flask)
+Requirement already satisfied (use --upgrade to upgrade): itsdangerous>=0.21 in /usr/local/lib/python2.7/dist-packages (from Flask)
+Cleaning up...
+(fp_one)fdev@uber1:~/fask$ deactivate
+fdev@uber1:~/fask$ sudo pip install Flask
+Requirement already satisfied (use --upgrade to upgrade): Flask in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): Werkzeug>=0.7 in /usr/local/lib/python2.7/dist-packages (from Flask)
+Requirement already satisfied (use --upgrade to upgrade): Jinja2>=2.4 in /usr/local/lib/python2.7/dist-packages (from Flask)
+Requirement already satisfied (use --upgrade to upgrade): itsdangerous>=0.21 in /usr/local/lib/python2.7/dist-packages (from Flask)
+Cleaning up...
+fdev@uber1:~/fask$ source fp_one/bin/activate
+(fp_one)fdev@uber1:~/fask$ ls
+fp_one
+(fp_one)fdev@uber1:~/fask$ tree
+.
+└── fp_one
+    ├── bin
+    │   ├── activate
+    │   ├── activate.csh
+    │   ├── activate.fish
+    │   ├── activate_this.py
+    │   ├── easy_install
+    │   ├── easy_install-2.7
+    │   ├── pip
+    │   ├── pip2
+    │   ├── pip2.7
+    │   ├── python
+    │   ├── python2 -> python
+    │   ├── python2.7 -> python
+    │   └── wheel
+    ├── include
+    │   └── python2.7 -> /usr/include/python2.7
+    ├── lib
+    │   └── python2.7
+    │       ├── _abcoll.py -> /usr/lib/python2.7/_abcoll.py
+    │       ├── _abcoll.pyc
+    │       ├── abc.py -> /usr/lib/python2.7/abc.py
+    │       ├── abc.pyc
+    │       ├── codecs.py -> /usr/lib/python2.7/codecs.py
+    │       ├── codecs.pyc
+    │       ├── copy_reg.py -> /usr/lib/python2.7/copy_reg.py
+    │       ├── copy_reg.pyc
+    │       ├── distutils
+    │       │   ├── distutils.cfg
+    │       │   ├── __init__.py
+    │       │   └── __init__.pyc
+    │       ├── encodings -> /usr/lib/python2.7/encodings
+    │       ├── fnmatch.py -> /usr/lib/python2.7/fnmatch.py
+    │       ├── fnmatch.pyc
+    │       ├── genericpath.py -> /usr/lib/python2.7/genericpath.py
+    │       ├── genericpath.pyc
+    │       ├── lib-dynload -> /usr/lib/python2.7/lib-dynload
+    │       ├── linecache.py -> /usr/lib/python2.7/linecache.py
+    │       ├── linecache.pyc
+    │       ├── locale.py -> /usr/lib/python2.7/locale.py
+    │       ├── locale.pyc
+    │       ├── no-global-site-packages.txt
+    │       ├── ntpath.py -> /usr/lib/python2.7/ntpath.py
+    │       ├── orig-prefix.txt
+    │       ├── os.py -> /usr/lib/python2.7/os.py
+    │       ├── os.pyc
+    │       ├── posixpath.py -> /usr/lib/python2.7/posixpath.py
+    │       ├── posixpath.pyc
+    │       ├── re.py -> /usr/lib/python2.7/re.py
+    │       ├── re.pyc
+    │       ├── site-packages
+    │       │   ├── easy_install.py
+    │       │   ├── easy_install.pyc
+    │       │   ├── flask
+    │       │   │   ├── app.py
+    │       │   │   ├── app.pyc
+    │       │   │   ├── blueprints.py
+    │       │   │   ├── blueprints.pyc
+    │       │   │   ├── _compat.py
+    │       │   │   ├── _compat.pyc
+    │       │   │   ├── config.py
+    │       │   │   ├── config.pyc
+    │       │   │   ├── ctx.py
+    │       │   │   ├── ctx.pyc
+    │       │   │   ├── debughelpers.py
+    │       │   │   ├── debughelpers.pyc
+    │       │   │   ├── ext
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   └── __init__.pyc
+    │       │   │   ├── exthook.py
+    │       │   │   ├── exthook.pyc
+    │       │   │   ├── globals.py
+    │       │   │   ├── globals.pyc
+    │       │   │   ├── helpers.py
+    │       │   │   ├── helpers.pyc
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── json.py
+    │       │   │   ├── json.pyc
+    │       │   │   ├── logging.py
+    │       │   │   ├── logging.pyc
+    │       │   │   ├── module.py
+    │       │   │   ├── module.pyc
+    │       │   │   ├── sessions.py
+    │       │   │   ├── sessions.pyc
+    │       │   │   ├── signals.py
+    │       │   │   ├── signals.pyc
+    │       │   │   ├── templating.py
+    │       │   │   ├── templating.pyc
+    │       │   │   ├── testing.py
+    │       │   │   ├── testing.pyc
+    │       │   │   ├── testsuite
+    │       │   │   │   ├── appctx.py
+    │       │   │   │   ├── appctx.pyc
+    │       │   │   │   ├── basic.py
+    │       │   │   │   ├── basic.pyc
+    │       │   │   │   ├── blueprints.py
+    │       │   │   │   ├── blueprints.pyc
+    │       │   │   │   ├── config.py
+    │       │   │   │   ├── config.pyc
+    │       │   │   │   ├── deprecations.py
+    │       │   │   │   ├── deprecations.pyc
+    │       │   │   │   ├── examples.py
+    │       │   │   │   ├── examples.pyc
+    │       │   │   │   ├── ext.py
+    │       │   │   │   ├── ext.pyc
+    │       │   │   │   ├── helpers.py
+    │       │   │   │   ├── helpers.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── regression.py
+    │       │   │   │   ├── regression.pyc
+    │       │   │   │   ├── reqctx.py
+    │       │   │   │   ├── reqctx.pyc
+    │       │   │   │   ├── signals.py
+    │       │   │   │   ├── signals.pyc
+    │       │   │   │   ├── static
+    │       │   │   │   │   └── index.html
+    │       │   │   │   ├── subclassing.py
+    │       │   │   │   ├── subclassing.pyc
+    │       │   │   │   ├── templates
+    │       │   │   │   │   ├── context_template.html
+    │       │   │   │   │   ├── escaping_template.html
+    │       │   │   │   │   ├── _macro.html
+    │       │   │   │   │   ├── mail.txt
+    │       │   │   │   │   ├── nested
+    │       │   │   │   │   │   └── nested.txt
+    │       │   │   │   │   ├── simple_template.html
+    │       │   │   │   │   ├── template_filter.html
+    │       │   │   │   │   └── template_test.html
+    │       │   │   │   ├── templating.py
+    │       │   │   │   ├── templating.pyc
+    │       │   │   │   ├── test_apps
+    │       │   │   │   │   ├── blueprintapp
+    │       │   │   │   │   │   ├── apps
+    │       │   │   │   │   │   │   ├── admin
+    │       │   │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   │   │   ├── static
+    │       │   │   │   │   │   │   │   │   ├── css
+    │       │   │   │   │   │   │   │   │   │   └── test.css
+    │       │   │   │   │   │   │   │   │   └── test.txt
+    │       │   │   │   │   │   │   │   └── templates
+    │       │   │   │   │   │   │   │       └── admin
+    │       │   │   │   │   │   │   │           └── index.html
+    │       │   │   │   │   │   │   ├── frontend
+    │       │   │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   │   │   └── templates
+    │       │   │   │   │   │   │   │       └── frontend
+    │       │   │   │   │   │   │   │           └── index.html
+    │       │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   ├── config_module_app.py
+    │       │   │   │   │   ├── config_module_app.pyc
+    │       │   │   │   │   ├── config_package_app
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   ├── flask_broken
+    │       │   │   │   │   │   ├── b.py
+    │       │   │   │   │   │   ├── b.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   ├── flaskext
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── oldext_package
+    │       │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   │   ├── submodule.py
+    │       │   │   │   │   │   │   └── submodule.pyc
+    │       │   │   │   │   │   ├── oldext_simple.py
+    │       │   │   │   │   │   └── oldext_simple.pyc
+    │       │   │   │   │   ├── flask_newext_package
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── submodule.py
+    │       │   │   │   │   │   └── submodule.pyc
+    │       │   │   │   │   ├── flask_newext_simple.py
+    │       │   │   │   │   ├── flask_newext_simple.pyc
+    │       │   │   │   │   ├── importerror.py
+    │       │   │   │   │   ├── importerror.pyc
+    │       │   │   │   │   ├── lib
+    │       │   │   │   │   │   └── python2.5
+    │       │   │   │   │   │       └── site-packages
+    │       │   │   │   │   │           ├── site_app.py
+    │       │   │   │   │   │           ├── site_app.pyc
+    │       │   │   │   │   │           ├── SiteEgg.egg
+    │       │   │   │   │   │           └── site_package
+    │       │   │   │   │   │               ├── __init__.py
+    │       │   │   │   │   │               └── __init__.pyc
+    │       │   │   │   │   ├── main_app.py
+    │       │   │   │   │   ├── main_app.pyc
+    │       │   │   │   │   ├── moduleapp
+    │       │   │   │   │   │   ├── apps
+    │       │   │   │   │   │   │   ├── admin
+    │       │   │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   │   │   ├── static
+    │       │   │   │   │   │   │   │   │   ├── css
+    │       │   │   │   │   │   │   │   │   │   └── test.css
+    │       │   │   │   │   │   │   │   │   └── test.txt
+    │       │   │   │   │   │   │   │   └── templates
+    │       │   │   │   │   │   │   │       └── index.html
+    │       │   │   │   │   │   │   ├── frontend
+    │       │   │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   │   │   └── templates
+    │       │   │   │   │   │   │   │       └── index.html
+    │       │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   ├── path
+    │       │   │   │   │   │   └── installed_package
+    │       │   │   │   │   │       ├── __init__.py
+    │       │   │   │   │   │       └── __init__.pyc
+    │       │   │   │   │   └── subdomaintestmodule
+    │       │   │   │   │       ├── __init__.py
+    │       │   │   │   │       ├── __init__.pyc
+    │       │   │   │   │       └── static
+    │       │   │   │   │           └── hello.txt
+    │       │   │   │   ├── testing.py
+    │       │   │   │   ├── testing.pyc
+    │       │   │   │   ├── views.py
+    │       │   │   │   └── views.pyc
+    │       │   │   ├── views.py
+    │       │   │   ├── views.pyc
+    │       │   │   ├── wrappers.py
+    │       │   │   └── wrappers.pyc
+    │       │   ├── Flask-0.10.1.dist-info
+    │       │   │   ├── DESCRIPTION.rst
+    │       │   │   ├── METADATA
+    │       │   │   ├── metadata.json
+    │       │   │   ├── RECORD
+    │       │   │   ├── top_level.txt
+    │       │   │   └── WHEEL
+    │       │   ├── itsdangerous-0.24.dist-info
+    │       │   │   ├── DESCRIPTION.rst
+    │       │   │   ├── METADATA
+    │       │   │   ├── metadata.json
+    │       │   │   ├── RECORD
+    │       │   │   ├── top_level.txt
+    │       │   │   └── WHEEL
+    │       │   ├── itsdangerous.py
+    │       │   ├── itsdangerous.pyc
+    │       │   ├── jinja2
+    │       │   │   ├── bccache.py
+    │       │   │   ├── bccache.pyc
+    │       │   │   ├── _compat.py
+    │       │   │   ├── _compat.pyc
+    │       │   │   ├── compiler.py
+    │       │   │   ├── compiler.pyc
+    │       │   │   ├── constants.py
+    │       │   │   ├── constants.pyc
+    │       │   │   ├── debug.py
+    │       │   │   ├── debug.pyc
+    │       │   │   ├── defaults.py
+    │       │   │   ├── defaults.pyc
+    │       │   │   ├── environment.py
+    │       │   │   ├── environment.pyc
+    │       │   │   ├── exceptions.py
+    │       │   │   ├── exceptions.pyc
+    │       │   │   ├── ext.py
+    │       │   │   ├── ext.pyc
+    │       │   │   ├── filters.py
+    │       │   │   ├── filters.pyc
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── lexer.py
+    │       │   │   ├── lexer.pyc
+    │       │   │   ├── loaders.py
+    │       │   │   ├── loaders.pyc
+    │       │   │   ├── meta.py
+    │       │   │   ├── meta.pyc
+    │       │   │   ├── nodes.py
+    │       │   │   ├── nodes.pyc
+    │       │   │   ├── optimizer.py
+    │       │   │   ├── optimizer.pyc
+    │       │   │   ├── parser.py
+    │       │   │   ├── parser.pyc
+    │       │   │   ├── runtime.py
+    │       │   │   ├── runtime.pyc
+    │       │   │   ├── sandbox.py
+    │       │   │   ├── sandbox.pyc
+    │       │   │   ├── _stringdefs.py
+    │       │   │   ├── _stringdefs.pyc
+    │       │   │   ├── tests.py
+    │       │   │   ├── tests.pyc
+    │       │   │   ├── utils.py
+    │       │   │   ├── utils.pyc
+    │       │   │   ├── visitor.py
+    │       │   │   └── visitor.pyc
+    │       │   ├── Jinja2-2.8.dist-info
+    │       │   │   ├── DESCRIPTION.rst
+    │       │   │   ├── entry_points.txt
+    │       │   │   ├── METADATA
+    │       │   │   ├── metadata.json
+    │       │   │   ├── RECORD
+    │       │   │   ├── top_level.txt
+    │       │   │   └── WHEEL
+    │       │   ├── _markerlib
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── markers.py
+    │       │   │   └── markers.pyc
+    │       │   ├── markupsafe
+    │       │   │   ├── _compat.py
+    │       │   │   ├── _compat.pyc
+    │       │   │   ├── _constants.py
+    │       │   │   ├── _constants.pyc
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── _native.py
+    │       │   │   ├── _native.pyc
+    │       │   │   ├── _speedups.c
+    │       │   │   ├── _speedups.so
+    │       │   │   ├── tests.py
+    │       │   │   └── tests.pyc
+    │       │   ├── MarkupSafe-0.23.dist-info
+    │       │   │   ├── DESCRIPTION.rst
+    │       │   │   ├── METADATA
+    │       │   │   ├── metadata.json
+    │       │   │   ├── RECORD
+    │       │   │   ├── top_level.txt
+    │       │   │   └── WHEEL
+    │       │   ├── pip
+    │       │   │   ├── basecommand.py
+    │       │   │   ├── basecommand.pyc
+    │       │   │   ├── baseparser.py
+    │       │   │   ├── baseparser.pyc
+    │       │   │   ├── cmdoptions.py
+    │       │   │   ├── cmdoptions.pyc
+    │       │   │   ├── commands
+    │       │   │   │   ├── completion.py
+    │       │   │   │   ├── completion.pyc
+    │       │   │   │   ├── freeze.py
+    │       │   │   │   ├── freeze.pyc
+    │       │   │   │   ├── help.py
+    │       │   │   │   ├── help.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── install.py
+    │       │   │   │   ├── install.pyc
+    │       │   │   │   ├── list.py
+    │       │   │   │   ├── list.pyc
+    │       │   │   │   ├── search.py
+    │       │   │   │   ├── search.pyc
+    │       │   │   │   ├── show.py
+    │       │   │   │   ├── show.pyc
+    │       │   │   │   ├── uninstall.py
+    │       │   │   │   ├── uninstall.pyc
+    │       │   │   │   ├── wheel.py
+    │       │   │   │   └── wheel.pyc
+    │       │   │   ├── compat
+    │       │   │   │   ├── dictconfig.py
+    │       │   │   │   ├── dictconfig.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   └── __init__.pyc
+    │       │   │   ├── download.py
+    │       │   │   ├── download.pyc
+    │       │   │   ├── exceptions.py
+    │       │   │   ├── exceptions.pyc
+    │       │   │   ├── index.py
+    │       │   │   ├── index.pyc
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── locations.py
+    │       │   │   ├── locations.pyc
+    │       │   │   ├── __main__.py
+    │       │   │   ├── __main__.pyc
+    │       │   │   ├── models
+    │       │   │   │   ├── index.py
+    │       │   │   │   ├── index.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   └── __init__.pyc
+    │       │   │   ├── operations
+    │       │   │   │   ├── freeze.py
+    │       │   │   │   ├── freeze.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   └── __init__.pyc
+    │       │   │   ├── pep425tags.py
+    │       │   │   ├── pep425tags.pyc
+    │       │   │   ├── req
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── req_file.py
+    │       │   │   │   ├── req_file.pyc
+    │       │   │   │   ├── req_install.py
+    │       │   │   │   ├── req_install.pyc
+    │       │   │   │   ├── req_set.py
+    │       │   │   │   ├── req_set.pyc
+    │       │   │   │   ├── req_uninstall.py
+    │       │   │   │   └── req_uninstall.pyc
+    │       │   │   ├── status_codes.py
+    │       │   │   ├── status_codes.pyc
+    │       │   │   ├── utils
+    │       │   │   │   ├── appdirs.py
+    │       │   │   │   ├── appdirs.pyc
+    │       │   │   │   ├── build.py
+    │       │   │   │   ├── build.pyc
+    │       │   │   │   ├── deprecation.py
+    │       │   │   │   ├── deprecation.pyc
+    │       │   │   │   ├── filesystem.py
+    │       │   │   │   ├── filesystem.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── logging.py
+    │       │   │   │   ├── logging.pyc
+    │       │   │   │   ├── outdated.py
+    │       │   │   │   ├── outdated.pyc
+    │       │   │   │   ├── ui.py
+    │       │   │   │   └── ui.pyc
+    │       │   │   ├── vcs
+    │       │   │   │   ├── bazaar.py
+    │       │   │   │   ├── bazaar.pyc
+    │       │   │   │   ├── git.py
+    │       │   │   │   ├── git.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── mercurial.py
+    │       │   │   │   ├── mercurial.pyc
+    │       │   │   │   ├── subversion.py
+    │       │   │   │   └── subversion.pyc
+    │       │   │   ├── _vendor
+    │       │   │   │   ├── cachecontrol
+    │       │   │   │   │   ├── adapter.py
+    │       │   │   │   │   ├── adapter.pyc
+    │       │   │   │   │   ├── cache.py
+    │       │   │   │   │   ├── cache.pyc
+    │       │   │   │   │   ├── caches
+    │       │   │   │   │   │   ├── file_cache.py
+    │       │   │   │   │   │   ├── file_cache.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── redis_cache.py
+    │       │   │   │   │   │   └── redis_cache.pyc
+    │       │   │   │   │   ├── compat.py
+    │       │   │   │   │   ├── compat.pyc
+    │       │   │   │   │   ├── controller.py
+    │       │   │   │   │   ├── controller.pyc
+    │       │   │   │   │   ├── filewrapper.py
+    │       │   │   │   │   ├── filewrapper.pyc
+    │       │   │   │   │   ├── heuristics.py
+    │       │   │   │   │   ├── heuristics.pyc
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── serialize.py
+    │       │   │   │   │   ├── serialize.pyc
+    │       │   │   │   │   ├── wrapper.py
+    │       │   │   │   │   └── wrapper.pyc
+    │       │   │   │   ├── colorama
+    │       │   │   │   │   ├── ansi.py
+    │       │   │   │   │   ├── ansi.pyc
+    │       │   │   │   │   ├── ansitowin32.py
+    │       │   │   │   │   ├── ansitowin32.pyc
+    │       │   │   │   │   ├── initialise.py
+    │       │   │   │   │   ├── initialise.pyc
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── win32.py
+    │       │   │   │   │   ├── win32.pyc
+    │       │   │   │   │   ├── winterm.py
+    │       │   │   │   │   └── winterm.pyc
+    │       │   │   │   ├── distlib
+    │       │   │   │   │   ├── _backport
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── misc.py
+    │       │   │   │   │   │   ├── misc.pyc
+    │       │   │   │   │   │   ├── shutil.py
+    │       │   │   │   │   │   ├── shutil.pyc
+    │       │   │   │   │   │   ├── sysconfig.cfg
+    │       │   │   │   │   │   ├── sysconfig.py
+    │       │   │   │   │   │   ├── sysconfig.pyc
+    │       │   │   │   │   │   ├── tarfile.py
+    │       │   │   │   │   │   └── tarfile.pyc
+    │       │   │   │   │   ├── compat.py
+    │       │   │   │   │   ├── compat.pyc
+    │       │   │   │   │   ├── database.py
+    │       │   │   │   │   ├── database.pyc
+    │       │   │   │   │   ├── index.py
+    │       │   │   │   │   ├── index.pyc
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── locators.py
+    │       │   │   │   │   ├── locators.pyc
+    │       │   │   │   │   ├── manifest.py
+    │       │   │   │   │   ├── manifest.pyc
+    │       │   │   │   │   ├── markers.py
+    │       │   │   │   │   ├── markers.pyc
+    │       │   │   │   │   ├── metadata.py
+    │       │   │   │   │   ├── metadata.pyc
+    │       │   │   │   │   ├── resources.py
+    │       │   │   │   │   ├── resources.pyc
+    │       │   │   │   │   ├── scripts.py
+    │       │   │   │   │   ├── scripts.pyc
+    │       │   │   │   │   ├── t32.exe
+    │       │   │   │   │   ├── t64.exe
+    │       │   │   │   │   ├── util.py
+    │       │   │   │   │   ├── util.pyc
+    │       │   │   │   │   ├── version.py
+    │       │   │   │   │   ├── version.pyc
+    │       │   │   │   │   ├── w32.exe
+    │       │   │   │   │   ├── w64.exe
+    │       │   │   │   │   ├── wheel.py
+    │       │   │   │   │   └── wheel.pyc
+    │       │   │   │   ├── html5lib
+    │       │   │   │   │   ├── constants.py
+    │       │   │   │   │   ├── constants.pyc
+    │       │   │   │   │   ├── filters
+    │       │   │   │   │   │   ├── alphabeticalattributes.py
+    │       │   │   │   │   │   ├── alphabeticalattributes.pyc
+    │       │   │   │   │   │   ├── _base.py
+    │       │   │   │   │   │   ├── _base.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── inject_meta_charset.py
+    │       │   │   │   │   │   ├── inject_meta_charset.pyc
+    │       │   │   │   │   │   ├── lint.py
+    │       │   │   │   │   │   ├── lint.pyc
+    │       │   │   │   │   │   ├── optionaltags.py
+    │       │   │   │   │   │   ├── optionaltags.pyc
+    │       │   │   │   │   │   ├── sanitizer.py
+    │       │   │   │   │   │   ├── sanitizer.pyc
+    │       │   │   │   │   │   ├── whitespace.py
+    │       │   │   │   │   │   └── whitespace.pyc
+    │       │   │   │   │   ├── html5parser.py
+    │       │   │   │   │   ├── html5parser.pyc
+    │       │   │   │   │   ├── ihatexml.py
+    │       │   │   │   │   ├── ihatexml.pyc
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── inputstream.py
+    │       │   │   │   │   ├── inputstream.pyc
+    │       │   │   │   │   ├── sanitizer.py
+    │       │   │   │   │   ├── sanitizer.pyc
+    │       │   │   │   │   ├── serializer
+    │       │   │   │   │   │   ├── htmlserializer.py
+    │       │   │   │   │   │   ├── htmlserializer.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   ├── tokenizer.py
+    │       │   │   │   │   ├── tokenizer.pyc
+    │       │   │   │   │   ├── treeadapters
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── sax.py
+    │       │   │   │   │   │   └── sax.pyc
+    │       │   │   │   │   ├── treebuilders
+    │       │   │   │   │   │   ├── _base.py
+    │       │   │   │   │   │   ├── _base.pyc
+    │       │   │   │   │   │   ├── dom.py
+    │       │   │   │   │   │   ├── dom.pyc
+    │       │   │   │   │   │   ├── etree_lxml.py
+    │       │   │   │   │   │   ├── etree_lxml.pyc
+    │       │   │   │   │   │   ├── etree.py
+    │       │   │   │   │   │   ├── etree.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   ├── treewalkers
+    │       │   │   │   │   │   ├── _base.py
+    │       │   │   │   │   │   ├── _base.pyc
+    │       │   │   │   │   │   ├── dom.py
+    │       │   │   │   │   │   ├── dom.pyc
+    │       │   │   │   │   │   ├── etree.py
+    │       │   │   │   │   │   ├── etree.pyc
+    │       │   │   │   │   │   ├── genshistream.py
+    │       │   │   │   │   │   ├── genshistream.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── lxmletree.py
+    │       │   │   │   │   │   ├── lxmletree.pyc
+    │       │   │   │   │   │   ├── pulldom.py
+    │       │   │   │   │   │   └── pulldom.pyc
+    │       │   │   │   │   ├── trie
+    │       │   │   │   │   │   ├── _base.py
+    │       │   │   │   │   │   ├── _base.pyc
+    │       │   │   │   │   │   ├── datrie.py
+    │       │   │   │   │   │   ├── datrie.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   ├── py.py
+    │       │   │   │   │   │   └── py.pyc
+    │       │   │   │   │   ├── utils.py
+    │       │   │   │   │   └── utils.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── ipaddress.py
+    │       │   │   │   ├── ipaddress.pyc
+    │       │   │   │   ├── lockfile
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── linklockfile.py
+    │       │   │   │   │   ├── linklockfile.pyc
+    │       │   │   │   │   ├── mkdirlockfile.py
+    │       │   │   │   │   ├── mkdirlockfile.pyc
+    │       │   │   │   │   ├── pidlockfile.py
+    │       │   │   │   │   ├── pidlockfile.pyc
+    │       │   │   │   │   ├── sqlitelockfile.py
+    │       │   │   │   │   ├── sqlitelockfile.pyc
+    │       │   │   │   │   ├── symlinklockfile.py
+    │       │   │   │   │   └── symlinklockfile.pyc
+    │       │   │   │   ├── _markerlib
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── markers.py
+    │       │   │   │   │   └── markers.pyc
+    │       │   │   │   ├── packaging
+    │       │   │   │   │   ├── __about__.py
+    │       │   │   │   │   ├── __about__.pyc
+    │       │   │   │   │   ├── _compat.py
+    │       │   │   │   │   ├── _compat.pyc
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── specifiers.py
+    │       │   │   │   │   ├── specifiers.pyc
+    │       │   │   │   │   ├── _structures.py
+    │       │   │   │   │   ├── _structures.pyc
+    │       │   │   │   │   ├── version.py
+    │       │   │   │   │   └── version.pyc
+    │       │   │   │   ├── pkg_resources
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   └── __init__.pyc
+    │       │   │   │   ├── progress
+    │       │   │   │   │   ├── bar.py
+    │       │   │   │   │   ├── bar.pyc
+    │       │   │   │   │   ├── counter.py
+    │       │   │   │   │   ├── counter.pyc
+    │       │   │   │   │   ├── helpers.py
+    │       │   │   │   │   ├── helpers.pyc
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── spinner.py
+    │       │   │   │   │   └── spinner.pyc
+    │       │   │   │   ├── requests
+    │       │   │   │   │   ├── adapters.py
+    │       │   │   │   │   ├── adapters.pyc
+    │       │   │   │   │   ├── api.py
+    │       │   │   │   │   ├── api.pyc
+    │       │   │   │   │   ├── auth.py
+    │       │   │   │   │   ├── auth.pyc
+    │       │   │   │   │   ├── cacert.pem
+    │       │   │   │   │   ├── certs.py
+    │       │   │   │   │   ├── certs.pyc
+    │       │   │   │   │   ├── compat.py
+    │       │   │   │   │   ├── compat.pyc
+    │       │   │   │   │   ├── cookies.py
+    │       │   │   │   │   ├── cookies.pyc
+    │       │   │   │   │   ├── exceptions.py
+    │       │   │   │   │   ├── exceptions.pyc
+    │       │   │   │   │   ├── hooks.py
+    │       │   │   │   │   ├── hooks.pyc
+    │       │   │   │   │   ├── __init__.py
+    │       │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   ├── models.py
+    │       │   │   │   │   ├── models.pyc
+    │       │   │   │   │   ├── packages
+    │       │   │   │   │   │   ├── chardet
+    │       │   │   │   │   │   │   ├── big5freq.py
+    │       │   │   │   │   │   │   ├── big5freq.pyc
+    │       │   │   │   │   │   │   ├── big5prober.py
+    │       │   │   │   │   │   │   ├── big5prober.pyc
+    │       │   │   │   │   │   │   ├── chardetect.py
+    │       │   │   │   │   │   │   ├── chardetect.pyc
+    │       │   │   │   │   │   │   ├── chardistribution.py
+    │       │   │   │   │   │   │   ├── chardistribution.pyc
+    │       │   │   │   │   │   │   ├── charsetgroupprober.py
+    │       │   │   │   │   │   │   ├── charsetgroupprober.pyc
+    │       │   │   │   │   │   │   ├── charsetprober.py
+    │       │   │   │   │   │   │   ├── charsetprober.pyc
+    │       │   │   │   │   │   │   ├── codingstatemachine.py
+    │       │   │   │   │   │   │   ├── codingstatemachine.pyc
+    │       │   │   │   │   │   │   ├── compat.py
+    │       │   │   │   │   │   │   ├── compat.pyc
+    │       │   │   │   │   │   │   ├── constants.py
+    │       │   │   │   │   │   │   ├── constants.pyc
+    │       │   │   │   │   │   │   ├── cp949prober.py
+    │       │   │   │   │   │   │   ├── cp949prober.pyc
+    │       │   │   │   │   │   │   ├── escprober.py
+    │       │   │   │   │   │   │   ├── escprober.pyc
+    │       │   │   │   │   │   │   ├── escsm.py
+    │       │   │   │   │   │   │   ├── escsm.pyc
+    │       │   │   │   │   │   │   ├── eucjpprober.py
+    │       │   │   │   │   │   │   ├── eucjpprober.pyc
+    │       │   │   │   │   │   │   ├── euckrfreq.py
+    │       │   │   │   │   │   │   ├── euckrfreq.pyc
+    │       │   │   │   │   │   │   ├── euckrprober.py
+    │       │   │   │   │   │   │   ├── euckrprober.pyc
+    │       │   │   │   │   │   │   ├── euctwfreq.py
+    │       │   │   │   │   │   │   ├── euctwfreq.pyc
+    │       │   │   │   │   │   │   ├── euctwprober.py
+    │       │   │   │   │   │   │   ├── euctwprober.pyc
+    │       │   │   │   │   │   │   ├── gb2312freq.py
+    │       │   │   │   │   │   │   ├── gb2312freq.pyc
+    │       │   │   │   │   │   │   ├── gb2312prober.py
+    │       │   │   │   │   │   │   ├── gb2312prober.pyc
+    │       │   │   │   │   │   │   ├── hebrewprober.py
+    │       │   │   │   │   │   │   ├── hebrewprober.pyc
+    │       │   │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   │   ├── jisfreq.py
+    │       │   │   │   │   │   │   ├── jisfreq.pyc
+    │       │   │   │   │   │   │   ├── jpcntx.py
+    │       │   │   │   │   │   │   ├── jpcntx.pyc
+    │       │   │   │   │   │   │   ├── langbulgarianmodel.py
+    │       │   │   │   │   │   │   ├── langbulgarianmodel.pyc
+    │       │   │   │   │   │   │   ├── langcyrillicmodel.py
+    │       │   │   │   │   │   │   ├── langcyrillicmodel.pyc
+    │       │   │   │   │   │   │   ├── langgreekmodel.py
+    │       │   │   │   │   │   │   ├── langgreekmodel.pyc
+    │       │   │   │   │   │   │   ├── langhebrewmodel.py
+    │       │   │   │   │   │   │   ├── langhebrewmodel.pyc
+    │       │   │   │   │   │   │   ├── langhungarianmodel.py
+    │       │   │   │   │   │   │   ├── langhungarianmodel.pyc
+    │       │   │   │   │   │   │   ├── langthaimodel.py
+    │       │   │   │   │   │   │   ├── langthaimodel.pyc
+    │       │   │   │   │   │   │   ├── latin1prober.py
+    │       │   │   │   │   │   │   ├── latin1prober.pyc
+    │       │   │   │   │   │   │   ├── mbcharsetprober.py
+    │       │   │   │   │   │   │   ├── mbcharsetprober.pyc
+    │       │   │   │   │   │   │   ├── mbcsgroupprober.py
+    │       │   │   │   │   │   │   ├── mbcsgroupprober.pyc
+    │       │   │   │   │   │   │   ├── mbcssm.py
+    │       │   │   │   │   │   │   ├── mbcssm.pyc
+    │       │   │   │   │   │   │   ├── sbcharsetprober.py
+    │       │   │   │   │   │   │   ├── sbcharsetprober.pyc
+    │       │   │   │   │   │   │   ├── sbcsgroupprober.py
+    │       │   │   │   │   │   │   ├── sbcsgroupprober.pyc
+    │       │   │   │   │   │   │   ├── sjisprober.py
+    │       │   │   │   │   │   │   ├── sjisprober.pyc
+    │       │   │   │   │   │   │   ├── universaldetector.py
+    │       │   │   │   │   │   │   ├── universaldetector.pyc
+    │       │   │   │   │   │   │   ├── utf8prober.py
+    │       │   │   │   │   │   │   └── utf8prober.pyc
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   ├── __init__.pyc
+    │       │   │   │   │   │   └── urllib3
+    │       │   │   │   │   │       ├── _collections.py
+    │       │   │   │   │   │       ├── _collections.pyc
+    │       │   │   │   │   │       ├── connectionpool.py
+    │       │   │   │   │   │       ├── connectionpool.pyc
+    │       │   │   │   │   │       ├── connection.py
+    │       │   │   │   │   │       ├── connection.pyc
+    │       │   │   │   │   │       ├── contrib
+    │       │   │   │   │   │       │   ├── __init__.py
+    │       │   │   │   │   │       │   ├── __init__.pyc
+    │       │   │   │   │   │       │   ├── ntlmpool.py
+    │       │   │   │   │   │       │   ├── ntlmpool.pyc
+    │       │   │   │   │   │       │   ├── pyopenssl.py
+    │       │   │   │   │   │       │   └── pyopenssl.pyc
+    │       │   │   │   │   │       ├── exceptions.py
+    │       │   │   │   │   │       ├── exceptions.pyc
+    │       │   │   │   │   │       ├── fields.py
+    │       │   │   │   │   │       ├── fields.pyc
+    │       │   │   │   │   │       ├── filepost.py
+    │       │   │   │   │   │       ├── filepost.pyc
+    │       │   │   │   │   │       ├── __init__.py
+    │       │   │   │   │   │       ├── __init__.pyc
+    │       │   │   │   │   │       ├── packages
+    │       │   │   │   │   │       │   ├── __init__.py
+    │       │   │   │   │   │       │   ├── __init__.pyc
+    │       │   │   │   │   │       │   ├── ordered_dict.py
+    │       │   │   │   │   │       │   ├── ordered_dict.pyc
+    │       │   │   │   │   │       │   ├── six.py
+    │       │   │   │   │   │       │   ├── six.pyc
+    │       │   │   │   │   │       │   └── ssl_match_hostname
+    │       │   │   │   │   │       │       ├── _implementation.py
+    │       │   │   │   │   │       │       ├── _implementation.pyc
+    │       │   │   │   │   │       │       ├── __init__.py
+    │       │   │   │   │   │       │       └── __init__.pyc
+    │       │   │   │   │   │       ├── poolmanager.py
+    │       │   │   │   │   │       ├── poolmanager.pyc
+    │       │   │   │   │   │       ├── request.py
+    │       │   │   │   │   │       ├── request.pyc
+    │       │   │   │   │   │       ├── response.py
+    │       │   │   │   │   │       ├── response.pyc
+    │       │   │   │   │   │       └── util
+    │       │   │   │   │   │           ├── connection.py
+    │       │   │   │   │   │           ├── connection.pyc
+    │       │   │   │   │   │           ├── __init__.py
+    │       │   │   │   │   │           ├── __init__.pyc
+    │       │   │   │   │   │           ├── request.py
+    │       │   │   │   │   │           ├── request.pyc
+    │       │   │   │   │   │           ├── response.py
+    │       │   │   │   │   │           ├── response.pyc
+    │       │   │   │   │   │           ├── retry.py
+    │       │   │   │   │   │           ├── retry.pyc
+    │       │   │   │   │   │           ├── ssl_.py
+    │       │   │   │   │   │           ├── ssl_.pyc
+    │       │   │   │   │   │           ├── timeout.py
+    │       │   │   │   │   │           ├── timeout.pyc
+    │       │   │   │   │   │           ├── url.py
+    │       │   │   │   │   │           └── url.pyc
+    │       │   │   │   │   ├── sessions.py
+    │       │   │   │   │   ├── sessions.pyc
+    │       │   │   │   │   ├── status_codes.py
+    │       │   │   │   │   ├── status_codes.pyc
+    │       │   │   │   │   ├── structures.py
+    │       │   │   │   │   ├── structures.pyc
+    │       │   │   │   │   ├── utils.py
+    │       │   │   │   │   └── utils.pyc
+    │       │   │   │   ├── retrying.py
+    │       │   │   │   ├── retrying.pyc
+    │       │   │   │   ├── re-vendor.py
+    │       │   │   │   ├── re-vendor.pyc
+    │       │   │   │   ├── six.py
+    │       │   │   │   └── six.pyc
+    │       │   │   ├── wheel.py
+    │       │   │   └── wheel.pyc
+    │       │   ├── pip-7.1.2.dist-info
+    │       │   │   ├── DESCRIPTION.rst
+    │       │   │   ├── entry_points.txt
+    │       │   │   ├── METADATA
+    │       │   │   ├── metadata.json
+    │       │   │   ├── pbr.json
+    │       │   │   ├── RECORD
+    │       │   │   ├── top_level.txt
+    │       │   │   └── WHEEL
+    │       │   ├── pkg_resources
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   └── _vendor
+    │       │   │       ├── __init__.py
+    │       │   │       ├── __init__.pyc
+    │       │   │       └── packaging
+    │       │   │           ├── __about__.py
+    │       │   │           ├── __about__.pyc
+    │       │   │           ├── _compat.py
+    │       │   │           ├── _compat.pyc
+    │       │   │           ├── __init__.py
+    │       │   │           ├── __init__.pyc
+    │       │   │           ├── specifiers.py
+    │       │   │           ├── specifiers.pyc
+    │       │   │           ├── _structures.py
+    │       │   │           ├── _structures.pyc
+    │       │   │           ├── version.py
+    │       │   │           └── version.pyc
+    │       │   ├── setuptools
+    │       │   │   ├── archive_util.py
+    │       │   │   ├── archive_util.pyc
+    │       │   │   ├── cli-32.exe
+    │       │   │   ├── cli-64.exe
+    │       │   │   ├── cli-arm-32.exe
+    │       │   │   ├── cli.exe
+    │       │   │   ├── command
+    │       │   │   │   ├── alias.py
+    │       │   │   │   ├── alias.pyc
+    │       │   │   │   ├── bdist_egg.py
+    │       │   │   │   ├── bdist_egg.pyc
+    │       │   │   │   ├── bdist_rpm.py
+    │       │   │   │   ├── bdist_rpm.pyc
+    │       │   │   │   ├── bdist_wininst.py
+    │       │   │   │   ├── bdist_wininst.pyc
+    │       │   │   │   ├── build_ext.py
+    │       │   │   │   ├── build_ext.pyc
+    │       │   │   │   ├── build_py.py
+    │       │   │   │   ├── build_py.pyc
+    │       │   │   │   ├── develop.py
+    │       │   │   │   ├── develop.pyc
+    │       │   │   │   ├── easy_install.py
+    │       │   │   │   ├── easy_install.pyc
+    │       │   │   │   ├── egg_info.py
+    │       │   │   │   ├── egg_info.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── install_egg_info.py
+    │       │   │   │   ├── install_egg_info.pyc
+    │       │   │   │   ├── install_lib.py
+    │       │   │   │   ├── install_lib.pyc
+    │       │   │   │   ├── install.py
+    │       │   │   │   ├── install.pyc
+    │       │   │   │   ├── install_scripts.py
+    │       │   │   │   ├── install_scripts.pyc
+    │       │   │   │   ├── launcher manifest.xml
+    │       │   │   │   ├── register.py
+    │       │   │   │   ├── register.pyc
+    │       │   │   │   ├── rotate.py
+    │       │   │   │   ├── rotate.pyc
+    │       │   │   │   ├── saveopts.py
+    │       │   │   │   ├── saveopts.pyc
+    │       │   │   │   ├── sdist.py
+    │       │   │   │   ├── sdist.pyc
+    │       │   │   │   ├── setopt.py
+    │       │   │   │   ├── setopt.pyc
+    │       │   │   │   ├── test.py
+    │       │   │   │   ├── test.pyc
+    │       │   │   │   ├── upload_docs.py
+    │       │   │   │   └── upload_docs.pyc
+    │       │   │   ├── compat.py
+    │       │   │   ├── compat.pyc
+    │       │   │   ├── depends.py
+    │       │   │   ├── depends.pyc
+    │       │   │   ├── dist.py
+    │       │   │   ├── dist.pyc
+    │       │   │   ├── extension.py
+    │       │   │   ├── extension.pyc
+    │       │   │   ├── gui-32.exe
+    │       │   │   ├── gui-64.exe
+    │       │   │   ├── gui-arm-32.exe
+    │       │   │   ├── gui.exe
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── lib2to3_ex.py
+    │       │   │   ├── lib2to3_ex.pyc
+    │       │   │   ├── msvc9_support.py
+    │       │   │   ├── msvc9_support.pyc
+    │       │   │   ├── package_index.py
+    │       │   │   ├── package_index.pyc
+    │       │   │   ├── py26compat.py
+    │       │   │   ├── py26compat.pyc
+    │       │   │   ├── py27compat.py
+    │       │   │   ├── py27compat.pyc
+    │       │   │   ├── py31compat.py
+    │       │   │   ├── py31compat.pyc
+    │       │   │   ├── sandbox.py
+    │       │   │   ├── sandbox.pyc
+    │       │   │   ├── script (dev).tmpl
+    │       │   │   ├── script.tmpl
+    │       │   │   ├── site-patch.py
+    │       │   │   ├── site-patch.pyc
+    │       │   │   ├── ssl_support.py
+    │       │   │   ├── ssl_support.pyc
+    │       │   │   ├── unicode_utils.py
+    │       │   │   ├── unicode_utils.pyc
+    │       │   │   ├── utils.py
+    │       │   │   ├── utils.pyc
+    │       │   │   ├── version.py
+    │       │   │   ├── version.pyc
+    │       │   │   ├── windows_support.py
+    │       │   │   └── windows_support.pyc
+    │       │   ├── setuptools-18.2.dist-info
+    │       │   │   ├── dependency_links.txt
+    │       │   │   ├── DESCRIPTION.rst
+    │       │   │   ├── entry_points.txt
+    │       │   │   ├── METADATA
+    │       │   │   ├── metadata.json
+    │       │   │   ├── RECORD
+    │       │   │   ├── top_level.txt
+    │       │   │   ├── WHEEL
+    │       │   │   └── zip-safe
+    │       │   ├── werkzeug
+    │       │   │   ├── _compat.py
+    │       │   │   ├── _compat.pyc
+    │       │   │   ├── contrib
+    │       │   │   │   ├── atom.py
+    │       │   │   │   ├── atom.pyc
+    │       │   │   │   ├── cache.py
+    │       │   │   │   ├── cache.pyc
+    │       │   │   │   ├── fixers.py
+    │       │   │   │   ├── fixers.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── iterio.py
+    │       │   │   │   ├── iterio.pyc
+    │       │   │   │   ├── jsrouting.py
+    │       │   │   │   ├── jsrouting.pyc
+    │       │   │   │   ├── limiter.py
+    │       │   │   │   ├── limiter.pyc
+    │       │   │   │   ├── lint.py
+    │       │   │   │   ├── lint.pyc
+    │       │   │   │   ├── profiler.py
+    │       │   │   │   ├── profiler.pyc
+    │       │   │   │   ├── securecookie.py
+    │       │   │   │   ├── securecookie.pyc
+    │       │   │   │   ├── sessions.py
+    │       │   │   │   ├── sessions.pyc
+    │       │   │   │   ├── testtools.py
+    │       │   │   │   ├── testtools.pyc
+    │       │   │   │   ├── wrappers.py
+    │       │   │   │   └── wrappers.pyc
+    │       │   │   ├── datastructures.py
+    │       │   │   ├── datastructures.pyc
+    │       │   │   ├── debug
+    │       │   │   │   ├── console.py
+    │       │   │   │   ├── console.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── repr.py
+    │       │   │   │   ├── repr.pyc
+    │       │   │   │   ├── shared
+    │       │   │   │   │   ├── console.png
+    │       │   │   │   │   ├── debugger.js
+    │       │   │   │   │   ├── FONT_LICENSE
+    │       │   │   │   │   ├── jquery.js
+    │       │   │   │   │   ├── less.png
+    │       │   │   │   │   ├── more.png
+    │       │   │   │   │   ├── source.png
+    │       │   │   │   │   ├── style.css
+    │       │   │   │   │   └── ubuntu.ttf
+    │       │   │   │   ├── tbtools.py
+    │       │   │   │   └── tbtools.pyc
+    │       │   │   ├── exceptions.py
+    │       │   │   ├── exceptions.pyc
+    │       │   │   ├── filesystem.py
+    │       │   │   ├── filesystem.pyc
+    │       │   │   ├── formparser.py
+    │       │   │   ├── formparser.pyc
+    │       │   │   ├── http.py
+    │       │   │   ├── http.pyc
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── _internal.py
+    │       │   │   ├── _internal.pyc
+    │       │   │   ├── local.py
+    │       │   │   ├── local.pyc
+    │       │   │   ├── posixemulation.py
+    │       │   │   ├── posixemulation.pyc
+    │       │   │   ├── _reloader.py
+    │       │   │   ├── _reloader.pyc
+    │       │   │   ├── routing.py
+    │       │   │   ├── routing.pyc
+    │       │   │   ├── script.py
+    │       │   │   ├── script.pyc
+    │       │   │   ├── security.py
+    │       │   │   ├── security.pyc
+    │       │   │   ├── serving.py
+    │       │   │   ├── serving.pyc
+    │       │   │   ├── testapp.py
+    │       │   │   ├── testapp.pyc
+    │       │   │   ├── test.py
+    │       │   │   ├── test.pyc
+    │       │   │   ├── urls.py
+    │       │   │   ├── urls.pyc
+    │       │   │   ├── useragents.py
+    │       │   │   ├── useragents.pyc
+    │       │   │   ├── utils.py
+    │       │   │   ├── utils.pyc
+    │       │   │   ├── wrappers.py
+    │       │   │   ├── wrappers.pyc
+    │       │   │   ├── wsgi.py
+    │       │   │   └── wsgi.pyc
+    │       │   ├── Werkzeug-0.11.3.dist-info
+    │       │   │   ├── DESCRIPTION.rst
+    │       │   │   ├── METADATA
+    │       │   │   ├── metadata.json
+    │       │   │   ├── RECORD
+    │       │   │   ├── top_level.txt
+    │       │   │   └── WHEEL
+    │       │   ├── wheel
+    │       │   │   ├── archive.py
+    │       │   │   ├── archive.pyc
+    │       │   │   ├── bdist_wheel.py
+    │       │   │   ├── bdist_wheel.pyc
+    │       │   │   ├── decorator.py
+    │       │   │   ├── decorator.pyc
+    │       │   │   ├── egg2wheel.py
+    │       │   │   ├── egg2wheel.pyc
+    │       │   │   ├── eggnames.txt
+    │       │   │   ├── __init__.py
+    │       │   │   ├── __init__.pyc
+    │       │   │   ├── install.py
+    │       │   │   ├── install.pyc
+    │       │   │   ├── __main__.py
+    │       │   │   ├── __main__.pyc
+    │       │   │   ├── metadata.py
+    │       │   │   ├── metadata.pyc
+    │       │   │   ├── paths.py
+    │       │   │   ├── paths.pyc
+    │       │   │   ├── pep425tags.py
+    │       │   │   ├── pep425tags.pyc
+    │       │   │   ├── pkginfo.py
+    │       │   │   ├── pkginfo.pyc
+    │       │   │   ├── signatures
+    │       │   │   │   ├── djbec.py
+    │       │   │   │   ├── djbec.pyc
+    │       │   │   │   ├── ed25519py.py
+    │       │   │   │   ├── ed25519py.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── keys.py
+    │       │   │   │   └── keys.pyc
+    │       │   │   ├── test
+    │       │   │   │   ├── complex-dist
+    │       │   │   │   │   ├── complexdist
+    │       │   │   │   │   │   ├── __init__.py
+    │       │   │   │   │   │   └── __init__.pyc
+    │       │   │   │   │   ├── setup.py
+    │       │   │   │   │   └── setup.pyc
+    │       │   │   │   ├── headers.dist
+    │       │   │   │   │   ├── header.h
+    │       │   │   │   │   ├── headersdist.py
+    │       │   │   │   │   ├── headersdist.pyc
+    │       │   │   │   │   ├── setup.py
+    │       │   │   │   │   └── setup.pyc
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   ├── __init__.pyc
+    │       │   │   │   ├── pydist-schema.json
+    │       │   │   │   ├── simple.dist
+    │       │   │   │   │   ├── setup.py
+    │       │   │   │   │   ├── setup.pyc
+    │       │   │   │   │   └── simpledist
+    │       │   │   │   │       ├── __init__.py
+    │       │   │   │   │       └── __init__.pyc
+    │       │   │   │   ├── test-1.0-py2.py3-none-win32.whl
+    │       │   │   │   ├── test_basic.py
+    │       │   │   │   ├── test_basic.pyc
+    │       │   │   │   ├── test_install.py
+    │       │   │   │   ├── test_install.pyc
+    │       │   │   │   ├── test_keys.py
+    │       │   │   │   ├── test_keys.pyc
+    │       │   │   │   ├── test_paths.py
+    │       │   │   │   ├── test_paths.pyc
+    │       │   │   │   ├── test_ranking.py
+    │       │   │   │   ├── test_ranking.pyc
+    │       │   │   │   ├── test_signatures.py
+    │       │   │   │   ├── test_signatures.pyc
+    │       │   │   │   ├── test_tagopt.py
+    │       │   │   │   ├── test_tagopt.pyc
+    │       │   │   │   ├── test_tool.py
+    │       │   │   │   ├── test_tool.pyc
+    │       │   │   │   ├── test_wheelfile.py
+    │       │   │   │   └── test_wheelfile.pyc
+    │       │   │   ├── tool
+    │       │   │   │   ├── __init__.py
+    │       │   │   │   └── __init__.pyc
+    │       │   │   ├── util.py
+    │       │   │   ├── util.pyc
+    │       │   │   ├── wininst2wheel.py
+    │       │   │   └── wininst2wheel.pyc
+    │       │   └── wheel-0.24.0.dist-info
+    │       │       ├── DESCRIPTION.rst
+    │       │       ├── entry_points.txt
+    │       │       ├── LICENSE.txt
+    │       │       ├── METADATA
+    │       │       ├── metadata.json
+    │       │       ├── RECORD
+    │       │       ├── RECORD.jws
+    │       │       ├── top_level.txt
+    │       │       └── WHEEL
+    │       ├── site.py
+    │       ├── site.pyc
+    │       ├── sre_compile.py -> /usr/lib/python2.7/sre_compile.py
+    │       ├── sre_compile.pyc
+    │       ├── sre_constants.py -> /usr/lib/python2.7/sre_constants.py
+    │       ├── sre_constants.pyc
+    │       ├── sre_parse.py -> /usr/lib/python2.7/sre_parse.py
+    │       ├── sre_parse.pyc
+    │       ├── sre.py -> /usr/lib/python2.7/sre.py
+    │       ├── stat.py -> /usr/lib/python2.7/stat.py
+    │       ├── stat.pyc
+    │       ├── types.py -> /usr/lib/python2.7/types.py
+    │       ├── types.pyc
+    │       ├── UserDict.py -> /usr/lib/python2.7/UserDict.py
+    │       ├── UserDict.pyc
+    │       ├── warnings.py -> /usr/lib/python2.7/warnings.py
+    │       ├── warnings.pyc
+    │       ├── _weakrefset.py -> /usr/lib/python2.7/_weakrefset.py
+    │       └── _weakrefset.pyc
+    ├── local
+    │   ├── bin -> /home/fdev/fask/fp_one/bin
+    │   ├── include -> /home/fdev/fask/fp_one/include
+    │   └── lib -> /home/fdev/fask/fp_one/lib
+    └── pip-selfcheck.json
+
+115 directories, 1041 files
+(fp_one)fdev@uber1:~/fask$ ls
+fp_one
+(fp_one)fdev@uber1:~/fask$ mkdir appone-h
+(fp_one)fdev@uber1:~/fask$ sudo chmod - R appone-h/
+chmod: cannot access ‘R’: No such file or directory
+(fp_one)fdev@uber1:~/fask$ sudo chmod -R 777  appone-h/
+(fp_one)fdev@uber1:~/fask$ cd appone-h/
+(fp_one)fdev@uber1:~/fask/appone-h$ ls
+(fp_one)fdev@uber1:~/fask/appone-h$ nano
+(fp_one)fdev@uber1:~/fask/appone-h$ ls
+hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+^X^C(fp_one)fdev@uber1:~/fask/appone-h$ ls
+hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+  File "hello.py", line 9
+    app.run(0.0.0.0)
+                ^
+SyntaxError: invalid syntax
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+172.13.10.2 - - [04/Jan/2016 13:25:19] "GET / HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:25:19] "GET /favicon.ico HTTP/1.1" 404 -
+^X^C(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+172.13.10.2 - - [04/Jan/2016 13:25:58] "GET / HTTP/1.1" 200 -
+^X^C * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+^[[A^X^Z
+[2]+  Stopped                 python hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+Traceback (most recent call last):
+  File "hello.py", line 4, in <module>
+    app.run()
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 675, in run_simple
+    s.bind((hostname, port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+Traceback (most recent call last):
+  File "hello.py", line 4, in <module>
+    app.run()
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 675, in run_simple
+    s.bind((hostname, port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+Traceback (most recent call last):
+  File "hello.py", line 9, in <module>
+    app.run(host = '0.0.0.0')
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 675, in run_simple
+    s.bind((hostname, port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+Traceback (most recent call last):
+  File "hello.py", line 8, in <module>
+    app.run(host = '0.0.0.0')
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 692, in run_simple
+    inner()
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 654, in inner
+    fd=fd)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 548, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 462, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+(fp_one)fdev@uber1:~/fask/appone-h$ ^C
+(fp_one)fdev@uber1:~/fask/appone-h$ clear
+(fp_one)fdev@uber1:~/fask/appone-h$ ll
+total 12
+drwxrwxrwx 2 fdev fdev 4096 Jan  4 13:23 ./
+drwxrwxrwx 4 root root 4096 Jan  4 13:22 ../
+-rw-rw-r-- 1 fdev fdev  165 Jan  4 13:27 hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+Traceback (most recent call last):
+  File "hello.py", line 8, in <module>
+    app.run(host = '0.0.0.0')
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 692, in run_simple
+    inner()
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 654, in inner
+    fd=fd)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 548, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 462, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6180 pts/0    00:00:00 python
+ 6183 pts/0    00:00:00 python
+ 6212 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ kill 6180
+(fp_one)fdev@uber1:~/fask/appone-h$ kill 6183
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+Traceback (most recent call last):
+  File "hello.py", line 8, in <module>
+    app.run(host = '0.0.0.0')
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 692, in run_simple
+    inner()
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 654, in inner
+    fd=fd)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 548, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 462, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6180 pts/0    00:00:00 python
+ 6183 pts/0    00:00:00 python
+ 6258 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ killall fdev
+fdev: no process found
+(fp_one)fdev@uber1:~/fask/appone-h$ killall python
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6180 pts/0    00:00:00 python
+ 6183 pts/0    00:00:00 python
+ 6261 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ kill 6183
+(fp_one)fdev@uber1:~/fask/appone-h$ sudo kill 6183
+(fp_one)fdev@uber1:~/fask/appone-h$ sudo kill 6180
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6180 pts/0    00:00:00 python
+ 6183 pts/0    00:00:00 python
+ 6267 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ sudo kill 6180
+(fp_one)fdev@uber1:~/fask/appone-h$ sudo kill -9 6180
+[2]+  Killed                  python hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6273 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+^X172.13.10.2 - - [04/Jan/2016 13:30:44] "GET / HTTP/1.1" 200 -
+^X^C(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6278 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ ls
+hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 161-451-987
+ 161-451-987
+^CTraceback (most recent call last):
+  File "hello.py", line 10, in <module>
+    app.run(host = '0.0.0.0')
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 675, in run_simple
+    s.bind((hostname, port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+ * Debugger is active!
+ * Debugger pin code: 161-451-987
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6286 pts/0    00:00:00 python
+ 6293 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ kill -9 6293
+-bash: kill: (6293) - No such process
+(fp_one)fdev@uber1:~/fask/appone-h$ kill -9 6286
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6294 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ python hello.py
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 161-451-987
+161
+^X^CTraceback (most recent call last):
+  File "hello.py", line 10, in <module>
+    app.run(host = '0.0.0.0')
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/home/fdev/fask/fp_one/local/lib/python2.7/site-packages/werkzeug/serving.py", line 675, in run_simple
+    s.bind((hostname, port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+ * Debugger is active!
+ * Debugger pin code: 161-451-987
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6298 pts/0    00:00:00 python
+ 6305 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ kill -9 6298
+(fp_one)fdev@uber1:~/fask/appone-h$ ps -a
+  PID TTY          TIME CMD
+ 1532 tty1     00:00:00 bash
+ 1945 pts/0    00:00:00 sudo
+ 1946 pts/0    00:00:00 nano
+ 6306 pts/0    00:00:00 ps
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py app.run(debug=True
+-bash: syntax error near unexpected token `('
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py app.run(debug=True)
+-bash: syntax error near unexpected token `('
+(fp_one)fdev@uber1:~/fask/appone-h$ nano hello.py app.run(debug=True);
+-bash: syntax error near unexpected token `('
+(fp_one)fdev@uber1:~/fask/appone-h$ clear
+(fp_one)fdev@uber1:~/fask/appone-h$ ls
+hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ ls
+hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ cd ..
+(fp_one)fdev@uber1:~/fask$ ls
+appone-h  fp_one
+(fp_one)fdev@uber1:~/fask$ ls
+appone-h  fp_one
+(fp_one)fdev@uber1:~/fask$ cd fp_one/
+(fp_one)fdev@uber1:~/fask/fp_one$ ls
+bin  include  lib  local  pip-selfcheck.json
+(fp_one)fdev@uber1:~/fask/fp_one$ cd ..
+(fp_one)fdev@uber1:~/fask$ ls
+appone-h  fp_one
+(fp_one)fdev@uber1:~/fask$ cd appone-h/
+(fp_one)fdev@uber1:~/fask/appone-h$ ll
+total 12
+drwxrwxrwx 2 fdev fdev 4096 Jan  4 13:23 ./
+drwxrwxrwx 4 root root 4096 Jan  4 13:22 ../
+-rw-rw-r-- 1 fdev fdev  165 Jan  4 13:33 hello.py
+(fp_one)fdev@uber1:~/fask/appone-h$ cd ..
+(fp_one)fdev@uber1:~/fask$ ls
+appone-h  fp_one
+(fp_one)fdev@uber1:~/fask$ deactivate
+fdev@uber1:~/fask$ ls
+appone-h  fp_one
+fdev@uber1:~/fask$ cd fp_one/
+fdev@uber1:~/fask/fp_one$ ls
+bin  include  lib  local  pip-selfcheck.json
+fdev@uber1:~/fask/fp_one$ cd ..
+fdev@uber1:~/fask$ cd ..
+fdev@uber1:~$ ll
+total 32
+drwxr-xr-x 5 fdev fdev 4096 Jan  4 13:09 ./
+drwxr-xr-x 8 root root 4096 Jan  4 12:32 ../
+-rw-r--r-- 1 fdev fdev  220 Jan  4 12:32 .bash_logout
+-rw-r--r-- 1 fdev fdev 3637 Jan  4 12:32 .bashrc
+drwx------ 3 fdev fdev 4096 Jan  4 13:11 .cache/
+drwxrwxrwx 4 root root 4096 Jan  4 13:22 fask/
+-rw-r--r-- 1 fdev fdev  675 Jan  4 12:32 .profile
+drwxrwxrwx 2 root root 4096 Jan  4 12:41 xftp/
+fdev@uber1:~$ sudo mkdir srcflask4d
+fdev@uber1:~$ chmod -R 777 srcflask4d/
+chmod: changing permissions of ‘srcflask4d/’: Operation not permitted
+fdev@uber1:~$ sudo chmod -R 777 srcflask4d/
+fdev@uber1:~$ cd srcflask4d/
+fdev@uber1:~/srcflask4d$ git clone https://github.com/mitsuhiko/flask.git
+Cloning into 'flask'...
+remote: Counting objects: 11622, done.
+remote: Total 11622 (delta 0), reused 0 (delta 0), pack-reused 11622
+Receiving objects: 100% (11622/11622), 5.20 MiB | 115.00 KiB/s, done.
+Resolving deltas: 100% (7166/7166), done.
+Checking connectivity... done.
+fdev@uber1:~/srcflask4d$ ls
+flask
+fdev@uber1:~/srcflask4d$ cd flask/
+fdev@uber1:~/srcflask4d/flask$ ls
+artwork  AUTHORS  CHANGES  CONTRIBUTING.rst  docs  examples  flask  LICENSE  Makefile  MANIFEST.in  README  scripts  setup.cfg  setup.py  tests  tox.ini
+fdev@uber1:~/srcflask4d/flask$ cd docs/
+fdev@uber1:~/srcflask4d/flask/docs$ ls
+advanced_foreword.rst  changelog.rst     deploying          flaskdocext.py  index.rst         make.bat        reqcontext.rst  _static         _themes
+api.rst                cli.rst           design.rst         flaskext.py     installation.rst  Makefile        security.rst    styleguide.rst  tutorial
+appcontext.rst         config.rst        errorhandling.rst  flaskstyle.sty  latexindex.rst    patterns        server.rst      _templates      unicode.rst
+becomingbig.rst        conf.py           extensiondev.rst   foreword.rst    license.rst       python3.rst     shell.rst       templating.rst  upgrading.rst
+blueprints.rst         contents.rst.inc  extensions.rst     htmlfaq.rst     logo.pdf          quickstart.rst  signals.rst     testing.rst     views.rst
+fdev@uber1:~/srcflask4d/flask/docs$ ls
+advanced_foreword.rst  changelog.rst     deploying          flaskdocext.py  index.rst         make.bat        reqcontext.rst  _static         _themes
+api.rst                cli.rst           design.rst         flaskext.py     installation.rst  Makefile        security.rst    styleguide.rst  tutorial
+appcontext.rst         config.rst        errorhandling.rst  flaskstyle.sty  latexindex.rst    patterns        server.rst      _templates      unicode.rst
+becomingbig.rst        conf.py           extensiondev.rst   foreword.rst    license.rst       python3.rst     shell.rst       templating.rst  upgrading.rst
+blueprints.rst         contents.rst.inc  extensions.rst     htmlfaq.rst     logo.pdf          quickstart.rst  signals.rst     testing.rst     views.rst
+fdev@uber1:~/srcflask4d/flask/docs$ ll
+total 440
+drwxrwxr-x 8 fdev fdev  4096 Jan  4 13:38 ./
+drwxrwxr-x 9 fdev fdev  4096 Jan  4 13:38 ../
+-rw-rw-r-- 1 fdev fdev  3436 Jan  4 13:38 advanced_foreword.rst
+-rw-rw-r-- 1 fdev fdev 27995 Jan  4 13:38 api.rst
+-rw-rw-r-- 1 fdev fdev  5271 Jan  4 13:38 appcontext.rst
+-rw-rw-r-- 1 fdev fdev  4629 Jan  4 13:38 becomingbig.rst
+-rw-rw-r-- 1 fdev fdev  9472 Jan  4 13:38 blueprints.rst
+-rw-rw-r-- 1 fdev fdev    24 Jan  4 13:38 changelog.rst
+-rw-rw-r-- 1 fdev fdev 10329 Jan  4 13:38 cli.rst
+-rw-rw-r-- 1 fdev fdev 21797 Jan  4 13:38 config.rst
+-rw-rw-r-- 1 fdev fdev  9573 Jan  4 13:38 conf.py
+-rw-rw-r-- 1 fdev fdev   978 Jan  4 13:38 contents.rst.inc
+drwxrwxr-x 2 fdev fdev  4096 Jan  4 13:38 deploying/
+-rw-rw-r-- 1 fdev fdev  8980 Jan  4 13:38 design.rst
+-rw-rw-r-- 1 fdev fdev 14327 Jan  4 13:38 errorhandling.rst
+-rw-rw-r-- 1 fdev fdev 16663 Jan  4 13:38 extensiondev.rst
+-rw-rw-r-- 1 fdev fdev  1866 Jan  4 13:38 extensions.rst
+-rw-rw-r-- 1 fdev fdev   345 Jan  4 13:38 flaskdocext.py
+-rw-rw-r-- 1 fdev fdev  4875 Jan  4 13:38 flaskext.py
+-rw-rw-r-- 1 fdev fdev  3106 Jan  4 13:38 flaskstyle.sty
+-rw-rw-r-- 1 fdev fdev  2807 Jan  4 13:38 foreword.rst
+-rw-rw-r-- 1 fdev fdev     7 Jan  4 13:38 .gitignore
+-rw-rw-r-- 1 fdev fdev  9679 Jan  4 13:38 htmlfaq.rst
+-rw-rw-r-- 1 fdev fdev  1104 Jan  4 13:38 index.rst
+-rw-rw-r-- 1 fdev fdev  6415 Jan  4 13:38 installation.rst
+-rw-rw-r-- 1 fdev fdev    81 Jan  4 13:38 latexindex.rst
+-rw-rw-r-- 1 fdev fdev  1191 Jan  4 13:38 license.rst
+-rw-rw-r-- 1 fdev fdev 23915 Jan  4 13:38 logo.pdf
+-rw-rw-r-- 1 fdev fdev  3712 Jan  4 13:38 make.bat
+-rw-rw-r-- 1 fdev fdev  4158 Jan  4 13:38 Makefile
+drwxrwxr-x 2 fdev fdev  4096 Jan  4 13:38 patterns/
+-rw-rw-r-- 1 fdev fdev  1645 Jan  4 13:38 python3.rst
+-rw-rw-r-- 1 fdev fdev 33479 Jan  4 13:38 quickstart.rst
+-rw-rw-r-- 1 fdev fdev  9196 Jan  4 13:38 reqcontext.rst
+-rw-rw-r-- 1 fdev fdev  7532 Jan  4 13:38 security.rst
+-rw-rw-r-- 1 fdev fdev  1619 Jan  4 13:38 server.rst
+-rw-rw-r-- 1 fdev fdev  3693 Jan  4 13:38 shell.rst
+-rw-rw-r-- 1 fdev fdev  7088 Jan  4 13:38 signals.rst
+drwxrwxr-x 2 fdev fdev  4096 Jan  4 13:38 _static/
+-rw-rw-r-- 1 fdev fdev  5897 Jan  4 13:38 styleguide.rst
+drwxrwxr-x 2 fdev fdev  4096 Jan  4 13:38 _templates/
+-rw-rw-r-- 1 fdev fdev  7563 Jan  4 13:38 templating.rst
+-rw-rw-r-- 1 fdev fdev 12592 Jan  4 13:38 testing.rst
+drwxrwxr-x 2 fdev fdev  4096 Jan  4 13:38 _themes/
+drwxrwxr-x 2 fdev fdev  4096 Jan  4 13:38 tutorial/
+-rw-rw-r-- 1 fdev fdev  4623 Jan  4 13:38 unicode.rst
+-rw-rw-r-- 1 fdev fdev 17258 Jan  4 13:38 upgrading.rst
+-rw-rw-r-- 1 fdev fdev  8312 Jan  4 13:38 views.rst
+fdev@uber1:~/srcflask4d/flask/docs$ sudo mkdir fdocs
+fdev@uber1:~/srcflask4d/flask/docs$ chmod 777 fdocs/
+chmod: changing permissions of ‘fdocs/’: Operation not permitted
+fdev@uber1:~/srcflask4d/flask/docs$ sudo chmod 777 fdocs/
+fdev@uber1:~/srcflask4d/flask/docs$ sudo sphinx-build -b html fdocs/
+Error: Config directory doesn't contain a conf.py file.
+fdev@uber1:~/srcflask4d/flask/docs$ make html
+sphinx-build -b html -d _build/doctrees   . _build/html
+Running Sphinx v1.3.3
+making output directory...
+--------------------------------------------------------------------------
+Warning: Flask themes unavailable.  Building with default theme
+If you want the Flask themes, run this command and build again:
+
+  git submodule update --init
+--------------------------------------------------------------------------
+loading pickled environment... not yet created
+loading intersphinx inventory from http://werkzeug.pocoo.org/docs/objects.inv...
+loading intersphinx inventory from https://docs.python.org/dev/objects.inv...
+loading intersphinx inventory from https://wtforms.readthedocs.org/en/latest/objects.inv...
+loading intersphinx inventory from http://click.pocoo.org/objects.inv...
+loading intersphinx inventory from http://jinja.pocoo.org/docs/objects.inv...
+loading intersphinx inventory from https://pythonhosted.org/blinker/objects.inv...
+loading intersphinx inventory from http://www.sqlalchemy.org/docs/objects.inv...
+building [mo]: targets for 0 po files that are out of date
+building [html]: targets for 74 source files that are out of date
+updating environment: 74 added, 0 changed, 0 removed
+reading sources... [100%] views
+/home/fdev/srcflask4d/flask/docs/api.rst:877: WARNING: autodoc: failed to import class u'FlaskGroup' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+/home/fdev/srcflask4d/flask/docs/api.rst:880: WARNING: autodoc: failed to import class u'AppGroup' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+/home/fdev/srcflask4d/flask/docs/api.rst:883: WARNING: autodoc: failed to import class u'ScriptInfo' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+/home/fdev/srcflask4d/flask/docs/api.rst:886: WARNING: autodoc: failed to import function u'with_appcontext' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+/home/fdev/srcflask4d/flask/docs/api.rst:888: WARNING: autodoc: failed to import function u'pass_script_info' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+/home/fdev/srcflask4d/flask/docs/api.rst:893: WARNING: autodoc: failed to import function u'script_info_option' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+/home/fdev/srcflask4d/flask/docs/api.rst:900: WARNING: autodoc: failed to import data u'run_command' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+/home/fdev/srcflask4d/flask/docs/api.rst:902: WARNING: autodoc: failed to import data u'shell_command' from module u'flask.cli'; the following exception was raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py", line 385, in import_object
+    __import__(self.modname)
+ImportError: No module named cli
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [100%] views
+/home/fdev/srcflask4d/flask/docs/quickstart.rst:887: WARNING: undefined label: extensions (if the link has no caption the label must precede a section header)
+generating indices... genindex
+writing additional pages... search
+copying images... [100%] _static/yes.png
+copying static files... WARNING: favicon file 'flask-favicon.ico' does not exist
+done
+copying extra files... done
+dumping search index in English (code: en) ... done
+dumping object inventory... done
+build succeeded, 10 warnings.
+
+Build finished. The HTML pages are in _build/html.
+fdev@uber1:~/srcflask4d/flask/docs$ cd _build/html
+fdev@uber1:~/srcflask4d/flask/docs/_build/html$ ls
+advanced_foreword.html  changelog.html  errorhandling.html  htmlfaq.html       license.html     reqcontext.html  shell.html       templating.html  views.html
+api.html                cli.html        extensiondev.html   _images            objects.inv      search.html      signals.html     testing.html
+appcontext.html         config.html     extensions.html     index.html         patterns         searchindex.js   _sources         tutorial
+becomingbig.html        deploying       foreword.html       installation.html  python3.html     security.html    _static          unicode.html
+blueprints.html         design.html     genindex.html       latexindex.html    quickstart.html  server.html      styleguide.html  upgrading.html
+fdev@uber1:~/srcflask4d/flask/docs/_build/html$ cd ..
+fdev@uber1:~/srcflask4d/flask/docs/_build$ ls
+doctrees  html
+fdev@uber1:~/srcflask4d/flask/docs/_build$ python -m SimpleHTTPServer
+Serving HTTP on 0.0.0.0 port 8000 ...
+172.13.10.2 - - [04/Jan/2016 13:47:57] "GET / HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:57] code 404, message File not found
+172.13.10.2 - - [04/Jan/2016 13:47:57] "GET /favicon.ico HTTP/1.1" 404 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/ HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/_static/classic.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/_static/pygments.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/_static/jquery.js HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/_static/underscore.js HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/_static/doctools.js HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/_images/logo-full.png HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:58] "GET /html/_static/basic.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:47:59] "GET /html/_static/flask-favicon.ico HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:01] "GET /html/foreword.html HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:01] "GET /html/_static/flask.png HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:06] "GET /html/quickstart.html HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:06] "GET /html/_static/classic.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:06] "GET /html/_static/pygments.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:06] "GET /html/_images/debugger.png HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:06] "GET /html/_static/basic.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:22] "GET /html/deploying/index.html HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:22] "GET /html/_static/classic.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:22] "GET /html/_static/pygments.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:22] "GET /html/_static/basic.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:29] "GET /html/patterns/celery.html HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:29] "GET /html/_static/classic.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:29] "GET /html/_static/pygments.css HTTP/1.1" 200 -
+172.13.10.2 - - [04/Jan/2016 13:48:29] "GET /html/_static/basic.css HTTP/1.1" 200 -
+^X^CTraceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 230, in <module>
+    test()
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 226, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 599, in test
+    httpd.serve_forever()
+  File "/usr/lib/python2.7/SocketServer.py", line 236, in serve_forever
+    poll_interval)
+  File "/usr/lib/python2.7/SocketServer.py", line 155, in _eintr_retry
+    return func(*args)
+KeyboardInterrupt
+fdev@uber1:~/srcflask4d/flask/docs/_build$ cd ..
+fdev@uber1:~/srcflask4d/flask/docs$ ls
+advanced_foreword.rst  changelog.rst     design.rst         flaskdocext.pyc  installation.rst  patterns        shell.rst       testing.rst
+api.rst                cli.rst           errorhandling.rst  flaskext.py      latexindex.rst    python3.rst     signals.rst     _themes
+appcontext.rst         config.rst        extensiondev.rst   flaskstyle.sty   license.rst       quickstart.rst  _static         tutorial
+becomingbig.rst        conf.py           extensions.rst     foreword.rst     logo.pdf          reqcontext.rst  styleguide.rst  unicode.rst
+blueprints.rst         contents.rst.inc  fdocs              htmlfaq.rst      make.bat          security.rst    _templates      upgrading.rst
+_build                 deploying         flaskdocext.py     index.rst        Makefile          server.rst      templating.rst  views.rst
+fdev@uber1:~/srcflask4d/flask/docs$ cd ..
+fdev@uber1:~/srcflask4d/flask$ ls
+artwork  AUTHORS  CHANGES  CONTRIBUTING.rst  docs  examples  flask  LICENSE  Makefile  MANIFEST.in  README  scripts  setup.cfg  setup.py  tests  tox.ini
+fdev@uber1:~/srcflask4d/flask$ cd examples/
+fdev@uber1:~/srcflask4d/flask/examples$ ls
+blueprintexample  flaskr  jqueryexample  minitwit  persona
+fdev@uber1:~/srcflask4d/flask/examples$ cd flaskr/
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ ls
+flaskr.py  README  schema.sql  static  templates  test_flaskr.py
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ flask --app=flaskr initdb
+No command 'flask' found, did you mean:
+ Command 'flasm' from package 'flasm' (universe)
+flask: command not found
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ clea
+No command 'clea' found, did you mean:
+ Command 'clex' from package 'clex' (universe)
+ Command 'clear' from package 'ncurses-bin' (main)
+clea: command not found
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ clear
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ ll
+total 36
+drwxrwxr-x 4 fdev fdev 4096 Jan  4 13:38 ./
+drwxrwxr-x 7 fdev fdev 4096 Jan  4 13:38 ../
+-rw-rw-r-- 1 fdev fdev 2893 Jan  4 13:38 flaskr.py
+-rw-rw-r-- 1 fdev fdev   10 Jan  4 13:38 .gitignore
+-rw-rw-r-- 1 fdev fdev  667 Jan  4 13:38 README
+-rw-rw-r-- 1 fdev fdev  142 Jan  4 13:38 schema.sql
+drwxrwxr-x 2 fdev fdev 4096 Jan  4 13:38 static/
+drwxrwxr-x 2 fdev fdev 4096 Jan  4 13:38 templates/
+-rw-rw-r-- 1 fdev fdev 2059 Jan  4 13:38 test_flaskr.py
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ catcat flaskr.py
+catcat: command not found
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ cat flaskr.py
+# -*- coding: utf-8 -*-
+"""
+    Flaskr
+    ~~~~~~
+
+    A microblog example application written as Flask tutorial with
+    Flask and sqlite3.
+
+    :copyright: (c) 2015 by Armin Ronacher.
+    :license: BSD, see LICENSE for more details.
+"""
+
+import os
+from sqlite3 import dbapi2 as sqlite3
+from flask import Flask, request, session, g, redirect, url_for, abort, \
+     render_template, flash
+
+
+# create our little application :)
+app = Flask(__name__)
+
+# Load default config and override config from an environment variable
+app.config.update(dict(
+    DATABASE=os.path.join(app.root_path, 'flaskr.db'),
+    DEBUG=True,
+    SECRET_KEY='development key',
+    USERNAME='admin',
+    PASSWORD='default'
+))
+app.config.from_envvar('FLASKR_SETTINGS', silent=True)
+
+
+def connect_db():
+    """Connects to the specific database."""
+    rv = sqlite3.connect(app.config['DATABASE'])
+    rv.row_factory = sqlite3.Row
+    return rv
+
+
+def init_db():
+    """Initializes the database."""
+    db = get_db()
+    with app.open_resource('schema.sql', mode='r') as f:
+        db.cursor().executescript(f.read())
+    db.commit()
+
+
+@app.cli.command('initdb')
+def initdb_command():
+    """Creates the database tables."""
+    init_db()
+    print('Initialized the database.')
+
+
+def get_db():
+    """Opens a new database connection if there is none yet for the
+    current application context.
+    """
+    if not hasattr(g, 'sqlite_db'):
+        g.sqlite_db = connect_db()
+    return g.sqlite_db
+
+
+@app.teardown_appcontext
+def close_db(error):
+    """Closes the database again at the end of the request."""
+    if hasattr(g, 'sqlite_db'):
+        g.sqlite_db.close()
+
+
+@app.route('/')
+def show_entries():
+    db = get_db()
+    cur = db.execute('select title, text from entries order by id desc')
+    entries = cur.fetchall()
+    return render_template('show_entries.html', entries=entries)
+
+
+@app.route('/add', methods=['POST'])
+def add_entry():
+    if not session.get('logged_in'):
+        abort(401)
+    db = get_db()
+    db.execute('insert into entries (title, text) values (?, ?)',
+               [request.form['title'], request.form['text']])
+    db.commit()
+    flash('New entry was successfully posted')
+    return redirect(url_for('show_entries'))
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != app.config['USERNAME']:
+            error = 'Invalid username'
+        elif request.form['password'] != app.config['PASSWORD']:
+            error = 'Invalid password'
+        else:
+            session['logged_in'] = True
+            flash('You were logged in')
+            return redirect(url_for('show_entries'))
+    return render_template('login.html', error=error)
+
+
+@app.route('/logout')
+def logout():
+    session.pop('logged_in', None)
+    flash('You were logged out')
+    return redirect(url_for('show_entries'))
+fdev@uber1:~/srcflask4d/flask/examples/flaskr$ cd -P
+fdev@uber1:~$ sudo poweroff
+fdev@uber1:~$
+Broadcast message from fdev@uber1
+        (/dev/pts/0) at 13:56 ...
+
+The system is going down for power off NOW!
